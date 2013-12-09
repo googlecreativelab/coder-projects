@@ -64,6 +64,64 @@ A, A:hover, A:visited, A:active {
     text-decoration: underline;
 }
 
+#project_nav {
+    width: 100%;
+    background-color: #f1c40f;
+    position: fixed;
+    height: 61px;
+    min-width: 300px;
+    z-index: 3;
+    color: #ffffff;
+}
+
+.project_home {
+    display: block;
+    background-color: #ff8f00;
+    width: 34px;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left:0px;
+}
+.project_home A {
+    position: absolute;
+    left: -13px;
+    display: block;
+    top: 13px;
+    font-size: 12px;
+    text-align: center;
+    width: 60px;
+    height: 34px;
+    line-height: 34px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.project_info {
+    position: absolute;
+    left: 48px;
+    top: 8px;
+    font-family: Courier, monospace;
+    font-size: 12px;
+    line-height: 12px;
+}
+#project_nav h1 {
+    position: absolute;
+    left: 48px;
+    top: 22px;
+    font-weight: 200;
+    font-size: 28px;
+    line-height: 28px;
+    padding: 0;
+    margin: 0;
+}
+
 
 .fixedbg {
     position: fixed;
@@ -298,6 +356,9 @@ A.button, A.button:hover, A.button:visited, A.button:active {
     clear: both;
     width: 640px;
 }
+.section.intro {
+    padding-top: 66px;
+}
 .section.projects {
     padding-bottom: 47px;
 }
@@ -318,7 +379,7 @@ A.button, A.button:hover, A.button:visited, A.button:active {
 }
 .section.last {
     border-bottom: 0px;
-    padding-bottom: 400px;
+    padding-bottom: 100px;
 }
 
 .section.introduction {
@@ -338,9 +399,8 @@ A.button, A.button:hover, A.button:visited, A.button:active {
 h2 {
     font-weight: 200;
     font-size: 28px;
-    line-height: 34px;
-    margin: 0 0 -4px 0;
-    padding: 34px 0 0 0;
+    line-height: 33px;
+    margin: 24px 0 0 0;
 }
 
 .callout {
@@ -416,9 +476,41 @@ h2 {
     position: relative;
     text-align: left;
     border-top: 1px dashed #ccc;
-    margin-top: 40px;
+    margin-top: 16px;
     margin-bottom: -17px;
 }
+
+.project.left, .project.right {
+    width: 306px;
+    float: left;
+}
+.project.right {
+    margin-left: 28px;
+}
+.project h3 {
+    font-size: 20px;
+    font-weight: 200;
+    margin:0;
+    padding:0;
+}
+.project p {
+    font-size: 15px;
+    margin: .5em 0;
+}
+.project.left .button.inline, .project.right .button.inline {
+    padding: 0 16px;
+    font-size: 16px;
+    line-height: 34px;
+    margin-right: 10px;
+}
+.project.left .difficulty, .project.right .difficulty {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 200;
+    color: #f1c40f;
+    vertical-align: middle;
+}
+
 .projectid {
     position: absolute;
     display: block;
@@ -428,45 +520,85 @@ h2 {
     color: #acacac;
     font-family: courier, monospace;
 }
-.project .feature {
+img.feature {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 34px;
+    margin-bottom: 10px;
 }
-.project .details {
-    width: 422px;
+.description .details {
+    width: 420px;
     padding-right: 24px;
     float: left;
 }
-.project .meta {
-    width: 194px;
+.description .meta {
+    width: 196px;
     float: left;
 }
-.project h3, .project .difficulty {
+.description h3, .description .difficulty {
     font-size: 28px;
     line-height: 33px;
     font-weight: 300;
-    margin: 20px 0 0 0;
+    margin: 24px 0 0 0;
 }
-.project .difficulty {
+.description .difficulty {
     color: #f1c40f;
 }
-.project p {
+.description p {
     font-size: 15px;
     line-height: 22px;
     margin: 7px 0;
 }
-.project .whofor {
+.description .whofor {
     font-style: italic;
 }
-.project .whofor strong {
+.description .whofor strong {
     display: block;
     font-style: normal;
 }
-.project .meta {
+.description .meta {
     color: #f1c40f;
 }
-.project .meta .name {
+.description .meta .name {
     display: block;
     color: #666666;
 }
+.projectlink {
+    margin: 24px 0;
+}
+.projectlink img {
+    width: 196;
+    float: left;
+}
+.projectlink .details {
+    width: 420px;
+    padding-left: 24px;
+    float: left;
+}
+.projectlink h3 {
+    color: #616161;
+    font-size: 18px;
+    margin: 0 0 2px 0;
+    padding:0;
+    line-height: 18px;
+}
+.projectlink p {
+    font-size: 15px;
+    margin: 0 0;
+}
+.projectlink h3 .difficulty {
+    color: #f1c40f;
+    font-weight: 200;
+}
+.projectlink A, .projectlink A:visited, .projectlink A:active, .projectlink A:hover {
+    color: #f1c40f;
+    text-decoration: none;
+}
+.projectlink A:hover {
+    text-decoration: underline;
+}
 
+.step .codeview {
+    position: relative;
+    height: 100px;
+    margin: 34px 0;
+}
