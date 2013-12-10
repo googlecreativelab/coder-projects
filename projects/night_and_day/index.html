@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product">
+<head> 
+    <title>Project Title | Coder Projects</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../shared_assets/js/jquery.min.js"></script>
+    <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../shared_assets/js/project.js"></script>
+    <meta itemprop="name" content="Night and Day | Coder Projects">
+    <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
+    <meta itemprop="image" content="http://googlecreativelab.github.io/coder/assets/images/introvideo_cropped_640.jpg">
+</head>
+<body>
+    <div id="project_nav">
+        <div class="project_home"><a href="../../">Coder</a></div>
+        <div class="project_info">&lt;project&gt; steps(13)</div>
+        <h1>Night and Day</h1>
+    </div>
+    <div class="section intro">
+        <img class="feature" src="assets/images/feature_full.jpg" />
+    </div>
+    <div class="section description">
+        <div class="details">
+            <h2>Description</h2>
+            <p>Ever wish you could control the universe? Well now you can pretend with this project. Change day into night and back again with the click of a mouse and learn a whole new programming language along the way.</p>
+            <p class="whofor"><strong>A great project for:</strong>
+            Sunbathers, night owls, and anyone that is looking to make big changes with the push of a button.
+            </p>
+        </div>
+        <div class="meta">
+            <div class="difficulty">Medium</div>
+            <p><span class="name">Skills Needed:</span>
+                Basic HTML, Basic CSS.
+            </p>
+            <p><span class="name">Skills Learned:</span>
+                Introduction to Javascript, Introduction to jQuery, Basic Interaction, CSS Circles, Buttons 
+            </p>
+            <p><span class="name">Submitted By:</span>
+                Coder Team
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section">
+        <h2>Are you ready to start clicking?</h2>
+        <p>A big part of making cool web things is interacting with them. However, if you’re starting from scratch or haven’t made anything with CSS and HTML it might be better to start with some earlier projects and pick up the fundamentals of basic coding before we go any further.</p>
+        <div class="projectlink">
+            <img src="../perfect_recipe/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../perfect_recipe/">Previous Project: The Perfect Recipe</a></h3>
+                <p>This project introduces the concept of <b>&lt;div&gt;</b> elements and CSS classes. Knowing about these will help you complete Night & Day more easily.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="../mondrian/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../mondrian/">Previous Project: Make Your Own Mondrian</a></h3>
+                <p>This project will help you navigate Coder and introduces some of the fundamentals of HTML and CSS that this project will build on.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section steps">
+        <div class="step">
+            <h2>Step 1: Let’s make a simple button</h2>
+            <br>
+            <img src="assets/images/step_01.jpg" />
+            <p>Let’s start with something a little different. Let’s make a simple button. </p>
+            <ul>
+                <li>In the HTML tab, within the pagecontent <b>&lt;div&gt;</b>, add a new <b>&lt;button&gt;</b> tag and write some text in in between the tag ends. We added “click me” to ours. Maybe you can be more clever.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;div class="pagecontent">
+        &lt;button>click me&lt;/button>
+&lt;/div>                    
+                </div>
+            </div>
+            <ul>
+                <li>Take a look at your project preview now. See that little button? That’s what the button tag creates. It’s a quick and easy way to make things that look like buttons on web pages. </li>
+                <li>Click it. Nothing will happen. That’s ok. The button tag just creates the button object.  We haven’t told it what to do yet. We’ll change that in the next two steps.</li>
+            </ul>            
+        </div>
+
+        <div class="step">
+            <h2>Step 2: Make a color class</h2>
+            <p>You can make buttons do pretty much anything like load images, animate objects, open new pages etc. However, for this project we want to turn night into day so we’ll focus on making that button change our background color first.</p>
+            <ul>
+                <li>Go to the CSS tab and add a new class. We named ours <b>.black</b>. Don’t forget to start your class name with a period, it let’s the code know you’re creating a class.</li>
+                <li>Add a <b>background-color</b> property to that class. Ours, predictably, is <b>black</b>.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.black {
+    background-color: black;
+}
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Step 3: Time to open that JS tab…</h2>
+            <br>
+            <img src="assets/images/step_03.jpg" />
+            <p>So now we’re going to go someplace previous projects have not gone before: the JS tab. JS 
+stands for Javascript. Javascript is a programming language that allows you to control how your application functions. You can use Javascript to respond to mouse clicks, perform calculations, or animate things on the screen. </p>
+
+<p>Javascript is different from HTML and CSS in a big way. You might have noticed that HTML and CSS show exactly what’s written in between their tags and braces. They’re static, once they’re set a certain way, they stay that way until you go back and change them. Javascript, on the other-hand, can actually think. It can look at the what’s going on in a project, (what the mouse is doing, for example) and make calculations or run logical responses that change what’s written in the HTML and CSS. So with Javascript, you can change what things look like or how the they behave.</p>  
+
+<p>In more advanced projects, Javascript will actually do complex math and calculations to do things like challenge you to a game, animate shapes and 
+Javascript is pretty powerful. It’s what we will use to make our simple button change our background-color.</p>
+        </div>
+
+        <div class="step">
+            <h2>Step 4: Look at how Javascript talks.</h2>
+            <br>
+            <img src="assets/images/step_04.jpg" />
+            <p>Take a look at the code that’s already in the JS tab.</p>
+            <p><i>It should look like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$(document).ready(function() {
+
+    //This code will run after your page loads
+
+});                   
+                </div>
+            </div>
+            <p>This probably looks kinda weird to you. Its syntax, how it’s written, is different than what we’ve been dealing with so far. So let’s walk through it.</p>
+
+<p>What is happening in this text is actually what’s called a function and you can read it a little bit like a sentence if you know how.</p>
+
+<p><b>$(document)</b> is a target which you can think of as a thing. To be specific, it’s the web project on the HTML page. Think of it like a the noun or subject of our sentence. The $()are important. They signal to the browser that this is a thing to look at.</p>
+
+<p><b>.ready</b> is an event, specifically an event that looks to see if something is fully loaded and ready to go. You can think of events like verbs and predicates in the sentence. <b>.ready</b> is a jQuery event. We’ll talk more about that later.</p>
+
+<p><b>function()</b> is exactly what it sounds like. In this case, it’s what starts or runs when the document is ready. It’s like another verb in the sentence.</p>
+
+<p>The <b>{}</b> are also very important. They contain the contents of function. They are similar to the tags in HTML and the curly braces in CSS. This is where we will be writing our own functions that make that button do cool things.</p>
+
+<p>If you read this code out as a sentence it would sound something like this: When the document is ready (fully loaded) then do the actions inside the braces.</p>
+
+<p>This function is used to make the JS page ready to do work. It’s key to all of our web projects that use Javascript because it’s what establishes the connection between the JS tabs and the CSS and HTML tabs. So don’t delete this. We will be writing inside of it and duplicating its structure.  </p>         
+        </div>
+
+        <div class="step">
+            <h2>Step 5: Get to know jQuery.</h2>
+            <p>So we lied to you a little bit. We’re not going to be writing pure Javascript just yet. We’re going to be using a set of ready-made Javascript bits called  jQuery. </p>
+
+<p>jQuery is what’s called a library, and it’s pre-loaded in the HTML page. If you go to the <b>&lt;head&gt;</b> tag and open it up you’ll see a line of code that that loads the jQuery library automatically:</p>
+            <p><i>It looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;script src="/static/common/js/jquery.min.js">&lt;/script>                  
+                </div>
+            </div>  
+            <p>Loading this jQuery library gives us easy access to a whole bunch of useful events, selectors, and effects that will make doing cool stuff simpler and much quicker than writing it out in raw javascript.</p>
+
+<p>Using jQuery will also help you become more comfortable with the language and logic of Javascript while you’re making stuff in Coder. </p>
+
+<p><b>.ready</b> is an example of a jQuery event, the pure Javascript would be much more complicated to write. We will be using a handful of others to help make our Night & Day project.</p>
+        </div>
+
+        <div class="step">
+            <h2>Step 6: Make it black</h2>
+            <br>
+            <img src="assets/images/step_06.jpg" />
+            <p>That took a while didn’t it? Now let’s make that button do something! You got the button, you’ve got the class you want to apply, you’ve got the JS tab open and you understand a tiny bit how it works. Let’s go!</p>
+
+            <ul>
+                <li>Inside the curly braces, let’s start a new function. Let’s think about what we want to do as a sentence: When the button is clicked then add the black CSS class to the HTML’s body.</li>
+                <li>Let’s start writing that out using what we know about Javascript syntax from the initial <b>$(document).ready</b> function. We know that our button will be clicked so let’s start the event with the <b>&lt;button&gt;</b> as target inside the <b>$()</b>. Unlike <b>document</b> we’ll need to put the name of the object and classes in quotes from here on out. We can use the jQuery event <b>.click</b> to detect a mouse click on that button.</li>
+                </ul>
+                <p><i>Our first line like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$('button').click(function(){
+
+});                 
+                </div>
+            </div>  
+            <ul>
+                <li>Now let’s make that button click do something. We’ll need to identify the thing we want to affect with that click. In this case it’s the <b>body</b>. In between the <b>.click {}</b> add a new line targeting the body.</li>
+                <li>Use the jQuery function <b>.addClass</b> (make sure you capitalize it correctly) to add the class <b>.black</b> to the body.</li>
+                <li>Make sure you finish off each function and statement you make with closed <b>()</b>,<b>{}</b>, and a ; these are the things that tell the browser a function or statement is finished.</li>
+            </ul>
+            <p><i>All our code looks like this right now:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$( document ).ready( function() {
+    $( 'button' ).click( function() {
+        $( 'body' ).addClass( 'black' );
+    );
+});                
+                </div>
+            </div>  
+            <ul>
+                <li>Go back the preview mode. Click the button. Did the body turn black?</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Step 7: Toggling with if/then/else</h2>
+            <br>
+            <img src="assets/images/step_07.jpg" />
+            <p>Right now our button does one thing then stops. Let’s change that. Remember how we said that Javascript can see what’s going on and actually think for us? Well let’s give it something to think about and use rules and words like “<b>if</b>” and “<b>else</b>” to turn our button into a toggle that can switch between black and white. We will be creating a function that checks to see if the <b>body</b> has a certain class, if it does, it will remove that class and add a new one, if it doesn’t then it removes and adds the inverse classes.</p>
+
+            <ul>
+                <li>Let’s first make a new CSS class that we’ll toggle between. We made ours <b>“.white”</b></li>
+                <li>In the JS tab go ahead and erase the following code. We’re going to replace it:<br><b>$( 'body' ).addClass( 'black' );</b></li>
+                <li>Let’s write an <b>”if/then/else”</b> statement within the click function. This is exactly what it sounds like. It’s a statement that will set up some conditional rules for our button action results.</li>
+            </ul>
+                <p><i>It looks like this (we will be putting new stuff in the curly braces and parentheses):</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$(document).ready( function() {
+    $('button').click(function(){
+        if (thisThingIsTrue) {
+            doThisThing
+        }
+        else {
+           doThisOtherThing
+        }
+    });
+});                
+                </div>
+            </div> 
+            <ul>
+                <li>Let’s start our <b>“if”</b> statement. We want to check to see if the body has the <b>.black”</b> class. To do that we’ll use the convenient jQuery bit: <b>.hasClass</b>.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$(document).ready( function() {
+    $('button').click(function(){
+        if($('body').hasClass('black')) {
+            doThisThing
+        }
+        else {
+           doThisOtherThing
+        }
+    });
+});              
+                </div>
+            </div> 
+            <ul>
+                <li>Now let’s define what it should do if it does have that class. This is the <b>“then”</b> part of our statement. Anything in the <b>{}</b> can be read as <b>“then.”</b> We want to take the current class away and add a different one. We’ll use the <b>.removeClass</b> and <b>.addClass</b> jQuery functions to do that.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$(document).ready( function() {
+    $('button').click(function(){
+        if($('body').hasClass('black')) {
+           $('body').removeClass('black').addClass('white');
+        }
+        else {
+           doThisOtherThing
+        }
+    });
+});             
+                </div>
+            </div> 
+            <ul>
+                <li>Now we have one last thing to do. If we leave it like this then it will only toggle once. We need to set up an <b>“else”</b> statement give it something to do when <b>if</b> isn’t true and keep it bouncing between black and white on every click. This is like saying “otherwise” in a sentence. In this case, we know that if something doesn’t have the <b>.black</b> class it will have to have the <b>.white class</b>. We need to make our <b>else</b> statement turn it <b>.black</b> class.</li>
+            </ul>
+            <p><i>Our final code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$(document).ready(function() {
+    $('button').click(function(){
+        if ($('body').hasClass('black')) {
+            $('body').removeClass('black').addClass('white');
+        }
+        else {
+            $('body').removeClass('white').addClass('black');
+        }
+    });
+});           
+                </div>
+            </div> 
+            <ul>
+                <li>The way this would read if it was a sentence would be something like this: <i>When button is clicked, check to see if the body has the black class applied to it, if it does, then remove that class and add white, otherwise, remove the white class and add black.</i></li>
+                <li>Go back to the preview mode and see if it toggles back and forth!</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Step 8: Clean it up and hang the sun (and moon)</h2>
+            <br>
+            <img src="assets/images/step_08.jpg" />
+            <p>Alright, now we have all the knowledge and code we need to turn night into day and back again! However, we need to step back a bit. What we’ve made up to this point was a prototype, it has the basics but it doesn’t really look that good. We’ll need to change some elements to get to where it needs to be. We’ll begin by getting rid of that default button we’ve created and making our own, much nicer-looking, button using a plain-old <b>&lt;div&gt;</b>. </p>
+
+            <ul>
+                <li>It helped us out a lot so far, but let’s delete the <b>&lt;button&gt;</b> tag in the HTML. We will make our own buttons using <b>&lt;div&gt;</b>. This will give us a little more control and freedom in styling it. Don’t worry, all the same JS functions we used on the <b>&lt;button&gt;</b> we can use on the <b>&lt;div&gt;</b>.</li>
+                <li>Let’s also delete the <b>.pagecontent</b> class in the CSS tab and its corresponding <b>&lt;div&gt;</b>. Be sure to delete the corresponding closing tag! </li>
+                <li>In the CSS tab make a new ID for our “button.” Since it will turn into both the Sun and Moon let’s call it something neutral like <b>#orb</b>. Pick a height and width for it. Make sure they are the same number to keep it round. We made ours <b>300px</b>.</li>
+                <li>To make a <b>&lt;div&gt;</b> into circle add the <b>border-radius</b> property and turn it up to <b>100%</b>. Neat trick, huh? It still technically has corners and will settle and position as a box but visually it looks like a circle, which is perfect for our purposes.</li>
+                <li>We also want to position our #orb smack dab in the center and add a bit of padding to the inside in anticipation of some later steps. If you want to see what it looks like, add a temporary <b>background-color</b>.</li>
+                </ul>
+                <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#orb {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    padding: 20px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: #blue;
+}                
+                </div>
+            </div>  
+            <ul>
+                <li>Let’s also make a new CSS ID for the sky and set it to take up all our background. Naming it  <b>#sky</b> and making separate from the<b>body</b> will make it a little bit easier to keep track of the logic in JS tab when we get to that point.</li>
+            </ul>
+            <p><i>Our code looks like this now:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#sky {
+    height: 100%;
+    width: 100%;
+}               
+                </div>
+            </div>  
+            <ul>
+                <li>Set up a <b>&lt;div&gt;</b> for the <b>#orb</b> and <b>#sky</b> in the body</li>
+            </ul>
+            <p><i>Our HTML looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id= "orb">&lt;/div>
+    &lt;div id= "sky">&lt;/div>
+&lt;/body>            
+                </div>
+            </div> 
+         </div>
+
+        <div class="step">
+            <h2>Step 9: Make Styles To Switch</h2>
+            <br>
+            <img src="assets/images/step_09.jpg" />
+            <p>Now let’s make the CSS classes that will turn our <b>#orb</b> into the <b>.sun</b> and <b>.moon</b> and our <b>#sky</b> into <b>.day</b> and <b>.night</b>.</p>
+            <ul>
+                <li>Let’s do the <b>#orb</b> classes first. Make two new classes name one <b>.sun</b> and one <b>.moon</b>.</li>
+                <li>Give them <b>background-color</b> and <b>border</b> properties that fit their names.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.sun {
+    background-color: #ffdd00;
+    border: 10px solid #f1c40f;
+}
+.moon {
+    background-color: #bdc3c7;
+    border: 10px solid #eaeff2;
+}
+                </div>
+            </div>
+            <ul>
+                <li>Now let’s do the same for the <b>#sky</b>. Add a <b>.night</b> and <b>.day</b> class that will change the <b>#sky</b> from dark to light.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.night {
+    background-color: #2c3e50;
+}
+
+.day {
+    background-color: #37d8e6;
+}
+                </div>
+            </div>
+            <ul>
+                <li>Let’s go into the HTML and apply our classes to their relevant <b>&lt;div&gt;</b>. Let’s start with the daytime class and make that our initial view when the page loads.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id= "orb" class= "sun">&lt;/div>
+    &lt;div id= "sky" class= "day">&lt;/div>
+&lt;/body>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Step 10: “Hover” craft.</h2>
+            <br>
+            <img src="assets/images/step_10.jpg" />
+            <p>Not all interactive elements need to be done in Javascript. CSS can also style links and button with properties like <b>“hover”</b> (what it looks like when you mouse over an object), <b>“active”</b> ( what it looks like when you press or click down on an object) and <b>“visited”</b> (what it looks like when a object or link has been clicked). Let’s add a <b>hover</b> to our <b>.sun</b> and <b>.moon</b> classes to show that they are clickable.</p>
+            <ul>
+                <li>Let’s do the <b>.sun: hover</b> first. Add a new line in your CSS. For a selector, write the name of the class we want to add the the hover. Then add the text <b>: hover {}</b>.</li>
+                <li>Between the braces add a thicker <b>border</b> with the same color as the .sun class.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.sun:hover {
+    border: 20px solid #f1c40f;
+}
+                </div>
+            </div>
+            <ul>
+                <li>Save and go to your preview. See what happens when you mouse over the Sun? Does the border get thicker?</li>
+                <li>Now add a <b>hover</b> to the <b>.moon</b> class using the same method.</li>
+        </div>
+
+        <div class="step">
+            <h2>Step 11: Sun/Moon Toggle</h2>
+            <br>
+            <img src="assets/images/step_11.jpg" />
+            <p>Now let’s get back into that Javascript. It should be straight-forward since will be reusing the code we already wrote. We just need to change some names!</p>
+            <ul>
+                <li>Let’s first target that <b>.click</b> action to our newly made <b>#orb</b>. This will turn it into a button.</li>
+                <li>Replace the <b>‘button’</b> text inside the <b>$()</b> with <b>‘#orb’</b>. Because we’re targeting a CSS ID we need to add that little # symbol between the quotes.</li>
+                <li>Next change the the object that the our new button will toggle. We’re going to have it toggle itself. Replace <b>body</b> with <b>'#orb'</b>.</li>
+                <li>Lastly, let’s replace the classes we’re toggling from <b>.white</b> and <b>.black</b> to our new <b>.sun</b> and <b>.moon</b>. Don’t include the period when identifying the class but make sure it’s in quotes.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$('#orb').click( function() {        
+        if ($(this).hasClass('sun')) {
+            $(this).removeClass('sun').addClass('moon');
+        }
+        else {
+            $(this).removeClass('moon').addClass('sun');
+        }
+                </div>
+            </div>
+            <ul>
+                <li>Save your code and check the preview. You should see the Sun become the Moon when you click it.</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Step 12: Day/Night Toggle</h2>
+            <br>
+            <img src="assets/images/step_12.jpg" />
+            <p>Now let’s do the same thing to the night sky.</p>
+            <ul>
+                <li>Immediately below the <b>‘#orb’</b> <b>if/then/else</b> statement, add a new <b>if/then/else</b> statement. Go ahead and copy and paste the one you just made.</li>
+                <li>Change the targets to be <b>‘#sky’</b> and the classes to be <b>‘day’</b> and <b>‘night’</b>.</li>
+                <li>Make sure that the <b>‘day’</b> replaces <b>‘sun’</b> and <b>‘night’</b> replaces <b>‘moon’</b> so the classes are synced.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+if ($('#sky').hasClass('day')) {
+    $('#sky').removeClass('day').addClass('night');
+}
+else {
+    $('#sky').removeClass('night').addClass('day');
+}
+                </div>
+            </div>
+            <ul>
+                <li>Save the code and test it out.</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Step 13: Put a man in the moon</h2>
+            <br>
+            <img src="assets/images/step_13.jpg" />
+            <p>Now we’ve got a pretty good sun and moon going and can switch between night and day with a click but something doesn’t feel right. Let’s make our moon a little bit more “moon-like” and with a few more circles for the lunar mare, or moonspots, that make up the what some people call the Man in the Moon.</p>
+            <p>We will be making them the same way we made our original <b>#orb</b>. But instead of toggling between two styles we will simply add and remove one. The catch is that we will be doing it to three different objects.</p>
+            <ul>
+                <li>Let’s start by making our moonspots CSS IDs. We will be making three moonspots. Other than height and width, they will all have the same properties. Make the three <b>40px</b>, <b>80px</b>, and <b>180px</b> in diameter.</li>
+                <li>We will be setting them inside our <b>&lt;div id= "orb"&gt;</b> so put a little <b>margin</b> on them and <b>float: right</b> so that don’t run over or butt into each other.</li>
+            </ul>
+            <p><i>Our first moonspot looks like this. You can use this to make the others:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#moonspot1 {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    float:right;
+    margin: 20px;
+}
+                </div>
+            </div>
+            <ul>
+                <li>Now let’s make a class that will make them visible when the moon is up. All we need to do is add a <b>background-color</b>. We’ve made ours match our moon’s border color.</li>
+            </ul>
+            <p><i>Our class looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.visible {
+    background-color: #eaeff2;
+}
+                </div>
+            </div>
+            <ul>
+                <li>And of course let’s place them inside our <b>&lt;div id= "orb"&gt;</b> in the HTML.</li>
+            </ul>
+            <p><i>Our HTML looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;div id= "orb" class= "sun">
+    &lt;div id= "moonspot1">&lt;/div>
+    &lt;div id= "moonspot2">&lt;/div>
+    &lt;div id= "moonspot3">&lt;/div>
+&lt;/div>
+                </div>
+            </div>
+            <ul>
+                <li>Lastly, as part of that <b>.click</b> event that we’ve set to swap all those other classes, let’s add a series of new <b>if/then/else</b> sets that will add and remove the visible class at the appropriate times. You’ll need to add one for each of our moonspot <b>&lt;divs&gt;</b>.</li>
+            </ul>
+            <p><i>Our Javascript looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+if ($('#moonspot1').hasClass('visible')) {
+    $('#moonspot1').removeClass('visible');
+} else {
+    $('#moonspot1').addClass('visible');
+}
+                </div>
+            </div>
+            <p>That’s it! You’re done. How did it turn out? How does it look? How does it feel to have so much power?</p>
+        </div>
+
+
+    </div>
+
+    <div class="section">
+        <h2>Bonus Rounds</h2>
+        <p>Now that you can change day to night,  let’s see what else we can put under the control of your clicks.</p>
+        <div class="projectlink">
+            <img src="assets/images/extra_challenge_photos.jpg" />
+            <div class="details">
+                <h3>Photo-Real <span class="difficulty">Easy</span></h3>
+                <p>Blue and black do not a sky make. See if you can add clouds to the day and stars do the night. Maybe there’s some cool photos on the NASA site that would work better than just colors for the sky? <i>HINT: Use the CSS <b>background-image: property</b> to place a picture instead of color.</i></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/extra_challenge_orion.jpg" />
+            <div class="details">
+                <h3>Off the Shoulder of Orion <span class="difficulty">Medium</span></h3>
+                <p>One moon and one sun? How predictable. Think intergalactic and put some more celestial bodies in that sky. Why not two moons and three suns? 10 moons and two suns? Make it a different solar system out there.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/extra_challenge_sunset.jpg" />
+            <div class="details">
+                <h3>Morning, Noon, Midnight... <span class="difficulty">Hard</span></h3>
+                <p>A day is 24 hours and within those hours are so many more times than just “night” and “day.” See if you can make our #orb button cycle through a purple evening sky or a bright orange morning in addition to the day and night sky styles we’ve already created. <i>HINT: you can use <b>“else if”</b> in <b>if/then</b> statements to make more sophisticated logical conditions.</i></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section projects last">
+        <h2>Coder Projects to Try Next</h2>
+        <p>Having fun with Javascript? Try building the digital clock project below. Or take a break from javascript and create a comic.  </p>
+
+        <!-- Starting Coder -->
+        <div class="project left">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../digital_clock/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3>Digital Clock</h3>
+                <p>What time is it? You’ll finally be able to answer that question after you’ve built this simple clock.</p>
+                <a href="../digital_clock/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+        <!-- Dear Diary -->
+        <div class="project right">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../comic_creator/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3>Comic Creator</h3>
+                <p>Got a story to tell? Have some great text and images you want to put together? This project will give you the pieces to turn them into a webcomic while teaching you some new skills along the way.</p>
+                <a href="../comic_creator/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+
+        <div class="clear"></div>
+    </div> <!-- end next projects -->
+    <div class="footer">
+        <div class="madewith bottom"></div>
+        <div class="links">
+            <a href="http://www.google.com/intl/en/policies/" class="trackout">Privacy and Terms</a>
+            <div class="plusholder">
+                <div class="g-plusone"></div>
+            </div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+    </div>
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41998892-1', 'googlecreativelab.github.io');
+  ga('send', 'pageview');
+
+  $(document).ready( function() {
+    $('a.trackdl').click(function() {
+      var version = $(this).attr('data-version');      
+      ga('send', 'event', 'download', 'click', version ); 
+    });
+    $('a.trackout').click(function() {
+      var destination = $(this).attr('href');      
+      ga('send', 'event', 'outbound', 'click', destination ); 
+    });
+  });
+</script>
+-->
+</body>
+</html>
