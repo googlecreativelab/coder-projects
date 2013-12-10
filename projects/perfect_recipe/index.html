@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product">
+<head> 
+    <title>The Perfect Recipe | Coder Projects</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../shared_assets/js/jquery.min.js"></script>
+    <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../shared_assets/js/project.js"></script>
+    <meta itemprop="name" content="The Perfect Recipe | Coder Projects">
+    <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
+    <meta itemprop="image" content="http://googlecreativelab.github.io/coder/assets/images/introvideo_cropped_640.jpg">
+</head>
+<body>
+    <div id="project_nav">
+        <div class="project_home"><a href="/">Coder</a></div>
+        <div class="project_info">&lt;project_01&gt; steps(12)</div>
+        <h1>The Perfect Recipe</h1>
+    </div>
+    <div class="section intro">
+        <img class="feature" src="assets/images/feature_full.jpg" />
+    </div>
+    <div class="section description">
+        <div class="details">
+            <h2>Description</h2>
+            <p>Do you have a favorite recipe that you want to share with the world? With this project we will use code to write a recipe that looks as good as it tastes.</p>
+            <p class="whofor"><strong>A great project for:</strong>
+                Foodies, chefs, sandwich aficionados, and anyone looking to learn the basics of web design and Coder.
+            </p>
+        </div>
+        <div class="meta">
+            <div class="difficulty">Easy</div>
+            <p><span class="name">Skills Needed:</span>
+                None!
+            </p>
+            <p><span class="name">Skills Learned:</span>
+                Introduction to Coder, Basic HTML, Basic CSS, Color, Images, Fonts, Lists
+            </p>
+            <p><span class="name">Submitted By:</span>
+                Coder Team
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section">
+        <h2>Welcome to Coder. Get ready to start coding!</h2>
+        <p>Welcome to Coder Projects! Hopefully, you’ve already downloaded and installed <a href="http://goo.gl/coder" target="_blank">Coder for Raspberry Pi</a>. If you haven’t (or aren’t sure what Coder is) you can read about it here: <a href="http://goo.gl/coder" target="_blank">http://goo.gl/coder</a>. There’s even a quick project to get you up and running if you need a little more help.</p>
+        <div class="projectlink">
+            <img src="../getting_started/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../getting_started/">A Helpful Coder Project: Getting Started</a></h3>
+                <p>This project will help you get started with Coder for Raspberry Pi. From plugging in your Pi to creating your first app.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section steps">
+        <div class="step">
+            <h2>Step 1: Make a new Coder app</h2>
+            <p><img src="assets/images/createproject.jpg" /></p>
+            <p>Our very first step will be to create a new Coder App. On the main Coder page you will see a grid of boxes with names on them. These are projects (also called apps), and there are a few that come pre-installed on Coder. Some of them are simple (like Hello Coder) and can help you become more familiar with the program. Others are more sophisticated (like Space Rocks!) and show the potential of what you can build. But you can take a look at those anytime. Let’s make our own program!
+            </p>
+            <ul>
+                <li>Go to the upper left of the screen. You should see a green box with a plus sign.</li>
+                <li>Click the plus to start creating a new app.</li>
+                <li>Give it a name and pick a color. We’re going to make a sandwich recipe so we’ve called ours “The Perfect Sandwich” and colored it purple to help it stand out. Don’t worry, you can change both of these later if you decide you don’t like them.</li>
+                <li>Once you’ve got a name and color, press “Create.” You should go straight into editing your new project.</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Step 2: Let's look around</h2>
+            <p>Now we’re going to take a look around our new app. All Coder projects have the same tabs and features so let’s take a second to familiarize ourselves with them.</p>
+            <p><img src="assets/images/step_02.jpg" /></p>
+            <p><b>Code View</b><br />When you begin a new project you start in the “Code View” of Coder. What we’re looking at is the source code for our new web project, the behind-the-scenes stuff of all coder projects.</p>
+
+            <ul style="list-style:none; padding-left:0;">
+                <li>A. Coder Button: This will take you back to the menu page with the other projects.</li>
+                <li>B. Project Name : The name of the project. Clicking this will show you what your project looks like.</li>
+                <li>C. HTML Tab: This is where our HTML code lives. HTML is a language that describes the structure and content of a web application. It’s where we will be doing a lot of work for this project. The astrisks on the tab means that we’ve changed something in the code. It’s there to let us know we need to save if we want our updates to take effect.</li>
+                <li>D. CSS Tab. This is where the CSS (Cascading Style Sheet) lives. CSS is a language that describes how your app looks. We will also be working in here.</li>
+                <li>E. Javascript (JS) Tab: Javascript is a programming language that allows you to control how your application functions. We won’t be doing anything in here yet so don’t worry about it for now.</li>
+                <li>F. Node: This is the Node.JS piece of your program. Unlike HTML, CSS, and JS, this part of your program doesn't run in your web browser. Instead it runs on your Raspberry Pi, and can do more advanced things like save and retrieve data. Again, you don’t have to worry about this tab just yet.</li>
+                <li>G. Media: This is where you can upload and manage media that you use in your project. Media are things like images, video, and audio clips.</li>
+                <li>H. Preview: This will show you a split screen preview of your project. You can use this to see how project looks without leaving the code view.</li>
+                <li>I. Settings: This is where you can change the color or name of the project. You can also export or, if you really mess up, delete it entirely.</li>
+                <li>J. Save and Revert: These buttons save or cancel changes you’ve made to your code. Whenever we write new code we need to save it before it takes effect.</li>
+            </ul>
+            
+            <p>Now that we know a little bit about what’s under the hood let’s take a look at what our project looks like right now. Click the project name to see our site.</p>
+            <p><img src="assets/images/step_02_b.jpg" /></p>
+            <p><b>Browser View</b><br />Now this what our project looks like to other people. This is what the code in the other view is making. There’s also some things here to be aware of, as well.</p>
+            <ul style="list-style:none; padding-left:0;">
+                <li>A. Coder Button: Takes you back to the main Coder menu.</li>
+                <li>B. &lt;/&gt; tag button: This takes you back to the code view.</li>
+            </ul>
+        </div>
+        <div class="step">
+            <h2>Step 3: Where's the heading?</h2>
+            <p><img src="assets/images/step_03.jpg" /></p>
+            <p>Now that we know our way around let’s start coding! All Coder projects start with a little bit of code already in them so let’s use what’s there and build on it.</p>
+            <ul>
+                <li>Go back to the HTML tab. We’ll be doing a lot of our work here.</li>
+
+                <li>Take a look at the code. You might have noticed that the lines start with bit of text that look like this: “<b>&lt;word&gt;</b>”. This is called a tag. Tags are the bits of HTML that define the structure and content of a site. They are very important in HTML. All tags have an open tag and a close tag. A close tag looks like this <b>&lt;/tag&gt;</b>. See that slash? That’s what makes a closed tag close. All tags need an opening and a closing or else they won’t work.</li> 
+
+                <li>Find the <b>&lt;h1&gt;</b> tag. This is the tag for a heading. Right now the heading looks like this:<br />
+
+                    <pre>&lt;h1&gt;Hello World&lt;/h1&gt;</pre>
+                </li>
+
+                <li>Let’s make this the title of our recipe. Change it to the name of sandwich you want to write a recipe for. You can use whatever sandwich you like. We called ours "The Perfect PB&amp;J". The ampersand (&amp;) is a special character in HTML, so you need to write its escaped form, which looks like <b>&amp;amp;</b>:<br />
+
+                    <pre>&lt;h1&gt;The Perfect PB&amp;amp;J&lt;/h1&gt;</pre>
+                </li>
+
+                <li>Now save and take a look at the preview window. See how the headline has changed in this view as well? That’s because we changed the text inside the tag. The heading is still in the same place it just says something different now.</li>
+            </ul>
+        </div>
+        <div class="step">
+            <h2>Step 4: Let’s start describing it</h2>
+            <p><img src="assets/images/step_04.jpg" /></p>
+            <p>Now that we know how to change the content of tags, let’s change a few more and add some new ones to start putting together our recipe.</p>
+            <ul>
+                <li>See the <b>&lt;p&gt;</b> tag underneath the <b>&lt;h1&gt;</b> we just changed? That’s a paragraph tag. We’re going to turn it into our recipe description.<br />
+
+                    Right now the &lt;p&gt; tag looks like this:<br />
+
+                    <pre>&lt;p&gt;Your html goes here.&lt;/p&gt;</pre>
+                </li>
+                <li>Change it to instead describe your recipe.</li>
+            </ul>
+            <p><i>Ours looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;p>This peanut butter and jelly sandwich is my favorite sandwich. It has the perfect balance of ingredients and looks great when made right.&lt;/p>
+                </div>
+            </div>
+            
+            <ul>
+                <li>Now save that and take a look. Your recipe description should now be on screen.</li>
+
+                <li>Up to this point we’ve only modified tags that were already in the app. Let’s add a new one! We’ll add a small headline to our description.</li>
+
+                <li>Add a new line of code between the <b>&lt;h1&gt;</b> and <b>&lt;p&gt;</b> tag.</li>
+
+                <li>Now let’s add an <b>&lt;h2&gt;</b> tag. It’s a headline, like the <b>&lt;h1&gt;</b> but won’t be as prominent. The <b>&lt;h2&gt;</b> tag should read “Description.”</li>
+            </ul>
+            <p><i>You code should look like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;h1>The Perfect PB&amp;amp;J&lt;/h1>
+&lt;h2>Description&lt;/h2>
+&lt;p>This peanut butter and jelly sandwich is my favorite sandwich. It has the perfect balance of ingredients and looks great when made right.&lt;/p>
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 5: One rule to divide them all</h2>
+            <p><img src="assets/images/step_05.jpg" /></p>
+            
+            <p>Now our recipe title and section title are butting into one another. That’s no good. Let’s add a line between them to keep them separate and divide the recipe into distinct sections.</p>
+
+            <p>Between the <b>&lt;h1&gt;</b> and <b>&lt;h2&gt;</b> tags make a new line and add a single <b>&lt;hr /&gt;</b> tag.</p>
+
+            <p><i>It should look like this:</i></p>
+
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;h1>The Perfect PB&amp;amp;J&lt;/h1>
+&lt;hr />
+&lt;h2>Description&lt;/h2>
+                </div>
+            </div>
+
+            <p>Remember, all tags need to be closed. There are, however, some elements that are simple and don't contain content. These tags close themselves, using the slash (<b>/</b>) at the end of the tag.</p>
+
+            <p>The <b>&lt;hr /&gt;</b> tag is one of those tags. <b>HR</b> stands for “Horizontal Rule” and it’s an HTML element designed to divide content on a page.</p>
+
+            <p>Save your code and take a look. See how the &lt;hr /&gt; line separates the title from the description?</p>
+
+        </div>
+        <div class="step">
+            <h2>Step 6: What else do we need?</h2>
+            <p><img src="assets/images/step_06.jpg" /></p>
+            <p>Any good recipe needs a list of ingredients. Fortunately HTML gives us an easy way to make list using tags.</p>
+            <ul>
+                <li>Let’s start by creating a new section like the description section we’ve already made.</li>
+                <li>Make a new code line and add another <b>&lt;hr /&gt;</b> tag underneath our description.</li>
+                <li>Beneath that <b>&lt;hr /&gt;</b> add an <b>&lt;h2&gt;</b> tag for the headline “Ingredients.”</li>
+            </ul>
+
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;hr />
+&lt;h2>Ingredients&lt;/h2>
+                </div>
+            </div>
+
+            <p>Now let’s add a new type of tag called an “un-ordered list.” An un-ordered list tag produces a nice list of things, each with their own bullet point. In fact, you’re reading an unordered list right now!</p>
+
+            <p>Un-ordered lists actually use two tags. One starts and ends the list. It looks like this <b>&lt;ul&gt;</b>. The other sits in between those tags and identifies a list item. It looks like this <b>&lt;li&gt;</b>.</p>
+
+            <ul>
+                <li>Make a new line of code and add an <b>&lt;ul&gt;</b> tag.</li>
+                <li>For each list item make a new line of code and enter an ingredient or tool needed for your recipe with a <b>&lt;li&gt;</b> tag.</li>
+            </ul>
+
+            <p><i>Ours looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;h2>Ingredients&lt;/h2>
+&lt;ul>
+    &lt;li>2 slices of white bread&lt;/li>
+    &lt;li>1 jar of grape jelly&lt;/li>
+    &lt;li>1 jar of smooth peanut butter&lt;/li>
+    &lt;li>A butter knife&lt;/li>
+    &lt;li>A sharp knife&lt;/li>
+    &lt;li>A cutting board&lt;/li>
+&lt;/ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="step">
+            <h2>Step 2: Write another step!</h2>
+            <p>Talk about what this step does. Keep it brief and entertaining.</p>
+            <ul>
+                <li>A list of short instructions.</li>
+                <li>That you can follow easily.</li>
+                <li>And work together to do one thing.</li>
+            </ul>
+            <p><i>Here's some Javascript:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+alert('whee!');
+                </div>
+            </div>
+            
+            <p>Point out any gotchas or key takeaways that were introduced in this step.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Write another step!</h2>
+            <p>Talk about what this step does. Keep it brief and entertaining.</p>
+            <ul>
+                <li>A list of short instructions.</li>
+                <li>That you can follow easily.</li>
+                <li>And work together to do one thing.</li>
+            </ul>
+            <p><i>Here's some Javascript:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+alert('whee!');
+                </div>
+            </div>
+            
+            <p>Point out any gotchas or key takeaways that were introduced in this step.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Write another step!</h2>
+            <p>Talk about what this step does. Keep it brief and entertaining.</p>
+            <ul>
+                <li>A list of short instructions.</li>
+                <li>That you can follow easily.</li>
+                <li>And work together to do one thing.</li>
+            </ul>
+            <p><i>Here's some Javascript:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+alert('whee!');
+                </div>
+            </div>
+            
+            <p>Point out any gotchas or key takeaways that were introduced in this step.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Write another step!</h2>
+            <p>Talk about what this step does. Keep it brief and entertaining.</p>
+            <ul>
+                <li>A list of short instructions.</li>
+                <li>That you can follow easily.</li>
+                <li>And work together to do one thing.</li>
+            </ul>
+            <p><i>Here's some Javascript:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+alert('whee!');
+                </div>
+            </div>
+            
+            <p>Point out any gotchas or key takeaways that were introduced in this step.</p>
+        </div>
+        
+        <div class="step">
+            <h2>Step 2: Write another step!</h2>
+            <p>Talk about what this step does. Keep it brief and entertaining.</p>
+            <ul>
+                <li>A list of short instructions.</li>
+                <li>That you can follow easily.</li>
+                <li>And work together to do one thing.</li>
+            </ul>
+            <p><i>Here's some Javascript:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+alert('whee!');
+                </div>
+            </div>
+            
+            <p>Point out any gotchas or key takeaways that were introduced in this step.</p>
+        </div>
+        
+        
+        <div class="step">
+            <h2>Step 1: Write a first step</h2>
+            <p>Talk about what this step does. Keep it brief and entertaining.</p>
+            <ul>
+                <li>A list of short instructions.</li>
+                <li>That you can follow easily.</li>
+                <li>And work together to do one thing.</li>
+            </ul>
+            <p><i>Here's some CSS:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#canvas {
+    background-color: #fff4db;
+    width: 750px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 1px #8d8d8d;
+}                    
+                </div>
+            </div>
+            <p><i>And here's some HTML:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;div>
+    &amp;amp; This needs to be escaped carefully.
+&lt;/div>
+&lt;/script>
+                </div>
+            </div>
+            
+            <p>Point out any gotchas or key takeaways that were introduced in this step.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Write another step!</h2>
+            <p>Talk about what this step does. Keep it brief and entertaining.</p>
+            <ul>
+                <li>A list of short instructions.</li>
+                <li>That you can follow easily.</li>
+                <li>And work together to do one thing.</li>
+            </ul>
+            <p><i>Here's some Javascript:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+alert('whee!');
+                </div>
+            </div>
+            
+            <p>Point out any gotchas or key takeaways that were introduced in this step.</p>
+        </div>
+    </div>
+
+
+
+    <div class="section">
+        <h2>Bonus Rounds</h2>
+        <p>Congrats on the finished project. If you’re interested in a challeng, try to do one of the excersises below.</p>
+        <div class="projectlink">
+            <img src="../example_project/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3>Give it 100% <span class="difficulty">Easy-ish</span></h3>
+                <p>So far we’ve been dealing with pixel dimensions on everything. What happens if we change <b>height</b> and <b>width</b> to percents? Can you create a Mondrian-style image that fills the entire browser and scales to any dimension the window takes?</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="../example_project/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3>Give it 100% <span class="difficulty">Hard</span></h3>
+                <p>So far we’ve been dealing with pixel dimensions on everything. What happens if we change <b>height</b> and <b>width</b> to percents? Can you create a Mondrian-style image that fills the entire browser and scales to any dimension the window takes?</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section projects last">
+        <h2>Coder Projects to Try Next</h2>
+        <p>Like drawing with code? There’s more than just CSS/HTML and static blocks. Try these other coder projects to make more cool things and learn more useful stuff.</p>
+
+        <!-- Starting Coder -->
+        <div class="project left">
+            <span class="projectid">&lt;project_00&gt;</span>
+            <img class="feature" src="../example_project/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Starting Coder</h3>
+                <p>You've just opened the box. Inside is a new Coder device! Learn how to connect to it and program it from your computer's web browser.</p>
+                <a href="../example_project/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">First-timer</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+        <!-- Dear Diary -->
+        <div class="project right">
+            <span class="projectid">&lt;project_01&gt;</span>
+            <img class="feature" src="../example_project/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Dear Diary</h3>
+                <p>Pour your heart out, speak your mind, and look great doing it with this project. Learn to style text, place images, and create a simple web page design that’s uniquely you.</p>
+                <a href="../example_project/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Beginner</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+
+        <div class="clear"></div>
+    </div> <!-- end next projects -->
+    <div class="footer">
+        <div class="madewith bottom"></div>
+        <div class="links">
+            <a href="http://www.google.com/intl/en/policies/" class="trackout">Privacy and Terms</a>
+            <div class="plusholder">
+                <div class="g-plusone"></div>
+            </div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+    </div>
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41998892-1', 'googlecreativelab.github.io');
+  ga('send', 'pageview');
+
+  $(document).ready( function() {
+    $('a.trackdl').click(function() {
+      var version = $(this).attr('data-version');      
+      ga('send', 'event', 'download', 'click', version ); 
+    });
+    $('a.trackout').click(function() {
+      var destination = $(this).attr('href');      
+      ga('send', 'event', 'outbound', 'click', destination ); 
+    });
+  });
+</script>
+-->
+</body>
+</html>

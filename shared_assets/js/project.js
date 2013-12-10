@@ -19,6 +19,7 @@ $(document).ready(function() {
         editor.setBehavioursEnabled( false );
         editor.setHighlightActiveLine( false );
         editor.setReadOnly( true );
+        editor.getSession().setUseWrapMode(true);
         editor.renderer.setShowGutter( false ); //disable line numbers
 
         //automatically adjust height to fit content
