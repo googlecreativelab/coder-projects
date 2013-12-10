@@ -64,6 +64,11 @@ A, A:hover, A:visited, A:active {
     text-decoration: underline;
 }
 
+UL {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+}
+
 #project_nav {
     width: 100%;
     background-color: #f1c40f;
@@ -373,6 +378,16 @@ A.button, A.button:hover, A.button:visited, A.button:active {
 .section p.last {
     margin-bottom: 0;
 }
+.section li {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 .5em 0;
+    font-weight: 200;
+}
+.section ul {
+    font-size: 16px;
+    margin: 1em 0 .5em 0;
+}
 .section .anchor {
     position: absolute;
     top: -60px;
@@ -605,6 +620,7 @@ img.feature {
 .step .codeview .data {
     position: relative;
     height: 100px;
+    font-size: 16px;
 }
 .step .codeview .data .ace_cursor {
     display: none;

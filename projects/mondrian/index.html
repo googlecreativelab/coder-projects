@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product">
+<head> 
+    <title>Make Your Own Mondrian | Coder Projects</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../shared_assets/js/jquery.min.js"></script>
+    <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../shared_assets/js/project.js"></script>
+    <meta itemprop="name" content="Make Your Own Mondrian | Coder Projects">
+    <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
+    <meta itemprop="image" content="http://googlecreativelab.github.io/coder/assets/images/introvideo_cropped_640.jpg">
+</head>
+<body>
+    <div id="project_nav">
+        <div class="project_home"><a href="/">Coder</a></div>
+        <div class="project_info">&lt;project_02&gt; steps(11)</div>
+        <h1>Make Your Own Mondiran</h1>
+    </div>
+    <div class="section intro">
+        <img class="feature" src="assets/images/feature_full.jpg" />
+    </div>
+    <div class="section description">
+        <div class="details">
+            <h2>Description</h2>
+            <p>Paint makes a mess. Code is so much cleaner. Use this project to recreate a classic Modern artwork, <a href="http://en.wikipedia.org/wiki/Piet_Mondrian" target="_blank">Piet Mondrian’s</a> Composition II in Red, Blue, and Yellow in your browser using basic web building blocks.</p>
+            <p class="whofor"><strong>A great project for:</strong>
+                Modern art buffs, aspiring art forgers and anyone that is interested in drawing with nothing but code.
+            </p>
+        </div>
+        <div class="meta">
+            <div class="difficulty">Easy</div>
+            <p><span class="name">Skills Needed:</span>
+                None!
+            </p>
+            <p><span class="name">Skills Learned:</span>
+                Divs, Basic Positioning, Basic HTML, Basic CSS, Color, Measurement 
+            </p>
+            <p><span class="name">Submitted By:</span>
+                Coder Team
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section">
+        <h2>Back to the basics</h2>
+        <p>If you’re new to Coder and unsure how to start you might want to take a quick step back. Check out these other Coder Projects for more help getting started.</p>
+        <div class="projectlink">
+            <img src="../getting_started/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../getting_started/">Coder Project: Getting Started</a></h3>
+                <p>This project will help you get started with Coder for Raspberry Pi. From plugging in your Pi to creating your first app.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="../perfect_recipe/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../getting_started/">Coder Project: The Perfect Recipe</a></h3>
+                <p>A good introduction to Coder as well as  Basic HTML and CSS. If you’ve never written code before or if you don’t know the difference between HTML and CSS this might be a better place to start.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section steps">
+        <div class="step">
+            <h2>Alright, let's get started</h2>
+            <p>As always, let’s start by making a new App in Coder. You call it whatever you want. We’ve called ours “Modern Mondrian.”</p>
+            <p><img src="assets/images/createproject.jpg" /></p>
+        </div>
+        <div class="step">
+            <h2>Step 1: Paint your gallery wall.</h2>
+            <p><img src="assets/images/step_01.jpg"/></p>
+            <p>Before we do anything else lets give our selves a nice big wall to hang our painting.</p>
+            <ul>
+                <li>Go into the CSS tab in your Mondrian project.</li>
+                <li>Erase anything that’s already there, we won’t be needing that pagecontent style.</li>
+                <li>Set the <b>body</b> and <b>html</b> styles to have a drywall-like background-color of <b>#f6f6f6</b>. A quick way to give two elements the same property is to write a style with multiple selectors separated by a comma.</li>
+            </ul>
+            <p><i>Our CSS code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+body, html {
+    background-color: #f6f6f6;
+}
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Step 2: Hang your canvas</h2>
+            <p><img src="assets/images/step_02.jpg"/></p>
+            <p>Let’s make a big box. This will be the canvas for our code painting and the container we will put everything else we will make into. To make our painting we will be using two new concepts: <b>#id</b> and <b>&lt;div&gt;</b>.</p>
+            <ul>
+                <li>In the <b>CSS</b> panel make a new #id for your big box. A CSS ID is type of selector that can be used to specify a style for a single, unique element in the HTML. You can call your ID whatever you like you just need to add an # in front of it. We’ve called ours <b>#painting</b>.</li>
+                <li>Set the <b>height</b> and <b>width</b> attributes for your box. Keep in mind that we will dividing this box into sections using simple arithmetic so pick and number that is big but also easy to divide into quarters and thirds, etc. We made ours <b>400px</b>.</li>
+                <li>Set the background color to white. You can also use a more canvas-like hex value. We used <b>#fff4db</b>.</li>
+                <li>Now let’s add a little positioning to this style. We want our painting to be centered on the wall with a little space from the ceiling. One easy way to do that is to set the left and right margins to <b>auto</b> and margin-top to <b>30px</b>.</li>
+                <li>We also added a <b>box-shadow</b> to our <b>#painting</b> style to help it stand out from the wall.</li>
+            </ul>
+            <p><i>The new CSS code we added looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#painting {
+    background-color: #fff4db;
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 0px #8d8d8d;
+}
+
+                </div>
+            </div>
+
+            <p>Now let’s add that style to an element on our HTML page.</p>
+
+            <ul>
+                <li>Switch back to the <b>HTML</b> tab and in between the &lt;body&gt; tags add a new &lt;div&gt; tag. Give it the #id style you just created. To give an html element an ID style from our CSS add the text <b>id="painting"</b> inside the opening tag.</li>
+            </ul>
+            <p><i>Our HTML looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id="painting">&lt;/div>
+&lt;/body>
+                </div>
+            </div>
+
+            <p>Divs are tags that help divide and segment a page. You can think of them like boxes that can be styled and positioned using CSS. You can also put stuff inside them, such as text, pictures, and even other divs. They are the basic building blocks of any website and a fundamental part of this project. So get ready to make a lot of them.</p>
+
+        </div>
+
+        <div class="step">
+            <h2>Step 3: Let’s start “div”-ing it up.</h2>
+            <p>Now that we have our basic structure, it’s time to define the structure of our painting. It’s very helpful to plan out and divide the work into sections before we begin coding. Positioning and dividing up boxes with <b>DIV</b>s and <b>CSS</b> is much easier if you’ve already done the math.</p>
+
+            <p>We will be thinking about the works as rows, columns, and boxes. Each one of these will have their own CSS #id and one or more corresponding HTML &lt;div&gt;s. Some of them will be visible and colored. Others will be invisible but serve to hold the boxes in proper position and alignment.</p>
+
+            <p><i>Here’s an illustration of how how these divisions will work and what the measurements for our finished piece will be:</i></p>
+            <p><img src="assets/images/step_03.jpg"/></p>
+            <p>We’ll start by making our top row the one with the big box on the right and two smaller boxes on the left.</p>
+            
+            <ul>
+                <li>Go into the <b>CSS</b> tab and define a new #id for the top row. Since we made our <b>#painting</b> size <b>400px</b> our top row should have a height of <b>290px</b> to match the proportions of Mondrian’s painting. Since we’ll be nesting this inside our big &lt;div&gt; and want it to fill the full width we don’t need to define that dimension. It will inherit that quality from its parent.</li>
+            </ul>
+            <p><i>Our CSS looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#toprow {
+    height: 290px;
+}
+                </div>
+            </div>
+            
+            <ul><li>After you’ve done that then add a new <b>&lt;div&gt;</b> in between the tags of your big painting on in the HTML page. Don’t worry if you can’t see it. This is one of those invisible divs we mentioned before. It will hold our boxes and columns in place. If you want to check its positioning add a temporary <b>background-color</b> to the <b>#toprow</b> style.</li></ul>
+
+            <p><i>Our HTML looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id="painting">
+        &lt;div id="toprow">&lt;/div>
+    &lt;/div>
+&lt;/body>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="step">
+            <h2>Step 4: Make the big box</h2>
+            <p>Alright, now let’s start adding some of those boxes we talked about. We’ll start with the biggest, most colorful one of them all: the big red box in the upper right.</p>
+            <ul>
+                <li>Let’s create another #id for our big red box. This one is a square that takes up the full height of its row. Ours has a width and height of <b>290px</b>.</li>
+
+                <li>Once you’ve done that add a corresponding <b>&lt;div&gt;</b> to your HTML within the <b>#toprow &lt;div&gt;</b> you created in the previous step. Remember this box won’t have any color yet. We’ll show you a trick to color it in on the next step.</li>
+            </ul>
+            <p><i>Our HTML looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id="painting">
+        &lt;div id="toprow">
+            &lt;div id="bigbox">&lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/body>
+                </div>
+            </div>
+            <p><i>The CSS addition looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#bigbox {
+    width: 290px;
+    height: 290px;
+}
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 5: Add some color and some class</h2>
+            <p><img src="assets/images/step_05.jpg"/></p>
+            <p>Now let’s give that box some color! Now you’re probably thinking we could just add a <b>background-color</b> attribute to the <b>#bigbox</b> id we already created, and you would be correct! That would get the job done pretty well. But remember we want to give multiple boxes the same color later in the project. For that a CSS <b>.class</b> will be a better choice.</p>
+
+            <p>Classes are similar to the #id styles we’ve been working with except the same class can be used to style multiple elements, including DIVs that already have #ids in our layout. That will make more sense in just a bit. Let’s make that .class first.</p>
+            <ul>
+                <li>In your CSS tab start a new line.</li>
+
+                <li>Begin writing your first color class. It looks exactly the same as the other styles we’ve typed up so far except instead of <b>“#”</b> in front of the selector we put a <b>“.”</b> (period). We are only defining color with these classes so the only attribute needs to be background-color. Try just “red” as the background-color.</li>
+            </ul>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.red {
+    background-color: red;   
+}
+                </div>
+            </div>
+            <p>If you’d prefer more control and variation in color you can use a hex value.</p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.red {
+    background-color: #cc3333;   
+}
+                </div>
+            </div>
+            
+            <p>To apply the <b>.red</b> class to our <b>#bigbox</b> DIV, simply add the text <b>class="red"</b> to its tag in HTML.</p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id="painting">
+        &lt;div id="toprow">
+            &lt;div id="bigbox" class="red">&lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/body>
+                </div>
+            </div>
+
+            <ul>
+                <li>Now that you know how .class works, go ahead and make classes for the other colors in this painting: .blue, .yellow, and .black. You can make additional color classes as well.</li>
+            </ul>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.red {
+    background-color: red;   
+}
+.blue {
+    background-color: blue; 
+}
+.yellow {
+    background-color: yellow;   
+}
+.black {
+    background-color: black;   
+}
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 6: Float it right</h2>
+            <p><img src="assets/images/step_06.jpg"/></p>
+            <p>You probably noticed the big red box is on the wrong side. These things happen. Web elements will default to the upper left if they aren’t assigned any other positioning. Let’s move this box to the place its supposed to go.</p>
+
+            <p>There are many different ways of positioning an element the but method we will be using is called <b>float</b>. It makes things move (or float) either <b>right</b> or <b>left</b> until they bump into something. Normally a DIV will position itself underneath the previous element, but when DIVs are <b>"floated"</b>, they can align side-by-side until there is no more space and they are forced to wrap.</p>
+            <ul>
+                <li>Let's make a class called <b>.right</b> and use it to float the <b>bigbox</b> DIV to the right:</li>
+            </ul>
+            <p><i>Here's the relevant CSS:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.right {
+    float: right;
+}
+                </div>
+            </div>
+            <p><i>And here's what changed in the HTML:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;div id="bigbox" class="red right">&lt;/div>
+                </div>
+            </div>
+            <p>Note that an element can only have a single <b>#id</b>, but it can have more than one <b>.class</b>.</p>
+            <p>Floated elements will stack up against each other. This means if we give all the boxes in our rows the .right .class they will float up next to each other and form a nice horizontal row. That’s what we want for the next step.</p>
+        </div>
+
+        <div class="step">
+            <h2>Step 7: Add a divider</h2>
+            <p><img src="assets/images/step_07.jpg"/></p>
+            <p>Now let’s add one of those black bars. We’ll add them the same way we added the big red box. Make a new #id for the top divider and assign a color and position class to it in the HTML. our divider is 10px wide and 290px tall.</p>
+            <p><i>Our CSS code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#divider1 {
+    height: 290px;
+    width: 10px;
+}
+                </div>
+            </div>
+            <p><i>And our HTML:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id="painting">
+        &lt;div id="toprow">
+            &lt;div id="bigbox" class="red right">&lt;/div>
+            &lt;div id="divider1" class="black right">&lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/body>
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 8: Make a column</h2>
+            <p><img src="assets/images/step_08.jpg"/></p>
+            <p>Now let’s make a column, called <b>#topleftcolumn</b>. We will be putting three boxes in it, two with the <b>.mediumbox</b> class, and a horizontal <b>#divider2</b> in between.<p>
+            <p><b>#topleftcolumn</b> won't be visible, but it helps position and stack those three boxes vertically within that last bit of the row.</p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id="painting">
+        &lt;div id="toprow">
+            &lt;div id="bigbox" class="red right">&lt;/div>
+            &lt;div id="divider1" class="black right">&lt;/div>
+            &lt;div id="topleftcolumn" class= "right">
+                &lt;div class="mediumbox">&lt;/div>
+                &lt;div id="divider2" class= "black">&lt;/div>
+                &lt;div class="mediumbox">&lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/body>
+                </div>
+            </div>
+
+            <p><i>Our CSS additions look like:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.mediumbox {
+    width: 100px;
+    height: 140px;
+}
+
+#divider2 {
+    height: 10px;
+    width: 100px;
+}
+                </div>
+            </div>
+            <p>Since the two boxes are the exact same size we can use one <b>.class</b> for both of them instead of using a unique <b>#id</b>.</p>
+        </div>
+        <div class="step">
+            <h2>Step 9: Do the middle row divider</h2>
+            <p><img src="assets/images/step_09.jpg"/></p>
+            <p>This is just another black divider, but it's not inside <b>#toprow</b>.</p>
+            <p><i>Here's the HTML markup. Can you figure out the CSS?</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id="painting">
+        &lt;div id="toprow">
+            &lt;div id="bigbox" class="red right">&lt;/div>
+            &lt;div id="divider1" class="black right">&lt;/div>
+            &lt;div id="topleftcolumn" class= "right">
+                &lt;div class="mediumbox">&lt;/div>
+                &lt;div id="divider2" class= "black">&lt;/div>
+                &lt;div class="mediumbox">&lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div id="middlerow">&lt;/div>
+    &lt;/div>
+&lt;/body>
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 10: Fill out the bottom row</h2>
+            <p><img src="assets/images/step_10.jpg"/></p>
+            <p>Now you’re ready to do the last row your self. You have all the pieces and knowledge at your disposal. The process is the same as the top row we just completed just with different sizes and colors. Keep an eye on those little boxes at the right. They’ll need their own column.</p>
+        </div>
+        <div class="step">
+            <h2>Step 11: Mess around with it</h2>
+            <p><img src="assets/images/step_11.jpg"/></p>
+            <p>You’re done! Doesn’t it look great? Actually, maybe it doesn’t look that great. Maybe you want to make it wilder, add more colors or change the ones that are already there. Good thing that’s easy to do. Go back into the CSS tab and start changing the values of the color classes we made. If you’re feeling really crazy, maybe change some box sizes or add new ones. See if you can make it a whole new painting.</p>
+        </div>
+    </div>
+
+
+
+    <div class="section">
+        <h2>Bonus Rounds</h2>
+        <p>Congrats on the finished piece. If you’re interested in taking your new found Modern art skills to the next level try some of the exercises below.</p>
+        <div class="projectlink">
+            <img src="assets/images/100_percent.jpg" />
+            <div class="details">
+                <h3>Give it 100% <span class="difficulty">Easy</span></h3>
+                <p>So far we’ve been dealing with pixel dimensions on everything. What happens if we change <b>height</b> and <b>width</b> to percents? Can you create a Mondrian-style image that fills the entire browser and scales to any dimension the window takes?</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/master_forger.jpg" />
+            <div class="details">
+                <h3>Master Forger <span class="difficulty">Hard</span></h3>
+                <p>Still digging on Mondrian? Why not try to recreate one of his most famous paintings, Broadway Boogie Woogie right next to the painting we just made? Get ready. It’s got a lot of squares.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section projects last">
+        <h2>Coder Projects to Try Next</h2>
+        <p>Like drawing with code? There’s more than just CSS/HTML and static blocks. Try these other coder projects to make more cool things and learn more useful stuff.</p>
+
+        <!-- Starting Coder -->
+        <div class="project left">
+            <span class="projectid">&lt;project_00&gt;</span>
+            <img class="feature" src="../example_project/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Starting Coder</h3>
+                <p>You've just opened the box. Inside is a new Coder device! Learn how to connect to it and program it from your computer's web browser.</p>
+                <a href="../example_project/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">First-timer</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+        <!-- Dear Diary -->
+        <div class="project right">
+            <span class="projectid">&lt;project_01&gt;</span>
+            <img class="feature" src="../example_project/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Dear Diary</h3>
+                <p>Pour your heart out, speak your mind, and look great doing it with this project. Learn to style text, place images, and create a simple web page design that’s uniquely you.</p>
+                <a href="../example_project/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Beginner</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+
+        <div class="clear"></div>
+    </div> <!-- end next projects -->
+    <div class="footer">
+        <div class="madewith bottom"></div>
+        <div class="links">
+            <a href="http://www.google.com/intl/en/policies/" class="trackout">Privacy and Terms</a>
+            <div class="plusholder">
+                <div class="g-plusone"></div>
+            </div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+    </div>
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41998892-1', 'googlecreativelab.github.io');
+  ga('send', 'pageview');
+
+  $(document).ready( function() {
+    $('a.trackdl').click(function() {
+      var version = $(this).attr('data-version');      
+      ga('send', 'event', 'download', 'click', version ); 
+    });
+    $('a.trackout').click(function() {
+      var destination = $(this).attr('href');      
+      ga('send', 'event', 'outbound', 'click', destination ); 
+    });
+  });
+</script>
+-->
+</body>
+</html>
