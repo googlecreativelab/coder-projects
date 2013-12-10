@@ -4,10 +4,10 @@
     <title>Project Title | Coder Projects</title>
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-    <link href="../../shared_assets/css/project.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="../../shared_assets/js/jquery.min.js"></script>
     <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script src="assets/js/project.js"></script>
+    <script src="../../shared_assets/js/project.js"></script>
     <meta itemprop="name" content="Project Title | Coder Projects">
     <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
     <meta itemprop="image" content="http://googlecreativelab.github.io/coder/assets/images/introvideo_cropped_640.jpg">
@@ -70,17 +70,24 @@
                 <li>Set the body and html styles to have a drywall-like color background #f6f6f6 (just like a gallery) and fill 100% of the screen.</li>
             </ul>
             <p><i>HINT: If you’re a little rusty on proper CSS style syntax you can copy and paste the code below and fill it in with the the attributes mentioned above.</i></p>
-            <div class="codeview" data-type="css">
-selector1, selector2 {
-    background-color: #VALUE
-    height: PERCENT%;
-    width: PERCENT%;
-}
+            <div class="codeview">
+                <div class="data" data-type="css">
+#canvas {
+    background-color: #fff4db;
+    width: 750px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 1px #8d8d8d;
+}                    
+                </div>
             </div>
-            <div class="codeview" data-type="html">
+            <div class="codeview">
+                <div class="data" data-type="html">
 &lt;div>
     this is some sample html &amp;lt;
-&lt/div>            
+&lt/div>
+                </div>
             </div>
         </div>
     </div>

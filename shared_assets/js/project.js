@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('.codeview').each( function() {
+    $('.codeview .data').each( function() {
         var $this = $(this);
         var content = $this.text();
         content = content.replace(/^\n/, "");
