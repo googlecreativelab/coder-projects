@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product">
+<head> 
+    <title>Comic Creator | Coder Projects</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../shared_assets/js/jquery.min.js"></script>
+    <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../shared_assets/js/project.js"></script>
+    <meta itemprop="name" content="Comic Creator | Coder Projects">
+    <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
+    <meta itemprop="image" content="http://googlecreativelab.github.io/coder/assets/images/introvideo_cropped_640.jpg">
+</head>
+<body>
+    <div id="project_nav">
+        <div class="project_home"><a href="../../">Coder</a></div>
+        <div class="project_info">&lt;project&gt; steps(10)</div>
+        <h1>Comic Creator</h1>
+    </div>
+    <div class="section intro">
+        <img class="feature" src="assets/images/feature_full.jpg" />
+    </div>
+    <div class="section description">
+        <div class="details">
+            <h2>Description</h2>
+            <p>Got a story to tell? Have some great text and images you want to put together? This project will give you the pieces to turn them into a webcomic while teaching you some new skills along the way.</p>
+            <p class="whofor"><strong>A great project for:</strong>
+            Comic fans, writers, anyone that wants to use images and text in fun ways online.
+            </p>
+        </div>
+        <div class="meta">
+            <div class="difficulty">Medium</div>
+            <p><span class="name">Skills Needed:</span>
+                Basic HTML, Basic CSS.
+            </p>
+            <p><span class="name">Skills Learned:</span>
+                Intermediate CSS, Image Placement, Basic Positioning, Z-Index,  Borders, Margins, Padding, Fonts. 
+            </p>
+            <p><span class="name">Submitted By:</span>
+                Coder Team
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section">
+        <h2>A quick prologue…</h2>
+        <p>Before we start building our comic it may be helpful to review some previous coder projects, especially if you’re not familiar with CSS and HTML. If you are cool with the code but not sure what you want to say you can download the images we used in our example.</p>
+        <div class="projectlink">
+            <img src="../perfect_recipe/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../perfect_recipe/">Previous Project: The Perfect Recipe</a></h3>
+                <p>This project introduces the concept of <b>&lt;div&gt;</b> elements and CSS classes. Knowing about these will help you complete Comic Creator more easily.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="../mondrian/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../mondrian/">Previous Project: Make Your Own Mondrian</a></h3>
+                <p>This project will help you navigate Coder and introduces some of the fundamentals of HTML and CSS that this project will build on.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/images.jpg" />
+            <div class="details">
+                <h3><a href="">Download: Our “Cool” Image Bundle</a></h3>
+                <p>If you don’t have your own images or don’t know what kind of comic you want to create, you can <a href="">download these 5 images</a> and follow along as we make our comic below. All the images are from the Smithsonian Institute's collection.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section steps">
+
+        <div class="step">
+            <h2>Ready to think inside the box? Install the template</h2>
+            <p>Alright, let’s start building our comic. This project is a little different than some of the other Coder projects. We won’t be starting from scratch. We’ve put together a kit with all the parts you need to make your own comic - all you need to do is add the words and pictures. We’ll walk you through how each piece works, introducing some new concepts along the way. </p>
+            <p>The first thing you need to do is download and install the Comic Template app onto your Coder. Installing an app on Coder as simple as creating a new one.</p>
+            <ul>
+                <li>Download the <i>comic_template.zip</i> onto your computer or desktop. If you missed the link at the top of the page you can also download it <a href="">here.</a></li>
+                <li>Click the box with the “+” on your Coder dashboard to start a new app.</li>
+                <li>Instead of titling your app or picking a color, click the arrow button in the lower-left corner of the box.</li>
+                <li>Find and select the <i>“comic_template.zip”</i> files that you just downloaded.</li>
+                <li>The new app should open up on Coder as well as appear on your dashboard and you’re ready to go!</li>
+            </ul>          
+        </div>
+
+        <div class="step">
+            <h2>Step 1: Take a look around</h2>
+            <br>
+            <img src="assets/images/step_01.jpg" />
+            <p>Now that you have the Comic Template app installed let’s look around (but don’t mess with anything just yet!)</p>
+            <ul>
+                <li>Let’s start with the preview. Click the eye symbol or the project name. Let’s start with the preview. Click the eye symbol or the project name. </li>
+                <li> Go to the HTML tab.</li>
+                <li>Notice how each panel that we saw in the preview has its own <b>&lt;div&gt;</b>.</li>
+                <li>Notice also that the panel <b>&lt;div&gt;</b> have three other elements inside it: two <b>&lt;divs&gt;</b> with the text we saw, and an <b>IMG</b> tag.</li>
+                <li>Now go to the CSS tab. Let’s look at some of the styles this kit uses.</li>
+                <li>Notice that we’ve set up a unique #id for each panel and given them a bunch of properties. Some of them should be familiar, like <b>width</b>, <b>height</b>, and <b>background-color</b>. Others will seem new like <b>overflow-hidden;</b>,  <b>position: relative;</b> and <b>border</b>.</li>
+                <li>Go down to the bottom of the CSS code. You’ll notice that we’ve set up some classes for our text styles with familiar properties like <b>font-family</b> and <b>color</b>. You might also notice there are some new properties here too like <b>margin</b> and <b>padding</b>.</li>
+                <li>Near the very bottom you see some classes that seem to be all about positioning. They have names like <b>.right</b>, <b>.left</b>, <b>.top</b>, and <b>.bottom</b>. You’ll also notice at the very bottom are three classes called <b>.inback</b>, <b>.inmiddle</b>, <b>.infront.</b></li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Step 2: A quick tour of our panel</h2>
+            <br>
+            <img src="assets/images/step_02.jpg" />
+            <p>Now that we’ve seen the app. Let’s look at our panels and see how we can modify them. </p>
+            <strong>Messing with the border.</strong><br>
+            <ul>
+                <li>Go to you CSS and find the <b>#id</b> for the top panel, it’s called <b>#panel1</b>.</li>
+                <li>Find the <b>border</b> property. </li>
+            </ul>
+            
+            <p><i>It should look like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+border:10px solid #2b2b2b;                    
+                </div>
+            </div>
+            <p>This is adding a 10 pixel dark grey solid border around our <b>#panel1 &lt;div&gt;</b> giving this panel, and our other panels, that classic comic feel. You’ll also notice that we’ve defined a <b>height</b> of <b>280px</b> and <b>width</b> of <b>780px</b> for our panel.</p>
+            <ul>
+                <li>Change the border to <b>50px</b> and make it <b>red</b> and see what happens.</li>
+                <li>Did you see how the whole box got bigger? That’s because properties like <b>border</b>, <b>margin</b>, and <b>padding</b> can add to the overall <b>height</b> and <b>width</b> of an object. When we changed the border to be <b>50px</b> thick, we added <b>80px</b> to the <b>height</b> and <b>width</b>.</li>
+                <li>Change the border <b>width</b> back to <b>10px</b> but feel free to change its color to whatever you want. Maybe even give different panels different colors.</li>
+            </ul>
+            <br>
+            <strong>Understanding overflow.</strong><br>
+            <p>Next let’s see what <b>overflow:hidden</b> is doing.</p>
+            <ul>
+                <li>Delete the <b>overflow:hidden</b> line of code from #panel1 and take a look at your preview.</li>
+                <li>See how the image in side the <b>&lt;div&gt;</b> is now popping out over the other panels on the page?</li>
+            </ul>
+            <p>This will be useful for making our comics. I allows us to use images of various sizes and dimensions in our preset panels.</p> 
+        </div>
+
+        <div class="step">
+            <h2>Step 3: Add a new picture</h2>
+            <br>
+            <img src="assets/images/step_03.jpg" />
+            <p>Alright, let’s start adding our own images and text and making our comic. For these next steps we will be using images and from our “cool” image bundle, showing wintry mix of arctic and antarctic exploration photos from the Smithsonian Institution’s archive. We will be making up a story to go with along with them. If you want to, you can copy what we’re doing. If you have a different story or images of your own, feel free to use those.</p>
+            <ul>
+                <li>Let’s start by getting rid of that placeholder in the top panel and substituting our scene-setting, landscape photograph.</li>
+                <li>Open the media drawer of Coder and add a new file. We’re uploading the <b>landscape.jpg</b> image.</li>
+                <li>Go to the HTML tab and swap out the <b>img src</b>, pasting the new <b>landscape.jpg</b> path in its place in between the ‘’ marks.</li>
+            </ul>
+            
+            <p><i>Our IMG tag looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;img src= "/static/apps/comic_complete/media/running.jpg" id="image3" class ="inback">                   
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Step 4: Position the picture in the panel</h2>
+            <br>
+            <img src="assets/images/step_04.jpg" />
+            <p>Now we’ve placed our picture but it doesn’t look quite right. The image we’ve put in there is bigger than the panel and the part we want to see isn’t showing up. Let’s scale it down and move it around to make it fit.</p>
+            <ul>
+                <li>Go back to the CSS tab and find the <b>image1 #id</b>. We will use this to help position and size this image.</li>
+            </ul>
+            
+            <p><i>It looks like this right now:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#image1 {
+    position: absolute;
+}                   
+                </div>
+            </div>
+
+            <p>If you look at the <b>#panel1</b> id you’ll see that it has the <b>position: relative;</b> property. These two things are part of the same system of CSS positioning.</p>
+            <p>CSS positioning properties help you place elements more precisely in relationship to one another then they would normally layout. Under normal circumstances HTML elements are positioned <b>static</b> which means they’re positioned according to the normal flow of the page.</p>
+            <p>Objects that are positioned <b>absolute</b> can be moved and placed relative to their first parent element (as long as that position is anything other than <b>static</b>, hence the need to apply it to our panel). So by applying a <b>position: absolute</b> property to our picture we can push it around, inside or panel. Let’s do that.</p>
+            <p>The first thing we need to do is just make the image smaller. The image we’ve added is pretty wide and we want it to fill the full width of the panel.</p>
+            <ul>
+                <li>Add a new <b>width</b> property to the <b>#id</b>.  Set it to <b>100%</b>. See how the width of the image now matches the width of the panel? You can also try using <b>height:100%</b>; or different percentages to help certain pictures fit better. Be careful about using <b>height</b> and <b>width</b> at the same time, though. It can stretch or bunch up your picture distorting it.</li>
+            </ul>
+            <p>Now lets shift that image up a little bit. To do that we will give it a new positioning property and tell it how many pixels to move.</p>
+            <ul>
+                <li>Add a new <b>bottom</b> property and add a negative pixel dimension to push it up. This will push the image up by making the bottom edge of the image rest at a certain point outside our panel. To scoot our image where we want it we used  <b>-110px</b>.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#image1 {
+    position: absolute;
+    width: 100%;
+    bottom: -110px;
+}                  
+                </div>
+            </div>
+            <p>And that’s how we can position images within our panels no matter their original size or shape.</p>
+            <p>You can use the properties <b>bottom</b>, <b>left</b>, <b>right</b>, and <b>top</b> with pixel dimensions to move your images around.</p>
+        </div>
+        <div class="step">
+            <h2>Step 5: Write new text</h2>
+            <br>
+            <img src="assets/images/step_05.jpg" />
+            <p>Now that we’ve got a new picture let’s start writing our story.</p>
+            <p>Our template includes two different classes for comic text. One is designed with narration and scene setting in mind. The other is better for dialogue and sound effects.</p>
+            <ul>
+            	<li>Back in the HTML tab find the <b>&lt;div></b> tags for our narration and big text.</li>
+            	<li>Add some new words!</li>
+            	<li>You may want to make a line break in your text. To do that you can add a <b>&lt;br></b> tag.</li>
+            </ul>
+        </div>
+         <div class="step">
+            <h2>Step 6: Padding and positioning your text</h2>
+            <br>
+            <img src="assets/images/step_06.jpg" />
+            <p>Alright so you’ve written the text for the first panel of your comic. Maybe you don’t like how the text boxes look or where the text is positioned? Maybe it’s blocking someone’s face? Let’s change that.</p>
+            <p><b>Padding and Margin</b><br />
+            <p>Let’s start with messing around with the <b>.narration</b> class’s <b>margin</b> and <b>padding</b>. These are the properties that keep our text from touching the edge of the panel and the edge of the box they are in. </p>
+            <ul>
+            	<li>Find the <b>.narration</b> class in the CSS.</li>
+            	<li>Find the <b>padding</b> property.</li>
+            </ul>	
+            <p><i>It should look like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+padding: 15px;
+                </div>
+            </div>
+            <p>Change it to something bigger, like <b>40px</b>.</p>
+            <p>See the way the overall box gets bigger? That’s because we’ve increased the distance between the text and the inside edge of the box.</p>
+            <p>Now find the margin property.</p>
+            <p><i>It should look like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+margin: 20px;
+                </div>
+            </div>
+            <ul>
+            	<li>Change it to <b>40px</b> and see what happens.</li>
+            	<li>See how it pushes further away from the edge of the panel?</li>
+            	<li>When your done, change everything back to its padding and margin.</li>
+            </ul>
+            <p>You can use these properties to change the text boxes if you don’t like the ones we’ve made.</p>
+            <p><b>left, right, top, and bottom</b><br />
+            <p>Now that we’ve played around with <b>margin</b> and <b>padding</b> let’s explore how to change the place on the panel the text actually appears.</p>
+            <ul>
+            	<li>Go back to the HTML tab for a second.</li>
+            	<li>Take a look at the <b>&lt;div></b> for narration in the first panel. Notice that next to the “narration” class there are two other classes <b>“top”</b> and <b>“right”</b></li>
+            	<li>Change <b>“right”</b> to <b>“left”</b> and see what happens. See how the narration box is now in the top left of the panel?</li>
+            </ul>
+            <p>The Comic Creator template has four classes to help us position the text boxes quickly. They use the same absolute positioning principle that we used on our image.</p>
+            <p>Try using them to move your text into different corners of the panel. Find a placement that works for your image.</p>
+        </div>
+        <div class="step">
+            <h2>Step 7: Continue the the story on the next row</h2>
+            <br>
+            <img src="assets/images/step_07.jpg" />
+            <p>Alright let’s do the next panels! This is shaping up to be an interesting adventure.</p>
+            <ul>
+            	<li>n the HTML tab, find the next two panels.</li>
+            	<li>Add new text and images.</li>
+            	<li>Use the positioning and width or height to adjust the image.</li>
+            	<li>Use the positioning classes to place the text.</li>
+            </ul>
+        </div>
+        <div class="step">
+            <h2>Step 8: Stacking stuff</h2>
+            <br>
+            <img src="assets/images/step_08.jpg" />
+            <p>On our third panel we ran into a bit of a problem. We made a bunch of dialogue text and now its overlapping our narration text. It’d be nice if the dialogue was under the narration. Let’s change that.</p>
+            <p>Look at the very bottom of the CSS tab. Remember those classes called <b>.inback</b>, <b>.inmiddle</b>, <b>.infront</b>? We’re using them in our HTML. Let’s look at them in CSS.</p>
+        	<p>
+        	p><i>It should look like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.inback {
+    z-index: 1;
+}
+
+.inmiddle {
+    z-index: 2;
+}
+
+.infront{
+    z-index: 3;
+}
+
+                </div>
+            </div>
+            <p>The z-index property determines how objects that are positioned (like the one’s we’re using) will stack on top of one another. Here, we’ve created three options and assigned a number to each, 1 being closest to the back and 3 being in the front.</p>
+            <p>Let’s go back to the HTML and give the dialogue in that panel the <b>.inmiddle</b> class to set it behind our narration.</p>
+        </div>
+        <div class="step">
+            <h2>Step 9: Finishing your comic</h2>
+            <br>
+            <img src="assets/images/step_09.jpg" />
+            <p>Now tell the rest of the story. Position and tweak the remaining images and text blocks to wrap-up your comic adventure.</p>
+        </div>
+        <div class="step">
+            <h2>Step 10: Sign it off</h2>
+            <br>
+            <img src="assets/images/feature_full.jpg" />
+            <p>The last step is to give your comic a title and give some credit to yourself, and anyone else that helped contribute to your story. That’s it! Nice work. How did it turn out? Is it as “cool” as ours?</p>
+        </div>
+
+    <!-- Section Steps closing div -->
+    </div>
+
+    <div class="section">
+        <h2>Bonus Rounds</h2>
+        <p>Five panels doesn’t leave a lot of room for a good story, does it? Now that you’ve started your comic, see if you can’t make it a little more interesting.</p>
+        <div class="projectlink">
+            <img src="assets/images/epic.jpg" />
+            <div class="details">
+                <h3>Epic tale <span class="difficulty">Easy</span></h3>
+                <p>We made one page, why not make a whole book! Try adding more frames and/or widening the page to tell and even bigger story.</i></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/speech.jpg" />
+            <div class="details">
+                <h3>More voices <span class="difficulty">Medium</span></h3>
+                <p>There are way more ways to talk than just narration and big white letters. Try creating new speech and text styles knowing what you do about CSS styles so far. </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/interactive.jpg" />
+            <div class="details">
+                <h3>Interactive storytelling <span class="difficulty">Hard</span></h3>
+                <p>Reading is fun but clicking is exciting. See if you can make some of the panels interactive. Try using the <b>:hover</b> or jQuery and commands from the Night &amp; Day exercise to make make panels, text, and images react to your mouse.</i></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section projects last">
+        <h2>Coder Projects to Try Next</h2>
+        <p>Did you enjoy making a comic with code? Try some of these other projects to and learn to make interactive things.</p>
+
+        <!-- Starting Project -->
+        <div class="project left">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../digital_clock/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Digital Clock</h3>
+                <p>What time is it? You’ll finally be able to answer that question after you’ve built this simple clock.</p>
+                <a href="../digital_clock/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+        <!-- Dear project -->
+        <div class="project right">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../night_and_day/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Night and Day</h3>
+                <p>Ever wish you could control the universe? Well now you can pretend with this project. Change day into night and back again with the click of a mouse and learn a whole new programming language along the way.</p>
+                <a href="../night_and_day/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+
+        <div class="clear"></div>
+    </div> <!-- end next projects -->
+    <div class="footer">
+        <div class="madewith bottom"></div>
+        <div class="links">
+            <a href="http://www.google.com/intl/en/policies/" class="trackout">Privacy and Terms</a>
+            <div class="plusholder">
+                <div class="g-plusone"></div>
+            </div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+    </div>
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41998892-1', 'googlecreativelab.github.io');
+  ga('send', 'pageview');
+
+  $(document).ready( function() {
+    $('a.trackdl').click(function() {
+      var version = $(this).attr('data-version');      
+      ga('send', 'event', 'download', 'click', version ); 
+    });
+    $('a.trackout').click(function() {
+      var destination = $(this).attr('href');      
+      ga('send', 'event', 'outbound', 'click', destination ); 
+    });
+  });
+</script>
+-->
+</body>
+</html>

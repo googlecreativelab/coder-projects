@@ -15,7 +15,7 @@
 <body>
     <div id="project_nav">
         <div class="project_home"><a href="../../">Coder</a></div>
-        <div class="project_info">Coder &lt;project&gt; steps(09)</div>
+        <div class="project_info">&lt;project&gt; steps(09)</div>
         <h1>Digital Clock</h1>
     </div>
     <div class="section intro">
@@ -70,20 +70,24 @@
             <p>Let’s start in the JS tab.</p>
             <ul>
                 <li>Let’s start a new function that will do all the work calculating and showing our time.  We will be writing most of our code in this function.</li>
-                <li>Inside the $(document).ready function write a new function and give it a name that makes sense to you. Since this function will ultimately display the time on our page we named ours displayTime.</li>
+                <li>Inside the $(document).ready function, create a new function and give it a name that makes sense to you. Since this function will ultimately display the time on our page, we named ours displayTime.</li>
             </ul>
             <p><i>Our code looks like this:</i></p>
             <div class="codeview">
                 <div class="data" data-type="javascript">
-function displayTime() {
+$(document).ready = function() {
 
-}
+    function displayTime() {
+
+    }
+
+});
                 </div>
             </div>
              <ul>
                 <li>Now that we have our function ready to go let’s make it do some work.</li>
-                <li> Let’s start by writing a new <b>variable</b>. Variables are like containers in Javascript, they can store information that can later be used in calculations and displays. We’re going to write a variable that will call up and store the current time.</li>
-            	<li>To create a variable write var and then a name describing what the variable will hold. Ours is going to hold the current time so we named it <b>currentTime</b>. After the name an <b>“=”</b> this is like saying “is the same as” and anything we put after that <b>“=”</b> will fill up our <b>currentTime</b> variable.</li>
+                <li> Let’s start by defining a new <b>variable</b>. Variables are like containers in Javascript. They can store information that can later be used in calculations and displays. We’re going to make a variable that will store the current time.</li>
+                <li>To create a variable write var and then a name describing what the variable will hold. Ours is going to hold the current time so we named it <b>currentTime</b>. After the variable name, an equal sign (<b>=</b>) is used to set the value of the variable and anything we put after that <b>“=”</b> will fill up our <b>currentTime</b> variable.</li>
             </ul>
             <p><i>Our code looks like this:</i></p>
             <div class="codeview">
@@ -95,7 +99,7 @@ function displayTime() {
                 </div>
             </div>
             <p>Now comes the cool part. We’re going to ask the computer the date and it’s going to store the answer in our <b>currentTime</b> variable.</p>
-        	<p>Programming languages, like Javascript, have some basic information at the ready. To do their job they have to know things like how to do math, how long a second is, and what the time is. That knowledge already exists and we can ask for this information directly whenever we need it to do work.</p>
+        	<p>Programming languages, like Javascript, have some basic information at the ready. To do their job they have to know things like how to do math, how long a second is, and what the time is. We can ask the computer for this information whenever we need it and allow it to do the hard work.</p>
        		<p>To get the current date and time we use the <b>Date</b> object. Add <b>new Date();</b> after the <b>“=”</b>.</p>
        		<p><i>Our code looks like this:</i></p>
        		<div class="codeview">
@@ -106,6 +110,7 @@ function displayTime() {
 }
                 </div>
             </div>
+            <p>When you see <b>var currentTime = new Date()</b>, you should think of it as <b>create a variable called currentTime and set its value to a new Date object</b>. 
             <p>What we’ve done is ask the computer to fill our <b>currentTime</b> variable with the date and time as this exact moment, as soon as the function runs. It does that by taking the time from your computer’s own clock so if your computer’s time is wrong the date it stores will be wrong.</p>
         </div>
         <div class="step">
@@ -187,14 +192,14 @@ fullTime.innerHTML = hours + ":" + minutes + ":" + seconds;
                 <div class="data" data-type="javascript">
 $(document).ready( function() {
   function displayTime() {
-    	var currentTime = new Date();
-    	var hours = currentTime.getHours();
-    	var minutes = currentTime.getMinutes();
-    	var seconds = currentTime.getSeconds();
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
     
-   	var fullTime = document.getElementById('clock');
+    var fullTime = document.getElementById('clock');
     
-    	fullTime.innerHTML = hours + ":" + minutes + ":" + seconds;
+    fullTime.innerHTML = hours + ":" + minutes + ":" + seconds;
   }
 
   displayTime();
@@ -215,8 +220,8 @@ $(document).ready( function() {
             <p><i>Our <b>body</b> tag looks like this:</i></p>
             <div class="codeview">
                 <div class="data" data-type="html">
-&lt;/body>
-&lt;div id='clock'> &lt;/div>
+&lt;body>
+    &lt;div id='clock'> &lt;/div>
 &lt;/body>
                 </div>
             </div>
@@ -281,18 +286,24 @@ setInterval(displayTime, 1000);
             </ul>
             <p>For our digital clock to be legit we need all our numbers to be 2 digits all the time. Adding a zero in the front would solve that problem. Let’s write some logic that will fix that.</p>
             <p>Remember how we said the Javascript can do math? It knows the value of numbers as well, and can determine if a number is greater, less than, or equal to another number.</p>
-            <p>Let’s start an <b>if/then</b> statement to add a <b>“0”</b> in front of numbers less than ten. We’ll start with our seconds variable since we can check that in less than a minute.</p>
+            <p>Let’s start an <b>if</b> statement to add a <b>“0”</b> in front of numbers less than ten. We’ll start with our seconds variable since we can check that in less than a minute.</p>
             <p>Within the  <b>displayTime()</b> function braces, just after our <b>hours</b>, <b>minutes</b>, and <b>seconds</b> variables, make a new line.</p>
         	<p><i>Add this line of code:</i></p>
         	<div class="codeview">
                 <div class="data" data-type="javascript">
-if(seconds < 10) {
-            seconds = "0" + seconds;
-        }
+// If the seconds digit is less than ten                    
+if (seconds &lt; 10) {
+    // Add the "0" digit to the front
+    // so 9 becomes "09"
+    seconds = "0" + seconds;
+}
                 </div>
             </div>
-        	<p>Let’s take a minute to look at what that is doing. </p>
-        	<p>It’s looking to see if <b>seconds</b> is less than 10, which would make it single digit. If it is, then it’s changing the contents of the <b>seconds</b> variable by adding the text <b>“0”</b> in front of the value. It’s a little weird to think about, but we just modified the content in a variable after we initially defined the variable. Variable contents can change when we need them to.</p>
+        	<p>Let’s take a minute to look at what that is doing. There are a few things here worth noting.</p>
+            <p>First, we're using an <b>if</b> statement to only do something if <b>seconds</b> is less than the number 10. We want <b>8</b> to become <b>08</b>, but we don't want <b>14</b> to become <b>014</b>.</p>
+            <p>Then, we modify the content of the <b>seconds</b> variable, placing a <b>"0"</b> in front of whatever was previously stored in <b>seconds</b>. You can change the content of a variable even after it's initially defined. That's why we call it a variable&mdash;because its content can vary.</p>
+            <p>Finally, and this is a tricky one, that plus (<b>+</b>) sign isn't <i>adding</i> <b>0</b> to <b>seconds</b>. If it were, basic math would tell us that we'd end up with the same thing. Note that we put quotes around our <b>"0"</b>. Quotes mean text content, which we call a <b>string</b>, and strings work differently than numbers. When you use the plus (<b>+</b>) operator with a string, it combines two strings together, one after the other.
+            If one of the properties is a <b>string</b>, like <b>"0"</b>, and the other is a <b>number</b>, like our <b>seconds</b> variable was, the number will be converted into a string before the two are appended.</p> 
         	<p>Take a look at the preview. You should eventually see it work with a “0” in front of our single digit seconds.</p>
         	<p>Go ahead and do the same thing for <b>hours</b> and <b>minutes</b>.</p>
         </div>
@@ -315,13 +326,17 @@ var meridiem = "AM";
             <p><i>Our code looks like this:</i></p>
         	<div class="codeview">
                 <div class="data" data-type="javascript">
-if(hours === 0) {
-            hours = 12;    
-        } 
-        else if(hours > 12) {
-            hours = hours - 12;
-            meridiem = "PM";
-        }
+// Convert from 24 hour to 12 hour format
+// and keep track of the meridiem.
+if (hours &gt; 12) {
+    hours = hours - 12;
+    meridiem = "PM";
+}
+
+// 0 AM and 0 PM should read as 12
+if (hours === 0) {
+    hours = 12;    
+}
                 </div>
             </div>
             <p>So what’s going on here? Like a lot of Javascript we can describe this in a sentence. It might sound something like this:</p>
@@ -344,7 +359,7 @@ fullTime.innerHTML = hours + ":" + minutes + ":" + seconds + " " + meridiem;
         <div class="projectlink">
             <img src="assets/images/world_clock.jpg" />
             <div class="details">
-                <h3>World clock<span class="difficulty">Easy</span></h3>
+                <h3>World clock <span class="difficulty">Easy</span></h3>
                 <p>What time is it in Tokyo? London? Sydney? Try making a wall of clocks, like a newsroom, that shows the time in different cities around the world. Try creating new functions that add or subtract hours from your current time.</p>
             </div>
             <div class="clear"></div>
@@ -360,7 +375,7 @@ fullTime.innerHTML = hours + ":" + minutes + ":" + seconds + " " + meridiem;
         <div class="projectlink">
             <img src="assets/images/alarm_clock.jpg" />
             <div class="details">
-                <h3>Alarm Clock<span class="difficulty">Hard</span></h3>
+                <h3>Alarm Clock <span class="difficulty">Hard</span></h3>
                 <p>Put your clock to work. See if you can make your clock do something attention getting, like change the background to eye catching color or an animated gif, when a certain time is reached.</p>
             </div>
             <div class="clear"></div>
