@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product">
+<head> 
+    <title>Getting Started | Coder Projects</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../shared_assets/js/jquery.min.js"></script>
+    <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../shared_assets/js/project.js"></script>
+    <meta itemprop="name" content="Getting Started | Coder Projects">
+    <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
+    <meta itemprop="image" content="http://googlecreativelab.github.io/coder/assets/images/introvideo_cropped_640.jpg">
+</head>
+<body>
+    <div id="project_nav">
+        <div class="project_home"><a href="../../">Coder</a></div>
+        <div class="project_info">&lt;project_00&gt; steps(12)</div>
+        <h1>Getting Started With Coder</h1>
+    </div>
+    <div class="section intro">
+        <img class="feature" src="assets/images/feature_full.jpg" />
+    </div>
+    <div class="section description">
+        <div class="details">
+            <h2>Description</h2>
+            <p>You've just opened the box. Inside is a new Coder device! This project will show you how to connect to your Coder and set it up to be programmed right from your computer's web browser.</p>
+            <p class="whofor"><strong>A great project for:</strong>
+                Everyone!
+            </p>
+        </div>
+        <div class="meta">
+            <div class="difficulty">Easy</div>
+            <p><span class="name">Skills Needed:</span>
+                None!
+            </p>
+            <p><span class="name">Skills Learned:</span>
+                Coder Setup, Booting your Device, Connecting to Wireless
+            </p>
+            <p><span class="name">Submitted By:</span>
+                Coder Team
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section">
+        <h2>Stuff You'll Need</h2>
+        <p><img src="assets/images/stuff_you_need.jpg" /></p>
+        <p>Before you get started, you'll need a Raspberry Pi, SD Card, and compatible power supply. If you don't have these already, see our shopping list <a href="http://googlecreativelab.github.io/coder/index.html#shoppinglist" target="_blank">over here</a>. You might also do a search for all-in-one <a href="https://www.google.com/search?q=raspberry+pi+coder+pack" target="_blank">all-in-one Coder Raspberry Pi packs</a>.</p>
+    </div>
+    <div class="section steps">
+        <div class="step">
+            <h2>Step 1: Download the Coder SD image</h2>
+            <p>If you already have a Coder-formatted SD card, skip on ahead to step 3. Otherwise, you can download the latest version from the Coder website. It's a large, 1GB zip file, so be prepared to wait for a bit.</p>
+            <p><a class="button inline" href="http://googlecreativelab.github.io/coder/#download" target="_blank">Download Here</a></p>
+        </div>
+        
+        
+        <div class="step">
+            <h2>Step 2: Format your SD card with the Coder image</h2>
+            <p><img src="assets/images/step_02.jpg" /></p>
+
+            <p>Now that you've downloaded the Coder SD image, we need to transfer that to the SD card you'll be using with Coder. This process will reformat your SD card and transform it into a valid Raspberry Pi boot disk.</p>
+
+            <p><i>Pay close attention here, because the intructions are slightly different depending on what type of computer you have.</i></p>
+
+            <p><b>If you have a Mac:</b></p>
+            <ul>
+                <li>You should have downloaded a zip file named something like <b>coder_v0.4zip</b>. Find it in your downloads folder.</li>
+                <li>Double-click that to unzip your download. It will create a folder called <b>coder_v0.4</b>. Inside are two files: <b>raspi.img</b> and <b>CoderSetup.app</b>.</li>
+                <li>Double-click the <b>CoderSetup.app</b> file. If you get a security error, option-click (or right click) and select <b>Open</b>, then click through the warning to allow the app to run.</li>
+                <li>Follow the instructions carefully. You will start by removing all SD cards from your computer, then you'll insert your Coder SD card for formatting. This process can take a minute or two. <i>Note that you will be asked to enter your password in order to format the SD card.</i></li>
+                <li>When you're all done, remove your new Coder SD card!</li>
+            </ul>
+
+            <p><b>If you have a Windows PC:</b></p>
+            <ul>
+                <li>You should have downloaded a zip file named something like <b>coder_v0.4zip</b>. Find it in your downloads folder.</li>
+                <li>Double-click that to unzip your download. It will create a folder called <b>coder_v0.4</b>. Inside are two files: <b>raspi.img</b> and <b>CoderSetup.app</b>.</li>
+                <li>Download <a href="http://sourceforge.net/projects/win32diskimager" target="_blank">Win32DiskImager</a>. Unzip this file and find the <b>Win32DiskImager</b> utility inside.</li>
+                <li>Insert the SD card into your SD card reader.</li>
+                <li>Run <b>Win32DiskImager</b>. <i>Note: you may need to run the utility as Administrator. Right-click on the file, and select 'Run as Administrator'.</i></li>
+                <li>Select the <b>raspi.img</b> file from your Coder download.</li>
+                <li>Select the drive letter of the SD card in the device box. <b><i>Be careful to select the correct drive; if you get the wrong one you can destroy your data on the computer's hard disk!</i></b></li>
+                <li>Click <b>Write</b>, wait for the write to complete, and then eject your new Coder SD card.</li>
+                <li>To connect to Coder using a Windows PC, you'll also need to install Apple's <b>Bonjour Print Services for Windows</b>. This will allow your web browser to see your Coder device at the <b>http://coder.local/</b> url. Do this before you go any further.<br />
+            <a href="http://support.apple.com/kb/DL999" target="_blank" class="button inline">Get Bonjour for Windows</a></li>
+            </ul>
+
+        </div>
+        
+        <div class="step">
+            <h2>Step 3: Plug it all in</h2>
+            <p><img src="assets/images/step_03.jpg" /></p>
+            <p>Let's put all the components together and boot your new Coder device for the first time.</p>
+
+            <p>First things first, you need to decide if you are connecting over WiFi or a wired Ethernet connection. Ethernet is much easier and more reliable&mdash;if you have it, use it. Wireless also works, but can take a little extra time to configure. If you have trouble, start by configuring things for a wired connection first, and use that connection to set up your device for WiFi.</p>
+
+            <ul>
+                <li>Insert the SD card into the SD slot underneath your Raspberry Pi. It only goes in one way, so if it doesn't fit, try turning it upside down. Don't force it.</li>
+                <li><b>Using Ethernet:</b> Plug in your Ethernet cable and connect your Raspberry Pi to your router or access point.</li>
+                <li><b>Using WiFi: </b> Do not plug in your Ethernet cable. Plug your WiFi adapter into the USB slot on your Raspberry Pi.</li>
+                <li>Finally, plug in the power adapter and connect its USB adapter to your Raspberry Pi. This isn't a real USB connector&mdash;it's just for power. You'll see the lights on your Pi blink while it boots up.</li>
+            </ul>
+
+        </div>
+        
+        <div class="step">
+            <h2>Step 4: Connect using Ethernet</h2>
+            <p><img src="assets/images/step_04.jpg" /></p>
+            <p>Your Coder is booting up. Give it a minute, and you should be able to connect to it from your computer's web browser.</p>
+            <p><b>Note: if youre using WiFi, you may want to connect this way first to configure your device.</b></p>
+        
+            <ul>
+                <li>Be patient. Give your new device a minute or so to boot up.</li>
+                <li>Open your web browser on your Mac or PC.</li>
+                <li>Type in <b>http://coder.local/</b> into the navigation bar.</li>
+                <li>You'll see a security warning, because your Coder device uses a self-signed security certificate. Click to proceed past this to the login screen.</li>
+                <li>Set a good password, then log in.</li>
+            </ul>
+
+        </div>
+
+        <div class="step">
+            <h2>Step 5: Connect using WiFi</h2>
+            <p><img src="assets/images/step_05.jpg" /></p>
+            <p><b>Skip this step if you're using Ethernet.</b></p>
+            <p>The first time you boot Coder using a wireless card, it will create an Ad-hoc device network called <b>CoderConfig</b>. You can connect to this network before your Pi has been configured and use it to set up your device.</p>
+
+            <ul>
+                <li>Be patient. Give your new device a minute or so to boot up.</li>
+                <li>Wait for the <b>CoderConfig</b> ad-hoc (device) network to appear. Connect to that with your computer.</li>
+                <li>On this config network, your Pi will connect to IP address <b>192.168.0.1</b>.</li>
+                <li>Open your web browser on your Mac or PC.</li>
+                <li>Type in <b>http://192.168.0.1/</b> into the navigation bar.</li>
+                <li>You'll see a security warning, because your Coder device uses a self-signed security certificate. Click to proceed past this to the login screen.</li>
+            </ul>
+            <p>Once you've connected you'll see this screen</p>
+            <p><img src="assets/images/step_05_b.jpg" /></p>
+            <ul>
+                <li>Set your password, and then log in.</li>
+            </ul>
+        </div>
+
+
+        <div class="step">
+            <h2>Step 6: Configure your Wifi</h2>
+            <p><img src="assets/images/step_06.jpg" /></p>
+            <p><b>Skip this step if you're using Ethernet.</b></p>
+            <p>Let's set Coder up to connect to your normal WiFi network. Then you'll be able to see your Coder device as well as the normal internet.</p>
+            <ul>
+                <li>After logging in on the config network, you'll arrive at the Coder home screen.</li>
+                <li>Click the gear icon at the top right to open the settings panel.</li>
+                <li>Click on the <b>Wifi Setup</b> button. This will take you to the WiFi configuration tool built into Coder.</li>
+                <li>Select your network from the list. If you don't see your network, select "<b>Rescan for Available Networks</b>". You may need to try this a couple times before your network is discovered.</li>
+                <li>Select your network and carefully type your network's password. <b>Type carefully</b>&mdash;if you type this incorrectly, your device will be unable to connect to the network when it restarts.</li>
+            </ul>
+            <p>When you've completed this, your Coder device will automatically restart and connect to your normal access point. You'll need to connect back to your normal access point to continue.</p>
+            <ul>
+                <li>Switch the wireless connection on your PC or Mac back to your normal access point. This should be the same network you configured your Coder to connect to.</li>
+                <li>Coder will take a minute to reboot. Be patient.</li>
+                <li>Type in <b>http://coder.local/</b> into the navigation bar to reconnect to your device.</li>
+                <li>You'll see a security warning, because your Coder device uses a self-signed security certificate. Click to proceed past this to the login screen.</li>
+                <li>Log in with the password you set earlier.</li>
+            </ul>
+        </div>
+
+
+        <div class="step">
+            <h2>Step 7: Explore</h2>
+            <p><img src="assets/images/step_07.jpg" /></p>
+            <p>Congratulations! Your new Coder is all set up and ready for making cool web things.</p>
+            <p>Take a moment to click around and explore. The <b>Hello Coder</b> app is a good place to start&mdash;it will show you how a basic Coder project is constructed. If you're ready for a break, try clicking on the app called "<b>Space Rocks!</b>" and play a quick game of interstellar survival and defense.</p>
+        </div>
+        
+
+    <div class="section">
+        <h2>Bonus Rounds</h2>
+        <p>If you’re eager to jump into coding, try to do one of the excersises below.</p>
+        <div class="projectlink">
+            <img src="assets/images/hello_coder.jpg" />
+            <div class="details">
+                <h3>Say Hello <span class="difficulty">Easy</span></h3>
+                <p>You may have peeked at the <b>Hello Coder</b> app, but did you find all the secret intructions inside? Try to follow the instructions and learn how you can edit HTML, CSS, and Javascript.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/new_app.jpg" />
+            <div class="details">
+                <h3>Unexplored Territory <span class="difficulty">Medium</span></h3>
+                <p>See that big green plus (<b>+</b>) rectangle? You know you're curious about what's inside. See if you can create your first Coder app. Can you change what it says? Can you find your way back?</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/space_hack.jpg" />
+            <div class="details">
+                <h3>Space Hacker <span class="difficulty">Medium</span></h3>
+                <p>There's some secret code to play with in <b>Space Rocks!</b>, but it's for code hackers only. Inside, you'll be able to change your ship's speed, or even customize the colors of the game to make it your own.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section projects last">
+        <h2>Coder Projects to Try Next</h2>
+        <p>Like drawing with code? There’s more than just CSS/HTML and static blocks. Try these other coder projects to make more cool things and learn more useful stuff.</p>
+
+        <!-- Starting Coder -->
+        <div class="project left">
+            <span class="projectid">&lt;project_00&gt;</span>
+            <img class="feature" src="../example_project/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Starting Coder</h3>
+                <p>You've just opened the box. Inside is a new Coder device! Learn how to connect to it and program it from your computer's web browser.</p>
+                <a href="../example_project/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">First-timer</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+        <!-- Dear Diary -->
+        <div class="project right">
+            <span class="projectid">&lt;project_01&gt;</span>
+            <img class="feature" src="../example_project/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Dear Diary</h3>
+                <p>Pour your heart out, speak your mind, and look great doing it with this project. Learn to style text, place images, and create a simple web page design that’s uniquely you.</p>
+                <a href="../example_project/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Beginner</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+
+        <div class="clear"></div>
+    </div> <!-- end next projects -->
+    <div class="footer">
+        <div class="madewith bottom"></div>
+        <div class="links">
+            <a href="http://www.google.com/intl/en/policies/" class="trackout">Privacy and Terms</a>
+            <div class="plusholder">
+                <div class="g-plusone"></div>
+            </div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+    </div>
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41998892-1', 'googlecreativelab.github.io');
+  ga('send', 'pageview');
+
+  $(document).ready( function() {
+    $('a.trackdl').click(function() {
+      var version = $(this).attr('data-version');      
+      ga('send', 'event', 'download', 'click', version ); 
+    });
+    $('a.trackout').click(function() {
+      var destination = $(this).attr('href');      
+      ga('send', 'event', 'outbound', 'click', destination ); 
+    });
+  });
+</script>
+-->
+</body>
+</html>
