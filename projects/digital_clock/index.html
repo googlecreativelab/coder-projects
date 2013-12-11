@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product">
+<head> 
+    <title>Digital Clock | Coder Projects</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../shared_assets/js/jquery.min.js"></script>
+    <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../shared_assets/js/project.js"></script>
+    <meta itemprop="name" content="Project Title | Coder Projects">
+    <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
+    <meta itemprop="image" content="http://googlecreativelab.github.io/coder/assets/images/introvideo_cropped_640.jpg">
+</head>
+<body>
+    <div id="project_nav">
+        <div class="project_home"><a href="/">Coder</a></div>
+        <div class="project_info">Coder &lt;project&gt; steps(09)</div>
+        <h1>Digital Clock</h1>
+    </div>
+    <div class="section intro">
+        <img class="feature" src="assets/images/feature_full.jpg" />
+    </div>
+    <div class="section description">
+        <div class="details">
+            <h2>Description</h2>
+            <p>What time is it? You’ll finally be able to answer that question after you’ve built this simple clock.</p>
+            <p class="whofor"><strong>A great project for:</strong>
+            Punctual people, chronically-late people, or anyone that wants to turn their browser into a clock.
+            </p>
+        </div>
+        <div class="meta">
+            <div class="difficulty">Medium</div>
+            <p><span class="name">Skills Needed:</span>
+                Introduction to Javascript, Basic HTML, Basic CSS
+            </p>
+            <p><span class="name">Skills Learned:</span>
+                Basic Javascript, Variables 
+            </p>
+            <p><span class="name">Submitted By:</span>
+                Coder Team
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section">
+        <h2>Have you put in the time?</h2>
+        <p>Making a clock might seem like a simple project but it requires a little Javascript programming knowledge. If you’ve never ventured into the JS tab on Coder you might want to start with a previous project.</p>
+        <div class="projectlink">
+            <img src="../night_and_day/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="">Coder Project: Night & Day</a></h3>
+                <p>This project will introduce you to Javascript, the JS tab and how to make your computer do some of the thinking for you.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section steps">
+        <div class="step">
+            <h2>Time to start!</h2>
+            <p>Are you ready? Great. Create a new app. Call it whatever you want. We’ve called ours “Digital Clock”</p>
+        </div>
+        <div class="step">
+            <h2>Step 1: Thinking time…</h2>
+            <p><img src="assets/images/step_01_diagram.jpg"/></p>
+            <p>Before we start writing any code, let’s think a little about the parts of a digital clock that we want to display. Time is generally broken up into three units: hours, minutes, and seconds. 12-hour clocks also separate a day into two parts: AM (which stands for ante-meridiem) and PM (post-meridiem). It seems pretty basic but understanding these units will give us the vocabulary we need to write our code.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Asking for the Date()</h2>
+            <p>Let’s start in the JS tab.</p>
+            <ul>
+                <li>Let’s start a new function that will do all the work calculating and showing our time.  We will be writing most of our code in this function.</li>
+                <li>Inside the $(document).ready function write a new function and give it a name that makes sense to you. Since this function will ultimately display the time on our page we named ours displayTime.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+function displayTime() {
+
+}
+                </div>
+            </div>
+             <ul>
+                <li>Now that we have our function ready to go let’s make it do some work.</li>
+                <li> Let’s start by writing a new <b>variable</b>. Variables are like containers in Javascript, they can store information that can later be used in calculations and displays. We’re going to write a variable that will call up and store the current time.</li>
+            	<li>To create a variable write var and then a name describing what the variable will hold. Ours is going to hold the current time so we named it <b>currentTime</b>. After the name an <b>“=”</b> this is like saying “is the same as” and anything we put after that <b>“=”</b> will fill up our <b>currentTime</b> variable.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+function displayTime() {
+	var currentTime =
+
+}
+                </div>
+            </div>
+            <p>Now comes the cool part. We’re going to ask the computer the date and it’s going to store the answer in our <b>currentTime</b> variable.</p>
+        	<p>Programming languages, like Javascript, have some basic information at the ready. To do their job they have to know things like how to do math, how long a second is, and what the time is. That knowledge already exists and we can ask for this information directly whenever we need it to do work.</p>
+       		<p>To get the current date and time we use the <b>Date</b> object. Add <b>new Date();</b> after the <b>“=”</b>.</p>
+       		<p><i>Our code looks like this:</i></p>
+       		<div class="codeview">
+                <div class="data" data-type="javascript">
+function displayTime() {
+	var currentTime = new Date();
+
+}
+                </div>
+            </div>
+            <p>What we’ve done is ask the computer to fill our <b>currentTime</b> variable with the date and time as this exact moment, as soon as the function runs. It does that by taking the time from your computer’s own clock so if your computer’s time is wrong the date it stores will be wrong.</p>
+        </div>
+        <div class="step">
+            <h2>Step 3: Hours, Minutes, Seconds</h2>
+            <p>Now our <b>currentTime</b> variable is full of information. Lots of information. It calls up the exact year, month , day, hour, minute, second, and even the millisecond at that moment. We need to pull out just the hours, seconds, and minutes to build our clock. Fortunately, we can do that by writing three more variables that extract and store just those things.</p>
+			<ul>
+				<li>Just below our <b>currentTime</b> variable write a new variable. This one will pull hours out, so we called ours <b>hours</b>.</li>
+			</ul>
+			<p><i>Our code looks like this:</i></p>
+			<div class="codeview">
+                <div class="data" data-type="javascript">
+function displayTime() {
+	var currentTime = new Date();
+	var hours = 
+}
+                </div>
+            </div>
+            <p>Now let’s fill that variable with just hours from our <b>currentTime</b> variable, to do that add the following text after the <b>“=”</b> <b>currentTime.getHours();</b></p>      
+			<p><b>getHours</b> is what’s called a <b>method</b> and it can be used with <b>Date</b> objects. It does what it describes, it looks at the date object information and gets just the hours. Right now all the date information (including the hours) is inside <b>currentTime</b> so we need to apply <b>getHours</b> to currentTime to extract the hour information.</p>        
+        	<p><i>Our code looks like this:</i></p>
+			<div class="codeview">
+                <div class="data" data-type="javascript">
+function displayTime() {
+	var currentTime = new Date();
+	var hours = currentTime.getHours();
+}
+                </div>
+            </div>
+            <p>Now we have a variable called <b>hours</b> that has our hours in it.</p>
+            <p>There are also methods for seconds and minutes. They’re <b>getSeconds</b> and <b>getMinutes</b>. Let’s create two variables below our <b>var hours</b> that pull out and hold the seconds and minutes from our <b>currentTime</b> variable.</p>
+			<p><i>Our code looks like this:</i></p>
+			<div class="codeview">
+                <div class="data" data-type="javascript">
+function displayTime() {
+	var currentTime = new Date();
+	var hours = currentTime.getHours();
+	var minutes = currentTime.getMinutes();
+   	var seconds = currentTime.getSeconds();
+}
+                </div>
+            </div>        
+        </div>
+        <div class="step">
+            <h2>Step 4: Putting it together</h2>
+            <p>Now that we’ve got all the variables for our times, let’s write a function that puts them all together in a way that we can read them.</p>
+        	<p>Let’s start by making a new line and writing a new variable. </p>
+        	<p>This variable will eventually assemble our hours, minutes, and seconds together. We’ve call ours <b>fullTime</b>.</p>
+        	<p><i>Our variable looks like this:</i></p>
+			<div class="codeview">
+                <div class="data" data-type="javascript">
+var fullTime = 
+                </div>
+            </div>
+            <p>Now we’re going to do something a little tricky. We’re going to fill our <b>fullTime</b> variable with a piece of our HTML that we want our time to appear. To do that we’re going to make JavaScript look at the HTML tab and identify the place in it we want to put our time.</p>   
+        	<p>We can do this by using setting our <b>fullTime</b> variable equal to <b>document.getElementById();</b></p>
+       		<p><i>Our code looks like this:</i></p>
+			<div class="codeview">
+                <div class="data" data-type="javascript">
+var fullTime = document.getElementById();
+                </div>
+            </div>
+            <p><b>getElementByID</b> is kind of like <b>getHours</b> except instead of getting time information from our <b>Date()</b> object it scans our HTML document and finds an HTML element with a specific ID. That ID will go inside the <b>()</b> in step 5.</p>
+        	<p>Now that we’ve got a piece of our HTML in <b>fullTime</b>. Let’s fill that HTML piece with our <b>hours</b>, <b>minutes</b>, and <b>seconds</b>.</p>
+        	<p>To do that we will use a method called <b>innerHTML</b>. <b>innerHTML</b> can set HTML and text inside something. In this case we want to set it inside our <b>fullTime</b> variable.</p>
+        	<p>Make a new line of code and add <b>fullTime.innerHTML</b></p>
+        	<p>No let’s write out the text that we want <b>innerHTML</b> to put inside our <b>fullTime</b> variable. </p>
+        	<p>Our <b>hours</b>, <b>minutes</b>, and <b>seconds</b> variables are full of numbers already. We need to assemble them in order and format them a little so they make sense. We can link them up with <b>+</b> and use <b>“”</b> to add non-variable text (like the : that go in between the numbers or spaces).</p>
+        	<p><i>Our code looks like this:</i></p>
+			<div class="codeview">
+                <div class="data" data-type="javascript">
+var fullTime = document.getElementById();
+    
+fullTime.innerHTML = hours + ":" + minutes + ":" + seconds;
+                </div>
+            </div>
+       		<p>The last step before we go to our HTML page is to make the whole function run. So far we’ve only described what it does. We have to activate it. To do that we need to simply add the name of the function to the end of our code just before the last curly brace. </p>
+       		<p><i>All our Javascript code looks like this:</i></p>
+			<div class="codeview">
+                <div class="data" data-type="javascript">
+$(document).ready( function() {
+  function displayTime() {
+    	var currentTime = new Date();
+    	var hours = currentTime.getHours();
+    	var minutes = currentTime.getMinutes();
+    	var seconds = currentTime.getSeconds();
+    
+   	var fullTime = document.getElementById('clock');
+    
+    	fullTime.innerHTML = hours + ":" + minutes + ":" + seconds;
+  }
+
+  displayTime();
+
+});
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 5: Making it visible</h2>
+            <p><img src="assets/images/step_05.jpg"/></p>
+            <p>We’ve been writing a bunch of code so far but we can’t see what it’s doing. Let’s change that.</p>
+            <p>Let’s make a place in our HTML for <b>fullTime</b> to pull and fill with our numbers.</p>
+            <ul>
+            	<li>Back in the HTML tab let’s erase the text and divs that are there and make a single <b>&lt;div></b> in our <b>&lt;body></b>.</li>
+            	<li>• Go ahead and give that <b>&lt;div></b> an id. We called ours ‘clock’</li>
+            </ul>
+            <p><i>Our <b>body</b> tag looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;/body>
+&lt;div id='clock'> &lt;/div>
+&lt;/body>
+                </div>
+            </div>
+            <ul>
+            	<li>Now go back to our JS tab.</li>
+            	<li>Remember those () that we’re at the end of <b>getElementById</b>? Let’s put the <b>‘clock’</b> id we assigned to our <b>&lt;div></b> in there.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+			<div class="codeview">
+                <div class="data" data-type="javascript">
+var fullTime = document.getElementById('clock');
+                </div>
+            </div>
+            <p>Now go back to the preview mode. See some numbers? That’s our clock! That’s what our code has made so far. It’s not perfect yet, though. We need to do some things to make it look more like a real digital clock.</p>
+        </div>
+        <div class="step">
+            <h2>Step 6: Making it look good</h2>
+            <p><img src="assets/images/step_06.jpg"/></p>
+            <p>The first thing we can do is style our clock text.</p>
+            <p>Remember how we gave the <b>&lt;div></b> an id? Let’s make a CSS <b>#id</b> that will make it look good.</p>
+            <p>You can style your clock however you want. We made ours big, white and in the middle of a blue screen.</p>
+        	<p><i>Here's some CSS:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+body {
+    background-color: #80d4ea;
+}
+
+#clock {
+    height: 100px;
+    width: 800px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-top: 70px;
+    font-family: courier;
+    text-align: center;
+    color: white;
+    font-size: 100px;
+}                 
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <h2>Step 7: Making it tick</h2>
+            <p>So our clock works and looks pretty good but something is missing. It isn’t ticking, it shows the current time the page loads, but doesn’t keep counting forward. Let’s fix that.</p>
+            <p>The reason our clock is frozen is that it is only running through the <b>displayTime</b> function once, when the page loads. We need to write some code to tell it to run every second.</p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+setInterval(displayTime, 1000);
+                </div>
+            </div>
+            <p><b>setInterval();</b> is a method that will call a function repeatedly after a certain amount of time, measured in milliseconds.  1000 milliseconds is one second. Our function now runs every second. Just like a clock should.</p>
+        </div>
+        <div class="step">
+            <h2>Step 8: Adding zeros</h2>
+            <p><img src="assets/images/step_08.jpg"/></p>
+            <p>We got our clock ticking but we still have a couple other problems. You might have to wait a minute to see this one.</p>
+            <ul>
+            	<li>Watch the “seconds” numbers.</li>
+            	<li>When they reach 1-9 you’ll noticey the become just one digit. </li>
+            </ul>
+            <p>For our digital clock to be legit we need all our numbers to be 2 digits all the time. Adding a zero in the front would solve that problem. Let’s write some logic that will fix that.</p>
+            <p>Remember how we said the Javascript can do math? It knows the value of numbers as well, and can determine if a number is greater, less than, or equal to another number.</p>
+            <p>Let’s start an <b>if/then</b> statement to add a <b>“0”</b> in front of numbers less than ten. We’ll start with our seconds variable since we can check that in less than a minute.</p>
+            <p>Within the  <b>displayTime()</b> function braces, just after our <b>hours</b>, <b>minutes</b>, and <b>seconds</b> variables, make a new line.</p>
+        	<p><i>Add this line of code:</i></p>
+        	<div class="codeview">
+                <div class="data" data-type="javascript">
+if(seconds < 10) {
+            seconds = "0" + seconds;
+        }
+                </div>
+            </div>
+        	<p>Let’s take a minute to look at what that is doing. </p>
+        	<p>It’s looking to see if <b>seconds</b> is less than 10, which would make it single digit. If it is, then it’s changing the contents of the <b>seconds</b> variable by adding the text <b>“0”</b> in front of the value. It’s a little weird to think about, but we just modified the content in a variable after we initially defined the variable. Variable contents can change when we need them to.</p>
+        	<p>Take a look at the preview. You should eventually see it work with a “0” in front of our single digit seconds.</p>
+        	<p>Go ahead and do the same thing for <b>hours</b> and <b>minutes</b>.</p>
+        </div>
+        <div class="step">
+            <h2>Step 9: Adding AM & PM</h2>
+            <p><img src="assets/images/feature_full.jpg"/></p>
+            <p>So we’ve got a nice looking digital clock. It’s got one last problem, though. It’s showing 24-hour time. Let’s make it a 12-hour clock and label AM and PM.</p>
+        	<p>Let’s start by adding a new variable at the top of our code.</p>
+        	<ul>
+        		<li>Before our little stack of if/then conditions, let’s add a new line and add a new variable we’re calling <b>meridiem</b></li>
+        		<li>Set its value to be the text <b>“AM”</b></li>
+        	</ul>
+        	<p><i>Our code looks like this:</i></p>
+        	<div class="codeview">
+                <div class="data" data-type="javascript">
+var meridiem = "AM";
+                </div>
+            </div>
+            <p>Add this code:</p>
+            <p><i>Our code looks like this:</i></p>
+        	<div class="codeview">
+                <div class="data" data-type="javascript">
+if(hours === 0) {
+            hours = 12;    
+        } 
+        else if(hours > 12) {
+            hours = hours - 12;
+            meridiem = "PM";
+        }
+                </div>
+            </div>
+            <p>So what’s going on here? Like a lot of Javascript we can describe this in a sentence. It might sound something like this:</p>
+            <p><i>If the content of the variable hours is equal to zero (just past midnight) the change the content of hours to 12. Otherwise, if the content of the variable hours is greater than twelve (the afternoon) then subtract 12 and change the contents of the meridiem variable to “PM.”</i></p>
+        	<p>Now we just need to add our new variable meridiem to our clock.</p>
+        	<p>Add a space ( like this: “ ”) and <b>+ meridiem</b> to that <b>fullTime.innerHTML</b> group we created for our clock.</p>
+        	<p><i>Our code looks like this:</i></p>
+        	<div class="codeview">
+                <div class="data" data-type="javascript">
+fullTime.innerHTML = hours + ":" + minutes + ":" + seconds + " " + meridiem;
+                </div>
+            </div>
+            <p>And there you have it! We’ve just built a pretty sweet looking clock. Nice work.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Bonus Rounds</h2>
+        <p>Now that we know the time let’s see what else we can make our clock do.</p>
+        <div class="projectlink">
+            <img src="assets/images/world_clock.jpg" />
+            <div class="details">
+                <h3>World clock<span class="difficulty">Easy</span></h3>
+                <p>What time is it in Tokyo? London? Sydney? Try making a wall of clocks, like a newsroom, that shows the time in different cities around the world. Try creating new functions that add or subtract hours from your current time.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/full_date.jpg" />
+            <div class="details">
+                <h3>Full date <span class="difficulty">Medium</span></h3>
+                <p>Showing the time is great, but let’s see if we can use all that date information. See if you can use methods like <b>getDay<b/>, <b>getDate</b>, <b>getMonth</b>, and getYear to make a daily calendar display.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/alarm_clock.jpg" />
+            <div class="details">
+                <h3>Alarm Clock<span class="difficulty">Hard</span></h3>
+                <p>Put your clock to work. See if you can make your clock do something attention getting, like change the background to eye catching color or an animated gif, when a certain time is reached.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section projects last">
+        <h2>Coder Projects to Try Next</h2>
+        <p>Like programming with Javascript and making cool web things. Try some of these other Coder Projects</p>
+
+        <!-- Starting Coder -->
+        <div class="project left">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../night_and_day/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Night and Day</h3>
+                <p>Ever wish you could control the universe? Well now you can pretend with this project. Change day into night and back again with the click of a mouse and learn a whole new programming language along the way.</p>
+                <a href="../night_and_day/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">First-timer</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+        <!-- Dear Diary -->
+        <div class="project right">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../comic_creator/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Comic Creator</h3>
+                <p>Got a story to tell? Have some great text and images you want to put together? This project will give you the pieces to turn them into a webcomic while teaching you some new skills along the way.</p>
+                <a href="../comic_creator/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Beginner</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+
+        <div class="clear"></div>
+    </div> <!-- end next projects -->
+    <div class="footer">
+        <div class="madewith bottom"></div>
+        <div class="links">
+            <a href="http://www.google.com/intl/en/policies/" class="trackout">Privacy and Terms</a>
+            <div class="plusholder">
+                <div class="g-plusone"></div>
+            </div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+    </div>
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41998892-1', 'googlecreativelab.github.io');
+  ga('send', 'pageview');
+
+  $(document).ready( function() {
+    $('a.trackdl').click(function() {
+      var version = $(this).attr('data-version');      
+      ga('send', 'event', 'download', 'click', version ); 
+    });
+    $('a.trackout').click(function() {
+      var destination = $(this).attr('href');      
+      ga('send', 'event', 'outbound', 'click', destination ); 
+    });
+  });
+</script>
+-->
+</body>
+</html>
