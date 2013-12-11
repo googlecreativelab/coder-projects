@@ -60,7 +60,7 @@ BODY, HTML {
 }
 
 A, A:hover, A:visited, A:active {
-    color: #f1c40f;
+    color: #ffbe00;
     text-decoration: underline;
 }
 
@@ -72,7 +72,7 @@ A, A:hover, A:visited, A:active {
     top: 0px;
     left: 0px;
     z-index: 7;
-    background-color: #f1c40f;
+    background-color: #ffbe00;
     color: #ffffff;
     overflow: hidden;
 }
@@ -113,7 +113,7 @@ A, A:hover, A:visited, A:active {
 }
 
 .masthead {
-    background-color: #f1c40f;
+    background-color: #ffbe00;
     color: #ffffff;
     position: relative;
     top: 0px;
@@ -146,7 +146,7 @@ A, A:hover, A:visited, A:active {
     position: absolute;
     font-size: 26px;
     line-height: 26px;
-    color: #d35400;
+    color: #f03a00;
     top: 105px;
     right: 20px;
     padding: 0;
@@ -165,7 +165,27 @@ A, A:hover, A:visited, A:active {
     margin: 0 auto 0 auto;
     padding: 256px 0 0 0;
 }
-
+.masthead A.what_is_coder,
+.masthead A.what_is_coder:visited,
+.masthead A.what_is_coder:active,
+.masthead A.what_is_coder:hover {
+    display: block;
+    position: absolute;
+    top:0;
+    right:60px;
+    padding: 8px;
+    border-radius: 0 0 6px 6px;
+    background-color: #00dbeb;
+    color: #fff;
+    font-family: dosissemibold, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.masthead A.what_is_coder:hover {
+}
 
 .fixedbar .logo H1 {
     position: absolute;
@@ -186,7 +206,7 @@ A, A:hover, A:visited, A:active {
     position: absolute;
     font-size: 13px;
     line-height: 13px;
-    color: #d35400;
+    color: #f03a00;
     top: 28px;
     right: -18px;
     padding: 0;
@@ -201,7 +221,7 @@ A, A:hover, A:visited, A:active {
 .button {
     display: inline-block;
     font-size: 17px;
-    background-color: #f1c40f;
+    background-color: #ffbe00;
     color: #ffffff;
     border-radius: 6px;
     line-height: 40px;
@@ -448,7 +468,7 @@ h2 {
     margin: 20px 0 0 0;
 }
 .project .difficulty {
-    color: #f1c40f;
+    color: #ffbe00;
 }
 .project p {
     font-size: 15px;
@@ -463,7 +483,7 @@ h2 {
     font-style: normal;
 }
 .project .meta {
-    color: #f1c40f;
+    color: #ffbe00;
 }
 .project .meta .name {
     display: block;

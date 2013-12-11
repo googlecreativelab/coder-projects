@@ -60,7 +60,7 @@ BODY, HTML {
 }
 
 A, A:hover, A:visited, A:active {
-    color: #f1c40f;
+    color: #ffbe00;
     text-decoration: underline;
 }
 
@@ -71,13 +71,35 @@ UL {
 
 #project_nav {
     width: 100%;
-    background-color: #f1c40f;
+    background-color: #ffbe00;
     position: fixed;
     height: 61px;
     min-width: 300px;
     z-index: 3;
     color: #ffffff;
 }
+A.what_is_coder,
+A.what_is_coder:visited,
+A.what_is_coder:active,
+A.what_is_coder:hover {
+    display: block;
+    position: absolute;
+    top:13px;
+    right:13px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #00dbeb;
+    color: #fff;
+    font-family: dosissemibold, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+A.what_is_coder:hover {
+}
+
 
 .project_home {
     display: block;
@@ -135,7 +157,7 @@ UL {
     top: 0px;
     left: 0px;
     z-index: 7;
-    background-color: #f1c40f;
+    background-color: #ffbe00;
     color: #ffffff;
     overflow: hidden;
 }
@@ -176,7 +198,7 @@ UL {
 }
 
 .masthead {
-    background-color: #f1c40f;
+    background-color: #ffbe00;
     color: #ffffff;
     position: relative;
     top: 0px;
@@ -209,7 +231,7 @@ UL {
     position: absolute;
     font-size: 26px;
     line-height: 26px;
-    color: #d35400;
+    color: #f03a00;
     top: 105px;
     right: 20px;
     padding: 0;
@@ -249,7 +271,7 @@ UL {
     position: absolute;
     font-size: 13px;
     line-height: 13px;
-    color: #d35400;
+    color: #f03a00;
     top: 28px;
     right: -18px;
     padding: 0;
@@ -264,7 +286,7 @@ UL {
 .button {
     display: inline-block;
     font-size: 17px;
-    background-color: #f1c40f;
+    background-color: #ffbe00;
     color: #ffffff;
     border-radius: 6px;
     line-height: 40px;
@@ -556,7 +578,7 @@ img.feature {
     margin: 24px 0 0 0;
 }
 .description .difficulty {
-    color: #f1c40f;
+    color: #ffbe00;
 }
 .description p {
     font-size: 15px;
@@ -571,7 +593,7 @@ img.feature {
     font-style: normal;
 }
 .description .meta {
-    color: #f1c40f;
+    color: #ffbe00;
 }
 .description .meta .name {
     display: block;
@@ -601,11 +623,11 @@ img.feature {
     margin: 0 0;
 }
 .projectlink h3 .difficulty {
-    color: #f1c40f;
+    color: #ffbe00;
     font-weight: 200;
 }
 .projectlink A, .projectlink A:visited, .projectlink A:active, .projectlink A:hover {
-    color: #f1c40f;
+    color: #ffbe00;
     text-decoration: none;
 }
 .projectlink A:hover {
