@@ -136,35 +136,34 @@ $(document).ready(function() {
 
 <p>What is happening in this text is actually what’s called a function and you can read it a little bit like a sentence if you know how.</p>
 
-<p><b>$(document)</b> is a target which you can think of as a thing. To be specific, it’s the web project on the HTML page. Think of it like a the noun or subject of our sentence. The $()are important. They signal to the browser that this is a thing to look at.</p>
+<p><b>document</b> is a variable in javascript that gives you access to the objects and content within the web page you're viewing.</p>
 
-<p><b>.ready</b> is an event, specifically an event that looks to see if something is fully loaded and ready to go. You can think of events like verbs and predicates in the sentence. <b>.ready</b> is a jQuery event. We’ll talk more about that later.</p>
+<p><b>$(document).ready</b> is an event that occurs on our document when it is fully loaded and ready to go. Quite often, we want to wait for a page to finish loading before we use javascript to manipulate its contents. The ready event makes it easy for our code to start working at just the right moment.</p>
 
-<p><b>function()</b> is exactly what it sounds like. In this case, it’s what starts or runs when the document is ready. It’s like another verb in the sentence.</p>
+<p><b>function()</b> is how we define a code routine that can be run in javascript. In this specific scenario, it marks the beginning of what we call a <b>callback</b>, which is a function that gets called when an event (like the ready event) happens.</p>
 
-<p>The <b>{}</b> are also very important. They contain the contents of function. They are similar to the tags in HTML and the curly braces in CSS. This is where we will be writing our own functions that make that button do cool things.</p>
+<p>The curly braces, <b>{</b> and <b>}</b>, are also very important. They mark the beginning and the end of the function, and without them, your code won't run correctly. They are similar to the tags in HTML and the curly braces in CSS. Between these curly braces is where we will be writing our own code that will make that button do cool things.</p>
 
 <p>If you read this code out as a sentence it would sound something like this: When the document is ready (fully loaded) then do the actions inside the braces.</p>
 
-<p>This function is used to make the JS page ready to do work. It’s key to all of our web projects that use Javascript because it’s what establishes the connection between the JS tabs and the CSS and HTML tabs. So don’t delete this. We will be writing inside of it and duplicating its structure.  </p>         
+<p>To sum it up, this function waits for the web page to be ready for us to do our work. It’s key to all of our web projects that use Javascript because it’s what establishes that our HTML elements exist on the page, before we start to manipulate them in code. So don’t delete this. We will be writing our code inside of it.  </p>         
         </div>
 
         <div class="step">
             <h2>Step 5: Get to know jQuery.</h2>
-            <p>So we lied to you a little bit. We’re not going to be writing pure Javascript just yet. We’re going to be using a set of ready-made Javascript bits called  jQuery. </p>
+            <p>In programming, there are usually many different ways to get the same thing done. Instead of writing everything from scratch, we're using a handy tool called jQuery to help us with a few common tasks.</p>
 
-<p>jQuery is what’s called a library, and it’s pre-loaded in the HTML page. If you go to the <b>&lt;head&gt;</b> tag and open it up you’ll see a line of code that that loads the jQuery library automatically:</p>
+<p>jQuery is what’s called a library, and in Coder it’s pre-loaded in the HTML page. If you go to the <b>&lt;head&gt;</b> tag and open it up you’ll see a line of code that that loads the jQuery library automatically:</p>
             <p><i>It looks like this:</i></p>
             <div class="codeview">
                 <div class="data" data-type="html">
 &lt;script src="/static/common/js/jquery.min.js">&lt;/script>                  
                 </div>
             </div>  
-            <p>Loading this jQuery library gives us easy access to a whole bunch of useful events, selectors, and effects that will make doing cool stuff simpler and much quicker than writing it out in raw javascript.</p>
+            <p>Loading this jQuery library gives us easy access to a whole bunch of useful things, such as events, CSS selectors, and animation effects that will make doing cool stuff simpler and much quicker than writing it out in raw javascript.</p>
 
-<p>Using jQuery will also help you become more comfortable with the language and logic of Javascript while you’re making stuff in Coder. </p>
 
-<p><b>.ready</b> is an example of a jQuery event, the pure Javascript would be much more complicated to write. We will be using a handful of others to help make our Night & Day project.</p>
+<p>When you see <b>$( )</b> wrapped around something, like around our document variable above, you're looking at jQuery. jQuery encapsulates HTML objects with functionality that allows these objects to be easily manipulated with code. You can do this without jQuery too, but it can sometimes be a bit more difficult. We will be using a handful of jQuery features to help keep our Night &amp; Day project simple.</p>
         </div>
 
         <div class="step">
