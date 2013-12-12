@@ -1,7 +1,7 @@
 # Coder Projects 
 ## Things to make. Stuff to learn.
 
-Coder Projects are simple, fun, and sneakily educational things that can all be made with [Coder and Rasberry Pi](http://goo.gl/coder).
+Looking for something to make with Coder? We've put together Coder Projects: simple, fun, and sneakily educational things that can all be made with [Coder and Rasberry Pi](http://goo.gl/coder).
 
 ## Looking for the Coder Projects site?
 [Visit the Coder Projects here](http://googlecreativelab.github.io/coder-projects/)
