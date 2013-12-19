@@ -35,5 +35,14 @@ $(document).ready(function() {
 
     });
 
+    //GA Tracking for tagged outlinks and downloads
+    $('a.trackout').click(function() {
+      var destination = $(this).attr('href');      
+      ga('send', 'event', 'outbound', 'click', destination ); 
+    });
+    $('a.trackdl').click(function() {
+      var destination = $(this).attr('href');      
+      ga('send', 'event', 'download', 'click', destination ); 
+    });
 });
 

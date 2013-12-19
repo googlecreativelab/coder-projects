@@ -21,6 +21,7 @@
     </div>
     <div class="section intro">
         <img class="feature" src="assets/images/feature_full.jpg" />
+        <a href="assets/downloads/digital_clock.zip" target="_blank" class="project_download trackdl">Download   Complete Project <span class="info">4k | .zip file</span></a>
     </div>
     <div class="section description">
         <div class="details">
@@ -158,33 +159,37 @@ function displayTime() {
             <h2>Step 4: Putting it together</h2>
             <p>Now that we’ve got all the variables for our times, let’s write a function that puts them all together in a way that we can read them.</p>
         	<p>Let’s start by making a new line and writing a new variable. </p>
-        	<p>This variable will eventually assemble our hours, minutes, and seconds together. We’ve call ours <b>fullTime</b>.</p>
+            <p>This variable will let us set the hours, minutes, and seconds that will show inside our HTML. We’ve call ours <b>clockDiv</b>.</p>
         	<p><i>Our variable looks like this:</i></p>
 			<div class="codeview">
                 <div class="data" data-type="javascript">
-var fullTime = 
+var clockDiv = 
                 </div>
             </div>
-            <p>Now we’re going to do something a little tricky. We’re going to fill our <b>fullTime</b> variable with a piece of our HTML that we want our time to appear. To do that we’re going to make JavaScript look at the HTML tab and identify the place in it we want to put our time.</p>   
-        	<p>We can do this by using setting our <b>fullTime</b> variable equal to <b>document.getElementById();</b></p>
+            <p>The reaason we called it <b>clockDiv</b> is that this variable will let our Javascript code connect with a DIV named "clock" that we'll eventually make in our HTML file. To make this connection, we use a function called <b>document.getElementById()</b> to retrieve a "handle" to a DIV with a specific ID. In this case, it's a DIV with the "<b>clock</b>" ID.</p>
        		<p><i>Our code looks like this:</i></p>
 			<div class="codeview">
                 <div class="data" data-type="javascript">
-var fullTime = document.getElementById();
+// This gets a "handle" to the clock div in our HTML
+var clockDiv = document.getElementById('clock');
                 </div>
             </div>
-            <p><b>getElementByID</b> is kind of like <b>getHours</b> except instead of getting time information from our <b>Date()</b> object it scans our HTML document and finds an HTML element with a specific ID. That ID will go inside the <b>()</b> in step 5.</p>
-        	<p>Now that we’ve got a piece of our HTML in <b>fullTime</b>. Let’s fill that HTML piece with our <b>hours</b>, <b>minutes</b>, and <b>seconds</b>.</p>
-        	<p>To do that we will use a method called <b>innerHTML</b>. <b>innerHTML</b> can set HTML and text inside something. In this case we want to set it inside our <b>fullTime</b> variable.</p>
-        	<p>Make a new line of code and add <b>fullTime.innerHTML</b></p>
-        	<p>No let’s write out the text that we want <b>innerHTML</b> to put inside our <b>fullTime</b> variable. </p>
-        	<p>Our <b>hours</b>, <b>minutes</b>, and <b>seconds</b> variables are full of numbers already. We need to assemble them in order and format them a little so they make sense. We can link them up with <b>+</b> and use <b>“”</b> to add non-variable text (like the : that go in between the numbers or spaces).</p>
+            <p><b>getElementByID</b> is kind of like <b>getHours</b> except instead of getting time information from our <b>Date()</b> object it scans our HTML document and finds an HTML element with a specific ID.</p>
+        	<p>Once we have a handle to our DIV element in Javascript, we can set its contents to the current time. Let’s fill that HTML element with our <b>hours</b>, <b>minutes</b>, and <b>seconds</b>.</p>
+            <p>To do that we will use a method called <b>innerText</b>. <b>innerText</b> can set text inside an HTML element such as our clock DIV.</p>
+        	<p>Make a new line of code and add <b>clockDiv.innerText</b></p>
+            <p>No let’s write out the text that we want <b>innerText</b> to put inside our <b>clock</b> DIV element.</p>
+            <p>Our <b>hours</b>, <b>minutes</b>, and <b>seconds</b> variables are full of numbers already. We need to assemble them in order and format them a little so they make sense. We can link them up with <b>+</b> and use <b>""</b> to turn these raw numbers into formatted text that contains the entire time, including the ":" characters that go in between the numbers or spaces.</p>
+            <p>In case you're wondering, programmers call text "<b>strings</b>," and combining several pieces of text together is called "<b>concatenation</b>". In case you're really wondering, integer numbers like -1, 0, 1, 2, and 3 are called "<b>ints</b>". And if you're really, really wondering, numbers with decimal points like 1.2, 0.005, and 3.14 are called "<b>floats</b>". There's a lot more you could read about this, if you're really, really, really wondering, but let's get back to making our clock.</p>
         	<p><i>Our code looks like this:</i></p>
 			<div class="codeview">
                 <div class="data" data-type="javascript">
-var fullTime = document.getElementById();
-    
-fullTime.innerHTML = hours + ":" + minutes + ":" + seconds;
+// This gets a "handle" to the clock div in our HTML
+var clockDiv = document.getElementById('clock');
+
+// Then we set the text inside the clock div
+// to the hours, minutes, and seconds of the current time
+clockDiv.innerText = hours + ":" + minutes + ":" + seconds;
                 </div>
             </div>
        		<p>The last step before we go to our HTML page is to make the whole function run. So far we’ve only described what it does. We have to activate it. To do that we need to simply add the name of the function to the end of our code just before the last curly brace. </p>
@@ -192,17 +197,22 @@ fullTime.innerHTML = hours + ":" + minutes + ":" + seconds;
 			<div class="codeview">
                 <div class="data" data-type="javascript">
 $(document).ready( function() {
+
   function displayTime() {
     var currentTime = new Date();
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
-    
-    var fullTime = document.getElementById('clock');
-    
-    fullTime.innerHTML = hours + ":" + minutes + ":" + seconds;
+
+    // This gets a "handle" to the clock div in our HTML
+    var clockDiv = document.getElementById('clock');
+
+    // Then we set the text inside the clock div 
+    // to the hours, minutes, and seconds of the current time
+    clockDiv.innerText = hours + ":" + minutes + ":" + seconds;
   }
 
+  // This runs the displayTime function the first time
   displayTime();
 
 });
@@ -213,27 +223,17 @@ $(document).ready( function() {
             <h2>Step 5: Making it visible</h2>
             <p><img src="assets/images/step_05.jpg"/></p>
             <p>We’ve been writing a bunch of code so far but we can’t see what it’s doing. Let’s change that.</p>
-            <p>Let’s make a place in our HTML for <b>fullTime</b> to pull and fill with our numbers.</p>
+            <p>Let’s make a place in our HTML for <b>clockDiv</b> to connect to and fill with our numbers.</p>
             <ul>
             	<li>Back in the HTML tab let’s erase the text and divs that are there and make a single <b>&lt;div></b> in our <b>&lt;body></b>.</li>
-            	<li>• Go ahead and give that <b>&lt;div></b> an id. We called ours ‘clock’</li>
+                <li>Go ahead and give that <b>&lt;div></b> an id. Remember that we used the ID ‘<b>clock</b>’ in the <b>document.getElementById()</b> method.</li>
             </ul>
             <p><i>Our <b>body</b> tag looks like this:</i></p>
             <div class="codeview">
                 <div class="data" data-type="html">
 &lt;body>
-    &lt;div id='clock'> &lt;/div>
+    &lt;div id='clock'>&lt;/div>
 &lt;/body>
-                </div>
-            </div>
-            <ul>
-            	<li>Now go back to our JS tab.</li>
-            	<li>Remember those () that we’re at the end of <b>getElementById</b>? Let’s put the <b>‘clock’</b> id we assigned to our <b>&lt;div></b> in there.</li>
-            </ul>
-            <p><i>Our code looks like this:</i></p>
-			<div class="codeview">
-                <div class="data" data-type="javascript">
-var fullTime = document.getElementById('clock');
                 </div>
             </div>
             <p>Now go back to the preview mode. See some numbers? That’s our clock! That’s what our code has made so far. It’s not perfect yet, though. We need to do some things to make it look more like a real digital clock.</p>
@@ -258,7 +258,7 @@ body {
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
     padding-top: 70px;
-    font-family: courier;
+    font-family: courier, monospace;
     text-align: center;
     color: white;
     font-size: 100px;
@@ -272,6 +272,8 @@ body {
             <p>The reason our clock is frozen is that it is only running through the <b>displayTime</b> function once, when the page loads. We need to write some code to tell it to run every second.</p>
             <div class="codeview">
                 <div class="data" data-type="javascript">
+// This makes our clock 'tick' by repeatedly
+// running the displayTime function every second.
 setInterval(displayTime, 1000);
                 </div>
             </div>
@@ -320,7 +322,9 @@ if (seconds &lt; 10) {
         	<p><i>Our code looks like this:</i></p>
         	<div class="codeview">
                 <div class="data" data-type="javascript">
-var meridiem = "AM";
+// Let's set the AM and PM meridiem and 
+// 12-hour format
+var meridiem = "AM";  // Default is AM
                 </div>
             </div>
             <p>Add this code:</p>
@@ -343,11 +347,11 @@ if (hours === 0) {
             <p>So what’s going on here? Like a lot of Javascript we can describe this in a sentence. It might sound something like this:</p>
             <p><i>If the content of the variable hours is equal to zero (just past midnight) the change the content of hours to 12. Otherwise, if the content of the variable hours is greater than twelve (the afternoon) then subtract 12 and change the contents of the meridiem variable to “PM.”</i></p>
         	<p>Now we just need to add our new variable meridiem to our clock.</p>
-        	<p>Add a space ( like this: “ ”) and <b>+ meridiem</b> to that <b>fullTime.innerHTML</b> group we created for our clock.</p>
+        	<p>Add a space ( like this: “ ”) and <b>+ meridiem</b> to that <b>clockDiv.innerText</b> assignment we created for our clock.</p>
         	<p><i>Our code looks like this:</i></p>
         	<div class="codeview">
                 <div class="data" data-type="javascript">
-fullTime.innerHTML = hours + ":" + minutes + ":" + seconds + " " + meridiem;
+clockDiv.innerText = hours + ":" + minutes + ":" + seconds + " " + meridiem;
                 </div>
             </div>
             <p>And there you have it! We’ve just built a pretty sweet looking clock. Nice work.</p>
@@ -456,12 +460,6 @@ fullTime.innerHTML = hours + ":" + minutes + ":" + seconds + " " + meridiem;
   ga('create', 'UA-41998892-3', 'googlecreativelab.github.io');
   ga('send', 'pageview');
   
-  $(document).ready( function() {
-    $('a.trackout').click(function() {
-      var destination = $(this).attr('href');      
-      ga('send', 'event', 'outbound', 'click', destination ); 
-    });
-  });
 </script>
 
 </body>

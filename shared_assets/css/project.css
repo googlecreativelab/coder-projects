@@ -138,6 +138,7 @@ A.what_is_coder:hover {
     font-size: 12px;
     line-height: 12px;
 }
+
 #project_nav h1 {
     position: absolute;
     left: 48px;
@@ -386,6 +387,7 @@ A.button, A.button:hover, A.button:visited, A.button:active {
 .section.intro {
     padding-top: 66px;
 }
+
 .section.projects {
     padding-bottom: 47px;
 }
@@ -428,6 +430,30 @@ A.button, A.button:hover, A.button:visited, A.button:active {
     width: 640px;
     margin: 0 auto;
 }
+
+A.project_download, A.project_download:hover, A.project_download:visited, A.project_download:active {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 0 0 68px;
+    background: url( ../images/project_download.png ) no-repeat;
+    background-position: 0px 4px;
+    height: 43px;
+    margin: 24px 0 18px 0;
+    width: 308px;
+    font-size: 20px;
+    line-height: 20px;
+    opacity: .9;
+}
+A.project_download:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+A.project_download .info {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+}
+
 
 .clear {
     clear: both;
