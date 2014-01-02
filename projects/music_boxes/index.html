@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product">
+<head> 
+    <title>Music Boxes | Coder Projects</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico" />
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../shared_assets/js/jquery.min.js"></script>
+    <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../shared_assets/js/project.js"></script>
+    <meta itemprop="name" content="Music Boxes | Coder Projects">
+    <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
+    <meta itemprop="image" content="http://googlecreativelab.github.io/coder-projects/projects/music_boxes/assets/images/info.jpg">
+</head>
+<body>
+    <div id="project_nav">
+        <div class="project_home"><a href="../../">Coder</a></div>
+        <div class="project_info">&lt;project&gt; steps(05)</div>
+        <h1>Music Boxes</h1>
+        <a href="http://goo.gl/coder" class="what_is_coder">What's CODER?</a>
+    </div>
+    <div class="section intro">
+        <img class="feature" src="assets/images/feature_full.jpg" />
+        <a href="assets/downloads/music_boxes.zip" target="_blank" class="project_download trackdl">Download          Complete Project <span class="info">4.7m | .zip file</span></a>
+    </div>
+    <div class="section description">
+        <div class="details">
+            <h2>Description</h2>
+            <p>Let’s turn it up. This project will transform your browser into a simple instrument that you can use to make music.</p>
+            <p class="whofor"><strong>A great project for:</strong>
+            Musicians, music lovers, or anyone that has a song in their heart that they want a computer to play.
+            </p>
+        </div>
+        <div class="meta">
+            <div class="difficulty">Medium</div>
+            <p><span class="name">Skills Needed:</span>
+                Basic HTML, Basic CSS, Introduction to jQuery, Basic Javascript
+            </p>
+            <p><span class="name">Skills Learned:</span>
+                Buttons, CSS Pseudo-Classes, Variables, Basic Audio, Basic Browser Compatibility 
+            </p>
+            <p><span class="name">Submitted By:</span>
+                Coder Team
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section">
+        <h2>Are you ready to jam?</h2>
+        <p>You’re probably ready to start playing but make sure you’ve got the skills you need to start this project or your hard work might fall flat.</p>
+        <div class="projectlink">
+            <img src="../night_and_day/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../projects/night_and_day/">Previous Project: Night and Day</a></h3>
+                <p>This project will introduce you to the button behaviors and basic Javascript skills used in this projects to make our musical boxes work.</p>
+            </div>
+            <div class="clear"></div>
+        <div class="projectlink">
+            <img src="assets/images/files_sml.jpg" />
+            <div class="details">
+                <h3><a href="">Download: Music Notes</a></h3>
+                <p>You’ll need to <a href="assets/downloads/music_notes.zip" target="_blank">download music_notes.zip</a> if you want your music box to play.</p>
+            </div>
+            <div class="clear"></div>    
+        </div>
+    </div>
+    <div class="section steps">
+        <div class="step">
+            <h2>Get the files</h2>
+            <p>Let’s start by downloading the audio files we will need to build these music boxes. Here's a set of pre-made note files that you can download as <a href="assets/downloads/music_notes.zip" target="_blank">music_notes.zip</a>.</b></p>
+            <p>Once you’ve downloaded the <b>zip</b> file make sure it’s in a place you can find it and open it to get at the files inside. You should see a bunch of files with types like <b>“mp3,”</b> <b>“ogg,”</b> and <b>“wav.”</b></p>
+        </div>
+        <div class="step">
+            <h2>Step 1: Let's add our audio tags</h2>
+            <br>
+            <img src="assets/images/step_01.jpg" />
+            <p>Alright. Let’s start with the exciting part and add those audio files to our project.</p>
+            <ul>
+                <li>Open the Media tab in Coder.</li>
+                <li>It may take a little while, but go ahead and upload each of the files from that folder into your app.</li>
+                <li>Once they’ve all been uploaded, go back to the HTML tab.</li>
+                <li>Erase everything in the <b>&lt;body&gt;</b> tag.</li>
+                <li>Inside our newly empty body tag, add an <b>&lt;audio&gt;</b> tag.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;audio>
+    &lt;/audio>
+&lt;/body>
+                </div>
+            </div>
+            <p>That audio tag is going to be the key to the whole project. It’s a special type of element that allows us to play audio files in web pages. We’ll fill it with all the files we’ve uploaded in the next step.</p>
+        </div>
+ 		<div class="step">
+            <h2>Step 2: Adding our audio files</h2>
+            <br>
+            <img src="assets/images/step_02.jpg" />
+            <p>Now that we’ve made our audio tag we need to fill it with audio files. This is where things can get a little tricky. </p> 
+            <p>The problem is that there isn’t one audio file type all browsers can play. Instead we must offer three different audio files that we know various browsers will be able to handle. Each one of the files will make the same sound but they have been converted to different formats that are suitable for different browsers. By providing different files, we make it more likely that someone will be able to hear and play with our music boxes project. </p>
+            <p>So now that we know why we have so many different file types, let’s add them to our <b>&lt;audio></b> tag. We’ll do it by defining three different sources for our audio element that a browser could pick.</p>
+            <ul>
+            	<li>Inside the <b>&lt;audio&gt;</b> tag add a new <b>&lt;source&gt;</b> tag.</li>
+            	<li>Next to the word <b>“source”</b> in the opening tag add the src attribute, <b>src=""</b>. Between the quotes, you'll be adding a link to an audio file you uploaded.</li>
+            	<li>Put your cursor in between the src attribute's quotes and go to the media tab.</li>
+                <li>Find the file called <b>c_note.mp3</b> and click "<b>paste to code</b>" to paste the audio path in between the quotes.</li>
+            	<li>After the src attribute, add the type attribute, <b>type="audio/mpeg"</b>. This tells the browser what type of audio file this is.</li>
+            </ul> 
+            <p>Go ahead and add two more <b>&lt;source></b> tags to hold the <b>OGG</b> and <b>WAV</b> files for the C note sound. The audio types for these will be "<b>audio/ogg</b>" and "<b>audio/wav</b>".</p>
+            <p>Once you’ve added those files. Add the attribute “<b>controls</b>” to the inside of the opening audio tag.</p>
+    		<p>This will add audio player controls to our file and let us test the sound in preview mode.</p>
+    		<p><i>Our code looks like this. If you've named your project differently, your src paths will be slightly different:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;audio controls>
+    &lt;source src="/static/apps/music_boxes/media/c_note.mp3" type="audio/mpeg">&lt;/source>
+    &lt;source src="/static/apps/music_boxes/media/c_note.ogg" type="audio/ogg">&lt;/source>
+    &lt;source src="/static/apps/music_boxes/media/c_note.wav" type="audio/wav">&lt;/source>  
+&lt;/audio>
+                </div>
+            </div>
+            <p>Now pretty much anyone with a modern browser should be able to hear this note! So let’s test it out.</p>
+    		<ul>
+    			<li>Go back to the preview.</li>
+    			<li>You should see a some audio controls in the upper left.</li>
+    			<li>Press play and listen to the sound. That’s our audio file!</li>
+    		</ul>
+    		<p>You can use this method to quickly play audio files in your projects. It’s pretty basic and not very cool looking. We want to make a musical instrument out of these sounds. To do that we’ll need to do a little more work.</p>
+    		<ul>
+    			<li>Go ahead and add <b>&lt;audio></b> tags and source files for each of our other music notes. </li>
+    			<li> Once you’ve added and tested all the files, take <b>“controls”</b> off of the audio tags. We want to hide them for now. Don’t worry, they’re still there. In the next steps we’ll make custom buttons to control and play those files.</li>
+    		</ul>
+    	</div>
+    	<div class="step">
+            <h2>Step 3: Let's make some boxes</h2>
+            <br>
+            <img src="assets/images/step_03.jpg" />
+            <p>Let’s start by making the boxes that will act as our “keys.” We will be giving each one a unique color and style so that we can tell them apart. When we finished we will have something that looks like the picture above. Each box will eventually become a button that plays a single note.</p>
+            <ul>
+            	<li>In the HTML tab add a new <b>&ltdiv></b> tag below our audio files.</li>
+            	<li>Give it an <b>id="instrument"</b> attribute. We'll use this container to hold and position the note boxes.</li>
+            	<li>Inside the <b>&ltdiv id="instrument"></b>, add seven more divs. </li>
+            	<li>Give each <b>&ltdiv></b> an id that corresponds to a musical note starting with <b>c</b> and ending with <b>b</b>. Note: this is a C scale (c, d, e, f, g, a, b).</li>
+            	<li>Also, give each <b>&ltdiv></b> a class called <b>"box"</b> (We'll use this to shape all of our note boxes the same).</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;div id="instrument">
+	&lt;div id="c" class="box">&lt;/div>
+	&lt;div id="d" class="box">&lt;/div>
+	&lt;div id="e" class="box">&lt;/div>
+	&lt;div id="f" class="box">&lt;/div>
+	&lt;div id="g" class="box">&lt;/div>
+	&lt;div id="a" class="box">&lt;/div>
+	&lt;div id="b" class="box">&lt;/div>
+&lt;/div>
+                </div>
+            </div>
+            <p>Alright, Now we have all our <b>divs</b> in place. Let’s style them!</p>
+            <ul>
+            	<li>Flip to the CSS tab. Go ahead and erase any code that’s already there.</li>
+            	<li>Make a style that changes the <b>background-color</b> of the <b>&lt;body></b> to <b>black</b></li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+body {
+    background-color: black;   
+}
+                </div>
+            </div>
+            <ul>
+            	<li>Next, make a style for our <b>instrument id</b>.</li>
+            	<li>Give it properties that will hold our buttons and position them in the center of the browser.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#instrument {
+    height: 116px;
+    width: 812px;
+    padding-right: 10px;
+    padding-top: 50px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+                </div>
+            </div>
+            <ul>
+            	<li>Next, create the <b>box</b> class that will give our boxes shape and sit inside our instrument.</li>
+            	<li>We’ll set the <b>width</b> and <b>height</b> to <b>100px</b> and the <b>top</b> and <b>left margins</b> to <b>10px</b>. A <b>float: left;</b> property will keep them lined up nicely.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.box {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+                </div>
+            </div>
+            <p>Now that we’ve got all our <b>#instrument</b> and <b>.box</b> styles, let’s create styles that will individually color each of our boxes.</p>
+            <ul>
+            	<li>Make a new <b>#id</b> for each of our musical note boxes.</li>
+            	<li>Give each box a <b>3px solid border</b> in a unique color. (We gave each of ours a color of the rainbow.)</li>
+            	<li>Give each of the boxes a unique <b>background-color</b> (We made ours a darker tint of its border color) </li>
+            </ul>
+            <p><i>The code for our note boxes looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#c {
+    background-color: #3e181b;
+    border: 3px solid #db1d2d;
+}
+
+#d {
+    background-color: #422018;
+    border: 3px solid #f0421c;
+}
+
+#e {
+    background-color: #45391b;
+    border: 3px solid #fec02d;
+}
+
+#f {
+    background-color: #193c29;
+    border: 3px solid #20d071;
+}
+
+#g {
+    background-color: #18323e;
+    border: 3px solid #1a9ddb;
+}
+
+#a {
+    background-color: #331f35;
+    border: 3px solid #a13fad;
+} 
+
+#b {
+    background-color: #43293d;
+    border: 3px solid #f26fd4;
+}
+
+                </div>
+            </div>
+            <p>Take a look at your preview. How does your music box look so far?</p>
+        </div>
+        <div class="step">
+            <h2>Step 4: Making our boxes buttons</h2>
+            <br>
+            <img src="assets/images/step_04.jpg" />
+            <p>Now that we’ve made our music boxes, let’s give them some properties that make them more fun to click and strum.</p>
+            <p>Let’s begin by adding some <b>hover</b> effect to our buttons that will brighten their background color up a bit as well as turn our cursor into a little finger instead of an arrow. Let’s start with <b>#c</b> id.</p>
+            <ul>
+            	<li>Add a new <b>hover</b> pseudo class for <b>#c</b>.</li>
+            	<li>Add a background-color property that’s a lighter tint of its current color.</li>
+            	<li>We’ll also add a <b>cursor</b> property with <b>pointer</b> as it’s value. This will change the cursor to the little hand.</li>
+            </ul>
+            <p><i>The code for our note boxes looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#c:hover {
+    background-color:#661920;
+    cursor: pointer;
+}
+                </div>
+            </div>
+            <p>Test it out on preview. See how the box lightens up and the color changes when you hover over it?</p>
+            <p>Go ahead  and make hover classes for each of the note boxes. You can add them right above their parent style to help keep track of them. </p>
+        	<p>You can use these values for the hover <b>background-color</b>:</p>
+        	<ul>
+        		<li>c: #661920</li>
+        		<li>d: #6e2819</li>
+        		<li>e: #735b20</li>
+        		<li>f: #1b613b</li>
+        		<li>g: #184d65</li>
+        		<li>a: #4e2753</li>
+        		<li>b: #6f3a62</li>
+        	</ul>
+        	<p>Now let’s make our boxes brighten all the way up when we click them. To do this we will add a new pseudo class called <b>active</b>.</p>
+        	<ul>
+        		<li>In between the <b>#c</b> id and <b>#c:hover</b> pseudo class add a new <b>#c: active</b> class.</li>
+        		<li>Add a background-color property that will match its border color.</li>
+        	</ul>
+        	<p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+#c:active {
+    background-color:#db1d2d;   
+}
+                </div>
+            </div>
+        	<p>Go back to the preview mode. Click on the first box. See how it brightens up all the way when its pressed? That’s what <b>active</b> is doing. Go ahead and make <b>active</b> pseudo-classes for all the note boxes that brighten them up to match their <b>border</b> colors when clicked.</p>
+        </div>
+        <div class="step">
+            <h2>Step 5: Making those boxes play music</h2>
+            <br>
+            <img src="assets/images/step_05.jpg"/>
+            <p>Alright. We’ve got all the pieces in place! Now let’s add a little Javascript and get this thing making music.</p>
+            <p>Let’s start with our first note, the c note.</p>
+            <ul>
+            	<li>Go back to the HTML tab.</li>
+            	<li>Find the audio tag for the C note.</li>
+            	<li>Add the <b>id “cAudio”</b>. This will help us control this element with Javascript.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;audio id="cAudio">
+        &lt;source src="/static/apps/music_boxes/media/c_note.mp3" type="audio/mpeg">&lt;/source>
+        &lt;source src="/static/apps/music_boxes/media/c_note.ogg" type="audio/ogg">&lt;/source>
+        &lt;source src="/static/apps/music_boxes/media/c_note.wav" type="audio/wav">&lt;/source>   
+&lt;/audio>
+                </div>
+            </div>
+            <ul>
+            	<li>Back in the Javascript tab add a new variable called <b>cNote.</b></li>
+            	<li>Use <b>document.getElementById</b> to pull the <b>cAudio</b> audio element we defined on the HTML tab.</li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+var cNote = document.getElementById('cAudio');
+                </div>
+            </div>
+            <p>Now that we’ve got a variable with our audio file, let’s make it play.</p>
+            <p>Let’s use jQuery to call out our <b>#c &lt;div></b> and make it play our <b>cNote</b> variable every time it’s clicked.<p>
+            <p>To do that start a new line and add the following text:</p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$('#c').mousedown(function(){
+
+});
+                </div>
+            </div>
+            <p>This will turn that <b>#c div</b> into a true button that will run a function as soon as the <b>&lt;div></b> is pressed with your mouse button.</p>
+            <ul>
+            	<li>In between the function braces, add the line: <b>cNote.play()</b></li>
+            	<li>Go to the preview mode and click the first box? Did the note play?</li>
+            </ul>
+            <p>Try clicking it twice, quickly. You’ll notice that the audio file will play all the way through (about 8 seconds) before we can click it again. That’s no fun. Let’s add some code to change that.</p>
+            <ul>
+            	<li>Go back into the Javascript tab.</li>
+            	<li>Add a new line of code above <b>cNote.play();</b></li>
+            	<li>Add the following text: <b>cNote.currentTime = 0;</b></li>
+            </ul>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$('#c').mousedown(function(){
+    cNote.currentTime = 0;
+    cNote.play();
+});
+                </div>
+            </div>
+            <p><b>currentTime</b> is a property that will scrub back to a certain point of a media file, measured in seconds. In this case we’re scrubbing it back to the beginning, or 0 seconds. This will happen every time the button is clicked and just before the file plays.</p>
+            <p>Go ahead and add <b>ids</b>, <b>variables</b> and <b>.mousedown</b> functions for the six other notes and your music player will be finished!</p>
+            <p>You can copy the code we just wrote and swap in new variable names and IDs.</p>
+            <p>Once you’re finished enjoy your music player! See what kind of songs you can play.</p>
+        </div>       
+    </div> <!-- end all steps section -->
+
+    <div class="section">
+        <h2>Bonus Rounds</h2>
+        <p>Making music is fun. See you if you can make your new instrument a little more interesting with the exercises below.</p>
+        <div class="projectlink">
+            <img src="assets/images/strum.jpg"/>
+            <div class="details">
+                <h3>Strumming <span class="difficulty">Easy-ish</span></h3>
+                <p>Clicking for each note is cool. My what if we change the interaction to <b>.mouseover</b> so that the mouse strums the surface?</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/melody.jpg"/>
+            <div class="details">
+                <h3>Melody Maker <span class="difficulty">Medium</span></h3>
+                <p>After you’ve changed the interaction to <b>.mouseover</b>, can you rearrange and duplicate the notes to make them into a melody or chord? Try changing their size and position as well.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/soundboard.jpg"/>
+            <div class="details">
+                <h3>Custom Soundboard <span class="difficulty">Hard</span></h3>
+                <p>Music notes are only one type of sound. Try finding other audio clips, or recording your own and adding them to the board. Maybe add pictures of where the sound came from to the boxes as well. You may need to find a tool to convert the files to the appropriate formats for your browser.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section projects last">
+        <h2>Coder Projects to Try Next</h2>
+        <p>Like making interactive things and programming with Javascript? Try these other coder projects to make more cool things and learn more useful stuff.</p>
+
+        <!-- Night and Day -->
+        <div class="project left">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../night_and_day/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Night and Day</h3>
+                <p>Ever wish you could control the universe? Well now you can pretend with this project. Change day into night and back again with the click of a mouse and learn a whole new programming language along the way.</p>
+                <a href="../night_and_day/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+        <!-- Digital Clock -->
+        <div class="project right">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../digital_clock/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Digital Clock</h3>
+                <p>What time is it? You’ll finally be able to answer that question after you’ve built this simple clock.</p>
+                <a href="../digital_clock/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+
+        <div class="clear"></div>
+    </div> <!-- end next projects -->
+    <div class="footer">
+        <div class="madewith bottom"></div>
+        <div class="links">
+            <a href="http://www.google.com/intl/en/policies/" class="trackout">Privacy and Terms</a>
+            <div class="plusholder">
+                <div class="g-plusone"></div>
+            </div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41998892-3', 'googlecreativelab.github.io');
+  ga('send', 'pageview');
+  
+</script>
+</body>
+</html>
