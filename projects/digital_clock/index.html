@@ -72,12 +72,12 @@
             <p>Let’s start in the JS tab.</p>
             <ul>
                 <li>Let’s start a new function that will do all the work calculating and showing our time.  We will be writing most of our code in this function.</li>
-                <li>Inside the $(document).ready function, create a new function and give it a name that makes sense to you. Since this function will ultimately display the time on our page, we named ours displayTime.</li>
+                <li>Inside the $(document).ready() event handler, create a new function and give it a name that makes sense to you. Since this function will ultimately display the time on our page, we named ours displayTime.</li>
             </ul>
             <p><i>Our code looks like this:</i></p>
             <div class="codeview">
                 <div class="data" data-type="javascript">
-$(document).ready = function() {
+$(document).ready(function() {
 
     function displayTime() {
 
