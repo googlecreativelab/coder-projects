@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product">
+<head> 
+    <title>Pop-Up Penguin Game | Coder Projects</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico" />
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../shared_assets/js/jquery.min.js"></script>
+    <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../shared_assets/js/project.js"></script>
+    <meta itemprop="name" content="Pop-Up Penguin Game | Coder Projects">
+    <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
+    <meta itemprop="image" content="http://googlecreativelab.github.io/coder-projects/pop_up_penguins/assets/images/info.jpg">
+</head>
+<body>
+    <div id="project_nav">
+        <div class="project_home"><a href="../../">Coder</a></div>
+        <div class="project_info">&lt;project&gt; steps(06)</div>
+        <h1>Pop-Up Penguin Game</h1>
+        <a href="http://goo.gl/coder" class="what_is_coder">What's CODER?</a>
+    </div>
+    <div class="section intro">
+        <img class="feature" src="assets/images/feature_full.jpg" />
+        <a href="assets/downloads/pop_up_penguins.zip" target="_blank" class="project_download trackdl">Download Complete Project<span class="info">189k | .zip file</span></a>
+    </div>
+    <div class="section description">
+        <div class="details">
+            <h2>Description</h2>
+            <p>Make a simple game to play with your friends and family. See if you can find all the penguins without waking the yeti!</p>
+            <p class="whofor"><strong>A great project for:</strong>
+             Penguin watchers, yeti hunters, puzzle lovers, and anyone that wants to challenge someone to a battle of adorable wits.
+            </p>
+        </div>
+        <div class="meta">
+            <div class="difficulty">Easy</div>
+            <p><span class="name">Skills Needed:</span>
+                Basic HTML, Basic CSS
+            </p>
+            <p><span class="name">Skills Learned:</span>
+                CSS Pseudo-Classes, Hover, Active, Cursor, Images 
+            </p>
+            <p><span class="name">Submitted By:</span>
+                Coder Team
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section">
+        <h2>Are you ready for the yeti?</h2>
+        <p>This project is pretty simple but having a little background with HTML, CSS, and Divs will help you unlock its secrets more quickly.</p>
+        <div class="projectlink">
+            <img src="../perfect_recipe/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../perfect_recipe/">Coder Project: Perfect Recipe</a></h3>
+                <p>A place to start if you’re unfamiliar with Coder or the basics of CSS and HTML. This project also covers image placement and uploading media files into Coder.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="../mondrian/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../mondrian/">Coder Project: Mondrian</a></h3>
+                <p>A good introduction to CSS styles and simple div placement and measurement.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/download_penguins.jpg"/>
+            <div class="details">
+                <h3>Download: Penguin PNGs</h3>
+                <p>You can use our artwork to get started. <a href="assets/downloads/penguin_pngs.zip">Download penguin_pngs.zip here</a>.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section steps">
+        <div class="step">
+            <h2>Get the penguin pngs!</h2>
+            <p>Before we start, we need to make sure we have all the image files this project requires. If you haven’t already, download the file at the top of this page called <a href="assets/downloads/penguin_pngs.zip">penguin_pngs.zip</a>.</p>
+            <p>Once you’ve downloaded the <b>zip</b> file make sure it’s in a place you can find it and open it to get at the files inside. It should be full of image files with the <b>"png"</b> extension.</p>
+
+        </div>
+        <div class="step">
+            <h2>Step 1: Upload our penguins</h2>
+            <p>Alright. Let’s start making our cute penguin game. The first thing we need to do is upload all our penguin images. </p>
+            <ul>
+                <li>Make a new app in Coder. We called ours <b>Pop-Up Penguins.</b></li>
+                <li>Open or unzip the <b>penguin_pngs.zip</b> file. You need the image files inside, not the zip itself.</li>
+                <li>In Coder, open the media tab in your app. It's the file icon at the top.</li>
+                <li>Click the “+” sign and add each file that you found inside the <b>penguin_pngs.zip</b> file. You should see them pop into the media folder.</li>
+                <li>It might take a minute, but upload each of the files into your app this way.</li>
+            </ul>
+			<p><b><i>To finish this step:</i></b></p>
+			<p>Upload all the images in the media folder.</p>
+        </div>
+        <div class="step">
+            <h2>Step 2: Make some divs</h2>
+            <br>
+            <img src="assets/images/step_02.jpg"/>
+            <p>Now that we’ve added all our files let’s start building our game. We’ll be adding a set of divs to our HTML and matching styles in our CSS that create the image above.</p>
+            <ul>
+                <li>Open the HTML tab and delete everything between the <b>&lt;body></b> tags.</li>
+                <li>Add the following code:</li>
+            </ul>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id="gameholder">
+        &lt;div id="title">&lt;/div>
+        &lt;div class="penguin1">&lt;/div>
+        &lt;div class="penguin2">&lt;/div>
+        &lt;div class="penguin3">&lt;/div>
+        &lt;div class="penguin4">&lt;/div>
+        &lt;div class="penguin5">&lt;/div>
+        &lt;div class="penguin6">&lt;/div>
+        &lt;div class="penguin7">&lt;/div>
+        &lt;div class="penguin8">&lt;/div>
+        &lt;div class="yeti">&lt;/div>
+    &lt;/div>
+&lt;/body>
+                </div>
+            </div>
+            <p><i>What this code is doing:</i></p>
+            <p>These divs are defining the structure for our game. Each <b>“penguin”</b> div will be a little bump of snow hiding a penguin (or yeti). We will be adding the images to them in the CSS.</p>
+            <ul>
+                <li>Next, go to the CSS tab.</li>
+                <li>Go ahead and erase the code that’s already there.</li>
+            </ul>
+            <p><i>Add the following code to the CSS tab:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+body {
+    background-color: #ccf5f5;
+}
+
+#gameholder {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title {
+    width: 600px;
+    height: 150px;
+    background-image:url('');
+}
+                </div>
+            </div>
+            <p><i>What this code is doing:</i><p>
+            <p><b>body</b> is making our background a nice blue color.</p>
+            <p><b>#gameholder</b> is making our <b>gameholder</b> div <b>600px</b> wide and centering it in the screen. It’s invisible, but helps us organize our other elements.</p>
+        	<p><b>#title</b> is setting a size for our our <b>title</b> div and giving that div a background image. In this case that image happens to be the title/instructions to our game. We’ll add that in the next step.</p>
+        	<ul>
+        		<li>Now open the media tab.</li>
+        		<li>Find the file called: <b>penguin_title.png</b></li>
+        		<li>Put your cursor between the <b>(‘ ’)</b> at the end of the background image property and click <b>“paste to code”</b></li>
+        	</ul>
+        	<p>Take a look at the preview. You should see some snow covered lettering that says <b>“Find the Penguins.”</b><p>
+        	<p>We’ve got our title, let’s add some little snow-covered mounds for our penguins!</p>
+        	<p><i>Add the following class to the CSS tab:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.penguin1 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('');
+}
+                </div>
+            </div>
+            <ul>
+            	<li>Now open the media tab.</li>
+            	<li>Find the file called: <b>mound_1.png</b></li>
+            	<li>Put your cursor between the <b>(‘ ’)</b> at the end of the background image property and click </b>“paste to code”</b></li>
+            </ul>
+            <p><i>All of out CSS looks like this so far:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+body {
+    background-color: #ccf5f5;
+}
+
+#gameholder {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title {
+    width: 600px;
+    height: 150px;
+    background-image:url('/static/apps/pop_up_penguins/media/penguin_title.png');
+}
+
+.penguin1 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('/static/apps/pop_up_penguins/media/mound_1.png');
+}
+                </div>
+            </div>
+            <p><b><i>To finish this step:</i></b></p>
+            <p>Copy the <b>.penguin1</b> class and use it to make styles for <b>.penguin2</b> through <b>.penguin8</b>. Make a <b>.yeti</b> class as well. You’ll find image files for each one labeled in the Media folder.</p>	
+        </div>
+    	<div class="step">
+            <h2>Step 3: Add a rollover</h2>
+            <br>
+            <img src="assets/images/step_03.jpg"/>
+            <p>Now let’s add a rollover or <b>:hover</b> effect to each one of our mounds. This will pop up a question mark and giggle the snow a little adding intrigue and suspense to our game.</p>
+            <ul>
+            	<li>In the CSS tab find our <b>.penguin1</b> class.</li>
+            	<li>Make a new line above the class and add the following style:</li>
+            </ul>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.penguin1:hover {
+    background-image:url('');
+    cursor: pointer;
+}
+                </div>
+            </div>
+            <p><i>What this code is doing:</i></p>
+            <p>This style is what’s called a <b>pseudo-class</b>. It’s a way to add effects and additional styles to elements that we’ve already created. In this case we will be changing the background image of that div when a mouse is over it. We will also be changing the cursor to a pointer, or little hand giving our users another clue that the mound is clickable.</p>
+            <ul>
+            	<li>Go into the Media tab and find the image for mound_1_hover.png.</li>
+            	<li>Paste the image link between the <b>(‘’)</b> of the <b>background-image</b> property.</li>
+            	<li>Go to the preview mode and run your mouse over the first mound. Did the question mark pop up? That’s <b>:hover</b> doing its job.</li>
+            </ul>
+            <p><b><i>To finish this step:</i></b></p>
+            <p>Make new <b>:hover</b> classes for each of our <b>.penguin</b> and <b>.yeti</b> classes. You can find the images in our media folder.</p>
+    	</div>
+    	<div class="step">
+            <h2>Step 4: Pop up the penguins!</h2>
+            <br>
+            <img src="assets/images/step_04.jpg"/>
+            <p>Now that we’ve got our mounds tempting us with those question marks, let’s hide some penguins (and a yeti!) inside each one and use another <b>pseudo-class</b> to make them pop up when clicked.</p>
+            <ul>
+            	<li>In the CSS tab find the <b>.penguin1:hover</b> class.</li>
+            	<li>Underneath*, that class add the following class:</li>
+            </ul>
+            <div class="codeview">
+                <div class="data" data-type="css">
+.penguin1:active {
+    background-image:url('');
+}
+                </div>
+            </div>
+            <p><i>What this code is doing:</i></p>
+            <p><b>:active</b> is another type of <b>pseudo-class</b>. Similar <b>:hover</b> it adds/changes the style of <b>.penguin1</b> when the <b>div</b> is <i>clicked</i> with the mouse.</p>
+            <p>* The position in the code of <b>pseudo-classes</b> is important. An <b>:active</b> class should always come after or underneath <b>:hover</b> in the code for the effect to work properly.</p>
+            <ul>
+            	<li>Go into the media tab and find a penguin image. You can start with <b>penguin_1.png</b>.</li>
+            	<li>Paste the code for the image in between the <b>(‘’)</b></li>
+            	<li>Go back to the preview and click the first mound. Did the penguin pop up? Hold your mouse button down to keep the penguin from popping back down.</li>
+            </ul>
+            <p><b><i>To finish this step:</i></b></p>
+            <p>Make new <b>:active</b> classes for each of our <b>.penguin</b> and <b>.yeti</b> classes. Add penguin images from the media tab. Make sure you hide the Yeti somewhere too.</p> 
+        <div>
+        <div class="step">
+            <h2>Step 5: Yeti alert!</h2>
+            <br>
+            <img src="assets/images/step_05.jpg"/>
+            <p>We’ve got all our penguins and yeti in place. Let’s add a yeti alert that will pop up when the yeti is clicked!</p>
+            <ul>
+            	<li>Go to the JS tab. </li>
+                <li>On the line below <b>“//This code will run after your page loads”</b> add a handler for the "<b>mousedown</b>" event to the <b>.yeti</b> div. It will look like this:</li>
+            </ul>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$(document).ready( function() {
+
+    //This code will run after your page loads
+
+    $(".yeti").mousedown(function() {
+        alert("Yaaaarrrr!");
+    });
+
+});
+                </div>
+            </div>
+            <p>This is a little bit of <b>Javascript</b> and <b>jQuery</b> that will pop up a browser alert with the text “Yaaaarrrr” when you press your mouse button on the yeti. Try it out in the preview mode. To learn more about Javascript try playing around with the <b>Night and Day</b> project next.</p>    
+    	</div>
+    	<div class="step">
+            <h2>Step 6: Mix it up and challenge someone</h2>
+            <br>
+            <img src="assets/images/step_06.jpg"/>
+            <p>Now that we’ve got all our penguins (and yeti) hidden let’s play the game! Find someone, either a friend or a family member, and challenge them to find all the penguins without accidently clicking on the yeti.</p>
+            <p>After they’ve had a go, mix the <b>classes</b> up in your HTML to reshuffle the mounds and let them try again. To make it extra challenging, change the images in the <b>:active</b> states to put different penguins (and your yeti) under different mounds.</p>
+            <p><b><i>To finish this step:</i></b></p>
+            <p>Teach your playing partner how to change the images in the <b>:active</b> states and trade off challenging each other to a game of <b>“Find the Penguins.”</b></p>
+        </div>    
+    </div> <!-- end all steps section -->
+
+    <div class="section">
+        <h2>Bonus Rounds</h2>
+        <p>Once you’ve mastered the game we’ve built together, see if you can make it bigger and better.</p>
+        <div class="projectlink">
+            <img src="assets/images/colony.jpg" />
+            <div class="details">
+                <h3>A whole colony! <span class="difficulty">Easy</span></h3>
+                <p>Nine snow mounds is childs-play. Why not make it more challenging. double, triple, or even quadruple the number of mounds to make the game more difficult! You can use the same <b>penguin</b> or <b>mound</b> png files more than once if you like but you’ll need to make more <b>divs</b> and <b>classes</b> and make our <b>gameholder</b> wider.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/stay_penguin.jpg" />
+            <div class="details">
+                <h3>Stay, penguin, stay! <span class="difficulty">Hard</span></h3>
+                <p>Holding the mouse button is hard work. See if you can use <b>Javascript</b> and <b>jQuery</b> to make the penguins stay up when clicked and disappear when the yeti is awoken. If you’re not sure how to do that try finishing the <b><a href="../night_and_day/">Night and Day</a></b> project to learn some tricks.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/sfx.jpg" />
+            <div class="details">
+                <h3>Real squeaks, squawks, and roars  <span class="difficulty">Hard</span></h3>
+                <p>If you feel like your penguin game is lacking certain level of auditory awesomeness try adding some sound effects to each click! You’ll probably need to learn a little bit about audio files. Fortunately, our <b><a href="../music_boxes/">Music Boxes</a></b> project covers those subjects. </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section projects last">
+        <h2>Coder Projects to Try Next</h2>
+        <p>Making interactive things is kinda cool. Try these projects next, if you want to make your mouse clicks even more powerful.</p>
+
+        <!-- Night and Day -->
+        <div class="project left">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../night_and_day/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Night and Day</h3>
+                <p>Ever wish you could control the universe? Well now you can pretend with this project. Change day into night and back again with the click of a mouse and learn a whole new programming language along the way.</p>
+                <a href="../night_and_day/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+        <!-- Music Boxes -->
+        <div class="project right">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../music_boxes/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Music Boxes</h3>
+                <p>Let’s turn it up. This project will transform your browser into a simple instrument that you can use to make music.</p>
+                <a href="../music_boxes/" target="_blank" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+
+        <div class="clear"></div>
+    </div> <!-- end next projects -->
+    <div class="footer">
+        <div class="madewith bottom"></div>
+        <div class="links">
+            <a href="http://www.google.com/intl/en/policies/" class="trackout">Privacy and Terms</a>
+            <div class="plusholder">
+                <div class="g-plusone"></div>
+            </div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41998892-3', 'googlecreativelab.github.io');
+  ga('send', 'pageview');
+  
+</script>
+</body>
+</html>
