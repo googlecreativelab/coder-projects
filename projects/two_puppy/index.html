@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product">
+<head> 
+    <title>Two.js Puppy | Coder Projects</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../shared_assets/js/jquery.min.js"></script>
+    <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../shared_assets/js/project.js"></script>
+    <meta itemprop="name" content="Two.js Puppy | Coder Projects">
+    <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
+    <meta itemprop="image" content="http://googlecreativelab.github.io/coder-projects/projects/two_puppy/assets/images/info.jpg">
+</head>
+<body>
+    <div id="project_nav">
+        <div class="project_home"><a href="/">Coder</a></div>
+        <div class="project_info">&lt;project&gt; steps(6)</div>
+        <h1>Two.js Puppy</h1>
+    </div>
+    <div class="section intro">
+        <img class="feature" src="assets/images/feature_full.jpg" />
+        <a href="assets/downloads/two_puppy.zip" target="_blank" class="project_download trackdl">Download   Complete Project <span class="info">39k | .zip file</span></a>
+    </div>
+    <div class="section description">
+        <div class="details">
+            <h2>Description</h2>
+            <p>Drawing with code can be a walk in the park with the help of Javascript and the handy drawing library <b>Two.js</b>. In just a few lines of code your browser becomes your sketchbook.</p>
+            <p class="whofor"><strong>A great project for:</strong>
+            Dog lovers, doodlers, and javascript junkies.
+            </p>
+        </div>
+        <div class="meta">
+            <div class="difficulty">Medium</div>
+            <p><span class="name">Skills Needed:</span>
+                Basic Javascript, Basic HTML, &amp; Basic CSS
+            </p>
+            <p><span class="name">Skills Learned:</span>
+                 Basic Two.js, Working with Javascript Libraries
+            </p>
+            <p><span class="name">Submitted By:</span>
+                Coder Team
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="section">
+        <h2>Before we get started with two.js.</h2>
+        <p>Drawing a puppy seems simple (and it is with Two.js!) but it requires a little experience with Javascript first. If you’ve never ventured into the JS tab on Coder you might want to start with a previous project.</p>
+        <div class="projectlink">
+            <img src="../night_and_day/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../night_and_day/index.html">Previous Coder Project: Night &amp; Day</a></h3>
+                <p>This project will introduce you to Javascript, the JS tab and how to make your computer do some of the thinking for you.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="../digital_clock/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../digital_clock/index.html">Previous Coder Project: Clock</a></h3>
+                <p>What time is it? You’ll finally be able to answer that question after you’ve built this simple clock.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/two.jpg" />
+            <div class="details">
+                <h3><a href="http://jonobr1.github.io/two.js/" target="_blank" class="trackout">Download: Two.js Library</a></h3>
+                <p>In this project we’ll be using a 2D drawing library for Javascript. You can download the two.js file <a href="https://raw.github.com/jonobr1/two.js/master/build/two.js" target="_blank">here</a> (right click the link and download to your desktop). There's also a ton more to learn about at the <a href="http://jonobr1.github.io/two.js/" target="_blank" class="trackout">Two.js website.</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section steps">
+
+        <div class="step">
+            <h2>Step 1: Setting up our sketchbook.</h2>
+            <p><img src="assets/images/step_01.jpg" /></p>
+            <p>Let’s get drawing! We’ll need to do a little bit of set up, but once we’ve got the pieces in place we’ll be able to draw with just a few lines of code. First we’ll upload the Two.js library to our project, then we’ll tell the code how to find Two.js. We’re actually already using some other helpful javascript libraries, like jQuery &amp; Ace, so adding Two.js will be a breeze. In fact you can use all sorts of helpful libraries with Coder using these same steps. </p>
+            <ul>
+                <li>If you haven’t already, go ahead and download <a href="http://jonobr1.github.io/two.js/" target="_blank" class="trackout">Two.js</a> it should be a file called: <b>two.js.</b></li>
+                <li>Start a new Coder app and call it whatever you’d like. We’ll call ours “Two Puppy”. </li>
+                <li>First thing’s first, let’s add the <b>two.js</b> file to our app. We’ll do that just like an image or audio file. Open the media tab, hit the + button, and upload the <b>two.js</b> file you downloaded earlier.</li>
+                <li>Look in the &lt;head> tag of your HTML, you’ll see a few lines that point to other .js files we’re using, they look something like this: <i>&lt;script src="/static/common/js/jquery.min.js"&gt;&lt;/script&gt;</i></li>
+                <li>Duplicate one of those lines and delete the src path inside the quotes. Now with your cursor still in between the quotes, open the media folder, hover over two.js, and select <b>Paste to Code.</b></li>
+            </ul>
+            <p><i>Our code looks like this. Note that your path might look a tiny bit different if you've named your project differently.</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;script src="/static/apps/two_puppy/media/two.js">&lt;/script>                  
+                </div>
+            </div>
+            <ul>
+            <li>While we’re in the HTML, tab let’s delete everything out of the <b>&lt;body></b> and add a new <b>&lt;div></b> with id “doodle”. We’ll use this <b>&lt;div></b> a bit later.</li>
+            </ul>
+            <p><i>Our full &lt;body&gt; code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="html">
+&lt;body>
+    &lt;div id="doodle">
+    &lt;/div>
+&lt;/body>                
+                </div>
+            </div>
+            <ul>
+            <li>Last set-up step! Delete everything in the CSS tab and give your body a nicer color than white. </li>
+            </ul>
+             <p><i>Our full CSS code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="css">
+body {
+    background-color: #FFFAED;
+}              
+                </div>
+            </div>
+			<p>Nothing to look at quite yet. But now it’s on to the JS tab where all the magic happens.</p>
+        </div>
+
+		<div class="step">
+            <h2>Step 2: A simple circle.</h2>
+            <p><img src="assets/images/step_02.jpg" /></p>
+            <p>With two.js and just a few lines of code we can start drawing simple shapes anywhere in the browser window. Here’s the first bit of javascript we’ll add (inside the <b>$(document).ready( function()</b> ) to our JS tab to draw a blue circle. We’ll go through it line by line below. </p>
+             <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$(document).ready( function() {
+
+    var elem = document.getElementById('doodle');
+    var two = new Two({fullscreen: true}).appendTo(elem);
+    
+    var dot = two.makeCircle(120, 120, 100);
+    dot.fill = '#52C5DC';
+    dot.noStroke();
+
+    two.update();            
+
+});
+                </div>
+            </div>
+            <p>Not too crazy, right? Let’s go through line by line and see what each does.</p>
+            <ul>
+	            <li>In the first line we create a variable called <b>elem</b> and save the location of the <b>‘doodle’ &lt;div></b> we made in our HTML tab.</li>
+	            <li>Line 2 is the big one, it creates a new Two.js instance and gives it the variable name <b>two</b>. You have a few options at this point, but the only thing we’re going to worry about is <b>fullscreen: true</b> this tells Two.js to make your drawing area the full size of your browser window. The <b>.appendTo(elem)</b> attaches our new Two instance to the <b>“doodle” &lt;div></b>. This is useful in case we want to have more than one Two.js instance on a page and just good practice. </li>
+	            <li>Finally, we’re drawing a circle! Two.js has a bunch of helper methods to draw simple shapes like circles. <b>two.makeCircle()</b> is one of those functions. It needs three numbers to work. The first two are <b>x</b> and <b>y</b> coordinates that say where the center point of the circle should be, the third number is the circle’s <b>radius</b>. So this line of code basically says “Draw a circle named ‘dot’ with the center 120 pixels over from the left, 120 pixels down from the top, and with a radius of 100 pixels.” </li>
+	            <li>The next 2 lines are just 2 of many properties of the circle we can change. <b>.fill</b> let’s us set a color for our circle using familiar HEX colors and <b>.noStroke()</b> tells Two.js that we don’t want to draw an outline around the circle. </li>
+	            <li>Finally, we need to tell Two.js to draw everything! We do this by calling the <b>two.update()</b> function. For this project we just need to have that line at the end of our code, but in more advanced projects there are other ways to tell Two.js to draw.</li>
+            </ul>
+            <p>If you’ve got everything typed in correctly you should see a blue circle in the top left of your preview screen. Try changing some of the numbers used for the circle or swap in your favorite HEX color. </p>
+        </div>
+
+		<div class="step">
+            <h2>Step 3: Just Doodling. </h2>
+            <p><img src="assets/images/step_03.jpg" /></p>
+            <p>Step 2 covered the basics of Two.js but before we dive into drawing our puppy let’s play with 2 more draw functions in Two.js: <b>makeLine()</b> &amp; <b>makeRectangle()</b>. They do just what you’d expect, but require slightly different code. Try adding this code before <b>two.update()</b>.</p>
+             <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+var rect = two.makeRectangle(260,120, 210,100);
+rect.fill = '#6cbf58';
+rect.stroke = '#ffffff';
+rect.linewidth = 5;
+    
+var line = two.makeLine(20,20, 210,300);
+line.stroke = '#ff4c22';
+line.linewidth = 8;          
+                </div>
+            </div>
+            <p>Based on the circle, you can probably guess what’s going on here, but let’s look at a few of the details. </p>
+            <ul>
+            	<li><b>two.makeRectangle()</b> does exactly that, you just need to give it an <b>x</b> and <b>y</b> for the center point, a width, and a height. So this line says “Make a rectangle named ‘rect’ 260 pixels over from the left, 120 pixels down from the bottom, 210 pixels wide, and 100 pixels tall.” </li>
+            	<li>Then we use some new properties of rect, <b>.stroke </b>set’s our rectangles stroke color and <b>.linewidth</b> let’s us say how many pixels thick the stroke should be. Simple. </li>
+            	<li><b>two.makeLine()</b>... makes a line! We just give it 2 <b>x</b> and <b>y</b> points and it connects the dots. We can use the same <b>.stroke</b> and <b>.linewidth </b>to style it.</li>
+            </ul>
+            <p>You can probably imagine all sorts of cool things to draw with just these shapes. Go ahead and play around with some of the numbers or create more circles, rectangles, and lines. We’ll start fresh in step 4 to draw our puppy.</p>
+
+        </div>
+
+		<div class="step">
+            <h2>Step 4: Puppy Positioning.</h2>
+            <p><img src="assets/images/step_04.jpg" /></p>
+            <p>Now that we know how to draw basic shapes we can draw almost anything. When you can draw anything, why not draw a puppy? To help us draw we’re going to use a few more tricks and variables, just to make it a little bit easier.</p>
+			<p>Also, up until now we haven’t exactly explained the x and y numbers that determine position, but it’s simple. Two.js uses a basic coordinate system with 0,0 in the upper left corner of your browser, with the numbers increasing as you move down and to the right. X gets bigger to the Right, Y gets bigger toward the bottom. You’ll find that almost all graphics programming uses this same coordinate system.</p>
+			<p>So with all that in mind, let’s write some code to draw a circle in the middle of our screen, no matter what size our browser is.</p>
+			<ul>
+				<li>Go ahead and delete all the javascript you’ve written (or even start fresh Coder app) and write this inside the <b>$(document).ready( function()</b> function. </li>
+			</ul>
+             <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+var elem = document.getElementById('doodle');
+var two = new Two({fullscreen: true}).appendTo(elem);
+
+var position = new Two.Vector(two.width/2, two.height/2);
+    
+var head = two.makeCircle(position.x, position.y, 100);
+head.fill = '#52C5DC';
+head.noStroke();
+
+two.update();         
+                </div>
+            </div>
+            <p>We really only needed one new line of code to center the circle in our screen. Let’s take a look. </p>
+            <ul>
+	            <li>Our third line of code creates a new <b>Two.js Vector</b> that we’ve named <b>position</b>. A Two.Vector is simply a variable that can hold 2 numbers instead of 1, perfect for coordinates! You can access each number by adding <b>.x</b> or <b>.y</b> to the name of your vector. </li>
+	            <li>Instead of assigning static numbers the <b>position</b> vector we’re using another feature of Two.js: <b>two.width</b> and <b>two.height</b>. Since we’ve already told Two.js to be the full size of our browser these are easy ways to get the width and height of the browser window. And dividing <b>two.width</b> and <b>two.height</b> by 2 will give us the center point of the browser every time.</li>
+	            <li>The last thing we need to do is use our new position vector to draw a circle. So instead of using numbers for the <b>two.makeCircle()</b> center point, we’re saying: <b>position.x</b> and <b>position.y</b>. (We can’t just say position, because the circle method expects 2 numbers separated by a comma.)</li>
+            </ul>
+            <p>Preview your app now and try resizing and refreshing the app. The circle won’t move when you resize the browser, just when you refresh, but it’s still a great way to position things when you’re not sure what size the browser window will be.</p>
+        </div>
+
+		<div class="step">
+            <h2>Step 5: Puppy Time.</h2>
+            <p><img src="assets/images/step_05.jpg" /></p>
+            <p>Oddly enough, we’re almost done! Using everything we’ve learned we can draw (almost) all of the pieces of a puppy. Check out how we’re drawing the rest of the puppy in the code below. One important thing to note, you’ll need to draw your shapes in the order you want them layered. Just like real paint, the first thing you draw will be at the bottom.</p>
+             <p><i>Our code after head.noStroke(); looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+var nose;
+nose = two.makeCircle(position.x, position.y+30, 32);
+nose.fill = '#EFB8D2';
+nose.noStroke();
+
+var eyeLeft;
+eyeLeft = two.makeCircle(position.x+42, position.y-26, 32);
+eyeLeft.fill = '#FFFFFF';
+eyeLeft.noStroke();
+
+var pupilLeft;
+pupilLeft = two.makeCircle(position.x+42, position.y-26, 20);
+pupilLeft.fill = '#7FC35E';
+pupilLeft.noStroke();
+
+var earLeft;
+earLeft = two.makeEllipse(position.x-100, position.y-80, 26, 46);
+earLeft.fill = '#52C5DC';
+earLeft.noStroke();
+earLeft.rotation = Math.PI / 4;        
+                </div>
+            </div>
+            <p>It looks like a lot, but it’s really just same bit of code we used to draw our circle repeated for other parts of the puppy. There are a few new things in there to draw the ear that we’ll explain now. </p>
+            <ul>
+            <li>Find the <b>earLeft</b> shape. See how we’re drawing an <b>Ellipse</b>, using <b>two.makeEllipse()</b>? This method works exactly like <b>two.makeRectangle()</b>, but will draw an oval shape instead. You just define the center point, width, and height. Easy.</li>
+            <li>We want to draw our ear ellipse at an angle and, of course, Two.js makes it easy with a property we can modify: <b>.rotation</b>. We specify rotation in Radians, which are a bit odd, but easy to work with. We won’t get into the details of the math but by multiplying and dividing <b>π</b> (3.14159265…) by different numbers we can change the rotation of our shape. To get pi in javascript we can write <b>Math.Pi</b>. Try changes the numbers in the code to see how the ear rotates.</li>
+            </ul>
+            <p>We still need to draw the right side of the puppy! Try making the right eye, pupil, and ear on your own based on the left side’s code. If you’re feeling lazy our code is below. </p>
+             <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+var eyeRight;
+eyeRight = two.makeCircle(position.x-42, position.y-26, 32);
+eyeRight.fill = '#FFFFFF';
+eyeRight.noStroke();
+
+var pupilRight;
+pupilRight = two.makeCircle(position.x-42, position.y-26, 20);
+pupilRight.fill = '#7FC35E';
+pupilRight.noStroke();
+
+var earRight;
+earRight = two.makeEllipse(position.x+100, position.y-80, 26, 46);
+earRight.fill = '#52C5DC';
+earRight.noStroke();
+earRight.rotation = -Math.PI / 4;       
+                </div>
+            </div>
+            <p>Our puppy is almost complete, but he’s missing a mouth! That’s a more complex shape that we’ll cover in our final step.</p>
+        </div>
+
+		<div class="step">
+            <h2>Step 6: Lickity Split.</h2>
+            <p><img src="assets/images/step_06.jpg" /></p>
+            <p>Two.js has a few helpful methods to draw simple shapes like circles, rectangles, lines, and ellipses, but if we want to draw more complex shapes we’ll have to do it ourselves. Our puppy’s tongue is basically half an ellipse, but that makes it a unique shape that we’ll draw using a new method called two.makePolygon(). It works a little bit like a two.makeLine() but we can use as many points as we want. Check out the code for our tongue. </p>
+             <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+var tongue;
+tongue = two.makePolygon(0,0,  100,0,  100,0,  90,58,  50,80,  10,58,  0,0);
+tongue.curved = true;
+tongue.fill = '#EE3E36';
+tongue.noStroke();      
+                </div>
+            </div>
+            <p>If you preview this code you’ll see the tongue is pretty big and stuck in the top left corner. That’s ok, we can reposition, scale, and rotate it later. Here’s what these first few lines are doing. </p>
+            <ul>
+	            <li>We passed 7 sets of x,y coordinates into the <b>makePolygon</b> method to define the shape. To make things easier to write we started at 0,0 and then added points in the order we wanted them to connect</li>
+	            <li><b>tongue.curved </b>is a new property that we set to true to tell Two.js to make the connections between the points curved. This is so we have a rounded tongue. You can try changing it to false and see what happens. </li>
+	            <li>You might notice we doubled up the points <b>(100,0)</b> and <b>(0,0)</b>. This is a hack to make the top left and top right of the tongue have a hard angle instead of a rounded corner. When Two.js tries to make a curved edge between two points that are in the exact same location, a corner happen</li>
+	            <li>The last few lines should look familiar to you, just basic styling of the tongue. </li>
+            </ul>
+            <p>Now let’s get the tongue in the right place. Here’s a few more lines of code with some new properties that help us position the tongue. </p>
+            <p><i>Our code looks like this:</i></p>
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+tongue.translation.x = position.x-40;
+tongue.translation.y = position.y+86;
+tongue.scale = 0.4;
+tongue.rotation = Math.PI / 5;    
+                </div>
+            </div>
+            <ul>
+           		<li>The first 2 lines use the property <b>.translation</b> to shift the tongue down and left on the screen. We have to specify if we’re shifting on the x or y axis by adding a <b>.x</b> or <b>.y</b> to .<b>translation</b>. Also, notice we’re using our position variable to easily find the center of the screen. </li>
+           		<li>The next new property is <b>.scale</b>. It works with decimal numbers, 1 is equal to 100%, so 0.4 is 40%. </li>
+           		<li>One last line to rotate the tongue and we’re done!</li>
+            </ul>
+            <p>That’s it! Preview your app, and if everything is written correctly you should see your new puppy.</p>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>Bonus Rounds</h2>
+        <p>Now that we’ve got the basics of drawing done, let’s see what else we can make with Two.js.
+</p>
+        <div class="projectlink">
+            <img src="assets/images/extra_challenge_zoo.jpg" />
+            <div class="details">
+                <h3>It’s a Zoo out there <span class="difficulty">Medium</span></h3>
+                <p>Dogs, cats, and snakes?! With the same techniques we used to draw a puppy see if you can create other crazy critters. </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/extra_challenge_two.jpg" />
+            <div class="details">
+                <h3>Explore Two.js <span class="difficulty">Hard</span></h3>
+                <p>You can a lot more than simple drawings with Two.js. Head over to the <a href="http://jonobr1.github.io/two.js/" class="trackout" target="_blank">Two.js website</a> to learn more about drawing, animation, and interactivity. </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section projects last">
+        <h2>Coder Projects to Try Next</h2>
+        <p>Like drawing with code? There’s more than one way to get pixels on the page.Try these other coder projects to make more cool things and learn more useful stuff.</p>
+
+        <!-- Mondrian -->
+        <div class="project left">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../mondrian/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Make Your Own Mondrian</h3>
+                <p>Paint makes a mess. Code is so much cleaner. Use this project to recreate a classic Modern artwork, Piet Mondrian’s Composition II in Red, Blue, and Yellow in your browser with CSS and HTML.</p>
+                <a href="../mondrian/" class="button inline">Open Project</a>
+                <div class="difficulty">Easy</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+        <!-- Music Boxes -->
+        <div class="project right">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../music_boxes/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Music Boxes</h3>
+                <p>Let’s turn it up. This project will transform your browser into a simple instrument that you can use to make music.</p>
+                <a href="../music_boxes/" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+
+        <div class="clear"></div>
+    </div> <!-- end next projects -->
+    <div class="footer">
+        <div class="madewith bottom"></div>
+        <div class="links">
+            <a href="http://www.google.com/intl/en/policies/" class="trackout">Privacy and Terms</a>
+            <div class="plusholder">
+                <div class="g-plusone"></div>
+            </div>
+            
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+    </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41998892-3', 'googlecreativelab.github.io');
+  ga('send', 'pageview');
+  
+</script>
+</body>
+</html>
