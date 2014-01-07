@@ -83,7 +83,7 @@
                 <li>If you haven’t already, go ahead and download <a href="http://jonobr1.github.io/two.js/" target="_blank" class="trackout">Two.js</a> it should be a file called: <b>two.js.</b></li>
                 <li>Start a new Coder app and call it whatever you’d like. We’ll call ours “Two Puppy”. </li>
                 <li>First thing’s first, let’s add the <b>two.js</b> file to our app. We’ll do that just like an image or audio file. Open the media tab, hit the + button, and upload the <b>two.js</b> file you downloaded earlier.</li>
-                <li>Look in the &lt;head> tag of your HTML, you’ll see a few lines that point to other .js files we’re using, they look something like this: <i>&lt;script src="/static/common/js/jquery.min.js"&gt;&lt;/script&gt;</i></li>
+                <li>Look in the <b>&lt;head></b> tag of your HTML, you’ll see a few lines that point to other .js files we’re using, they look something like this: <b><i>&lt;script src="/static/common/js/jquery.min.js"&gt;&lt;/script&gt;</i></b></li>
                 <li>Duplicate one of those lines and delete the src path inside the quotes. Now with your cursor still in between the quotes, open the media folder, hover over two.js, and select <b>Paste to Code.</b></li>
             </ul>
             <p><i>Our code looks like this. Note that your path might look a tiny bit different if you've named your project differently.</i></p>
@@ -105,7 +105,7 @@
                 </div>
             </div>
             <ul>
-            <li>Last set-up step! Delete everything in the CSS tab and give your body a nicer color than white. </li>
+            <li>Last set-up step! Delete everything in the CSS tab and give your body a nicer color than just plain old white. </li>
             </ul>
              <p><i>Our full CSS code looks like this:</i></p>
             <div class="codeview">
@@ -169,7 +169,7 @@ line.linewidth = 8;
             </div>
             <p>Based on the circle, you can probably guess what’s going on here, but let’s look at a few of the details. </p>
             <ul>
-            	<li><b>two.makeRectangle()</b> does exactly that, you just need to give it an <b>x</b> and <b>y</b> for the center point, a width, and a height. So this line says “Make a rectangle named ‘rect’ 260 pixels over from the left, 120 pixels down from the bottom, 210 pixels wide, and 100 pixels tall.” </li>
+            	<li><b>two.makeRectangle()</b> does exactly that, you just need to give it an <b>x</b> and <b>y</b> for the center point, a <b>width</b>, and a <b>height</b>. So this line says “Make a rectangle named ‘rect’ 260 pixels over from the left, 120 pixels down from the bottom, 210 pixels wide, and 100 pixels tall.” </li>
             	<li>Then we use some new properties of rect, <b>.stroke </b>set’s our rectangles stroke color and <b>.linewidth</b> let’s us say how many pixels thick the stroke should be. Simple. </li>
             	<li><b>two.makeLine()</b>... makes a line! We just give it 2 <b>x</b> and <b>y</b> points and it connects the dots. We can use the same <b>.stroke</b> and <b>.linewidth </b>to style it.</li>
             </ul>
@@ -242,7 +242,7 @@ earLeft.rotation = Math.PI / 4;
             <p>It looks like a lot, but it’s really just same bit of code we used to draw our circle repeated for other parts of the puppy. There are a few new things in there to draw the ear that we’ll explain now. </p>
             <ul>
             <li>Find the <b>earLeft</b> shape. See how we’re drawing an <b>Ellipse</b>, using <b>two.makeEllipse()</b>? This method works exactly like <b>two.makeRectangle()</b>, but will draw an oval shape instead. You just define the center point, width, and height. Easy.</li>
-            <li>We want to draw our ear ellipse at an angle and, of course, Two.js makes it easy with a property we can modify: <b>.rotation</b>. We specify rotation in Radians, which are a bit odd, but easy to work with. We won’t get into the details of the math but by multiplying and dividing <b>π</b> (3.14159265…) by different numbers we can change the rotation of our shape. To get pi in javascript we can write <b>Math.Pi</b>. Try changes the numbers in the code to see how the ear rotates.</li>
+            <li>We want to draw our ear ellipse at an angle and, of course, Two.js makes it easy with a property we can modify: <b>.rotation</b>. We specify rotation in Radians, which are a bit odd, but easy to work with. We won’t get into the details of the math but by multiplying and dividing <b>π</b> (3.14159265…) by different numbers we can change the rotation of our shape. To get pi in javascript we can write <b>Math.Pi</b>. Try changing the numbers in the code to see how the ear rotates.</li>
             </ul>
             <p>We still need to draw the right side of the puppy! Try making the right eye, pupil, and ear on your own based on the left side’s code. If you’re feeling lazy our code is below. </p>
              <p><i>Our code looks like this:</i></p>
@@ -285,8 +285,8 @@ tongue.noStroke();
             <p>If you preview this code you’ll see the tongue is pretty big and stuck in the top left corner. That’s ok, we can reposition, scale, and rotate it later. Here’s what these first few lines are doing. </p>
             <ul>
 	            <li>We passed 7 sets of x,y coordinates into the <b>makePolygon</b> method to define the shape. To make things easier to write we started at 0,0 and then added points in the order we wanted them to connect</li>
-	            <li><b>tongue.curved </b>is a new property that we set to true to tell Two.js to make the connections between the points curved. This is so we have a rounded tongue. You can try changing it to false and see what happens. </li>
-	            <li>You might notice we doubled up the points <b>(100,0)</b> and <b>(0,0)</b>. This is a hack to make the top left and top right of the tongue have a hard angle instead of a rounded corner. When Two.js tries to make a curved edge between two points that are in the exact same location, a corner happen</li>
+	            <li><b>tongue.curved </b>is a new property that we set to <b>true</b> to tell Two.js to make the connections between the points curved. This is so we have a rounded tongue. You can try changing it to false and see what happens. </li>
+	            <li>You might notice we doubled up the points <b>(100,0)</b> and <b>(0,0)</b>. This is a little hack to make the top left and top right of the tongue have a hard angle instead of a rounded corner. When Two.js tries to make a curved edge between two points that are in the exact same location we get a corner.</li>
 	            <li>The last few lines should look familiar to you, just basic styling of the tongue. </li>
             </ul>
             <p>Now let’s get the tongue in the right place. Here’s a few more lines of code with some new properties that help us position the tongue. </p>
@@ -325,7 +325,7 @@ tongue.rotation = Math.PI / 5;
             <img src="assets/images/extra_challenge_two.jpg" />
             <div class="details">
                 <h3>Explore Two.js <span class="difficulty">Hard</span></h3>
-                <p>You can a lot more than simple drawings with Two.js. Head over to the <a href="http://jonobr1.github.io/two.js/" class="trackout" target="_blank">Two.js website</a> to learn more about drawing, animation, and interactivity. </p>
+                <p>You can do a lot more than simple drawings with Two.js. Head over to the <a href="http://jonobr1.github.io/two.js/" class="trackout" target="_blank">Two.js website</a> to learn more about drawing, animation, and interactivity. </p>
             </div>
             <div class="clear"></div>
         </div>
@@ -333,7 +333,7 @@ tongue.rotation = Math.PI / 5;
 
     <div class="section projects last">
         <h2>Coder Projects to Try Next</h2>
-        <p>Like drawing with code? There’s more than one way to get pixels on the page.Try these other coder projects to make more cool things and learn more useful stuff.</p>
+        <p>Like drawing with code? There’s more than one way to get pixels on the page. Try these other coder projects to make more cool things and learn more useful stuff.</p>
 
         <!-- Mondrian -->
         <div class="project left">

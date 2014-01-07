@@ -173,7 +173,7 @@ body {
             	<li>Find the file called: <b>mound_1.png</b></li>
             	<li>Put your cursor between the <b>(' ')</b> at the end of the background image property and click </b>“paste to code”</b></li>
             </ul>
-            <p><i>All of out CSS looks like this so far:</i></p>
+            <p><i>All of our CSS looks like this so far:</i></p>
             <div class="codeview">
                 <div class="data" data-type="css">
 body {
@@ -207,7 +207,7 @@ body {
             <h2>Step 3: Add a rollover</h2>
             <br>
             <img src="assets/images/step_03.jpg"/>
-            <p>Now let’s add a rollover or <b>:hover</b> effect to each one of our mounds. This will pop up a question mark and giggle the snow a little adding intrigue and suspense to our game.</p>
+            <p>Now let’s add a rollover or <b>:hover</b> effect to each one of our mounds. This will pop up a question mark and jiggle the snow a little adding intrigue and suspense to our game.</p>
             <ul>
             	<li>In the CSS tab find our <b>.penguin1</b> class.</li>
             	<li>Make a new line above the class and add the following style:</li>
@@ -220,7 +220,6 @@ body {
 }
                 </div>
             </div>
-            <p><i>What this code is doing:</i></p>
             <p>This style is what’s called a <b>pseudo-class</b>. It’s a way to add effects and additional styles to elements that we’ve already created. In this case we will be changing the background image of that div when a mouse is over it. We will also be changing the cursor to a pointer, or little hand giving our users another clue that the mound is clickable.</p>
             <ul>
             	<li>Go into the Media tab and find the image for mound_1_hover.png.</li>
@@ -237,7 +236,7 @@ body {
             <p>Now that we’ve got our mounds tempting us with those question marks, let’s hide some penguins (and a yeti!) inside each one and use another <b>pseudo-class</b> to make them pop up when clicked.</p>
             <ul>
             	<li>In the CSS tab find the <b>.penguin1:hover</b> class.</li>
-            	<li>Underneath*, that class add the following class:</li>
+            	<li>Underneath, that class add the following class:</li>
             </ul>
             <div class="codeview">
                 <div class="data" data-type="css">
@@ -246,12 +245,11 @@ body {
 }
                 </div>
             </div>
-            <p><i>What this code is doing:</i></p>
             <p><b>:active</b> is another type of <b>pseudo-class</b>. Similar <b>:hover</b> it adds/changes the style of <b>.penguin1</b> when the <b>div</b> is <i>clicked</i> with the mouse.</p>
-            <p>* The position in the code of <b>pseudo-classes</b> is important. An <b>:active</b> class should always come after or underneath <b>:hover</b> in the code for the effect to work properly.</p>
+            <p>The position in the code of <b>pseudo-classes</b> is important. An <b>:active</b> class should always come after or underneath <b>:hover</b> in the code for the effect to work properly.</p>
             <ul>
             	<li>Go into the media tab and find a penguin image. You can start with <b>penguin_1.png</b>.</li>
-            	<li>Paste the code for the image in between the <b>(‘’)</b></li>
+            	<li>Paste the code for the image inbetween the <b>(‘’)</b></li>
             	<li>Go back to the preview and click the first mound. Did the penguin pop up? Hold your mouse button down to keep the penguin from popping back down.</li>
             </ul>
             <p><b><i>To finish this step:</i></b></p>
@@ -285,7 +283,7 @@ $(document).ready( function() {
             <h2>Step 6: Mix it up and challenge someone</h2>
             <br>
             <img src="assets/images/step_06.jpg"/>
-            <p>Now that we’ve got all our penguins (and yeti) hidden let’s play the game! Find someone, either a friend or a family member, and challenge them to find all the penguins without accidently clicking on the yeti.</p>
+            <p>Now that we’ve got all our penguins (and yeti) hidden let’s play the game! Find a friend or a family member and challenge them to find all the penguins without accidently clicking on the yeti.</p>
             <p>After they’ve had a go, mix the <b>classes</b> up in your HTML to reshuffle the mounds and let them try again. To make it extra challenging, change the images in the <b>:active</b> states to put different penguins (and your yeti) under different mounds.</p>
             <p><b><i>To finish this step:</i></b></p>
             <p>Teach your playing partner how to change the images in the <b>:active</b> states and trade off challenging each other to a game of <b>“Find the Penguins.”</b></p>
@@ -299,7 +297,7 @@ $(document).ready( function() {
             <img src="assets/images/colony.jpg" />
             <div class="details">
                 <h3>A whole colony! <span class="difficulty">Easy</span></h3>
-                <p>Nine snow mounds is childs-play. Why not make it more challenging. double, triple, or even quadruple the number of mounds to make the game more difficult! You can use the same <b>penguin</b> or <b>mound</b> png files more than once if you like but you’ll need to make more <b>divs</b> and <b>classes</b> and make our <b>gameholder</b> wider.</p>
+                <p>Why not make it more challenging. Double or triple the number of mounds to make the game more difficult! You can use the same <b>penguin</b> png files more than once if you like but you’ll need to make more <b>divs</b> and <b>classes</b>.</p>
             </div>
             <div class="clear"></div>
         </div>
@@ -307,7 +305,7 @@ $(document).ready( function() {
             <img src="assets/images/stay_penguin.jpg" />
             <div class="details">
                 <h3>Stay, penguin, stay! <span class="difficulty">Hard</span></h3>
-                <p>Holding the mouse button is hard work. See if you can use <b>Javascript</b> and <b>jQuery</b> to make the penguins stay up when clicked and disappear when the yeti is awoken. If you’re not sure how to do that try finishing the <b><a href="../night_and_day/">Night and Day</a></b> project to learn some tricks.</p>
+                <p>See if you can use <b>Javascript</b> and <b>jQuery</b> to make the penguins stay up when clicked and disappear when the yeti is awoken. If you’re not sure how to do that try finishing the <b><a href="../night_and_day/">Night and Day</a></b> project to learn some tricks.</p>
             </div>
             <div class="clear"></div>
         </div>
@@ -315,7 +313,7 @@ $(document).ready( function() {
             <img src="assets/images/sfx.jpg" />
             <div class="details">
                 <h3>Real squeaks, squawks, and roars  <span class="difficulty">Hard</span></h3>
-                <p>If you feel like your penguin game is lacking certain level of auditory awesomeness try adding some sound effects to each click! You’ll probably need to learn a little bit about audio files. Fortunately, our <b><a href="../music_boxes/">Music Boxes</a></b> project covers those subjects. </p>
+                <p>If you feel like your penguin game is lacking certain level of auditory awesomeness try adding some sound effects to each click. You’ll probably need to learn a little bit about audio files. Fortunately, our <b><a href="../music_boxes/">Music Boxes</a></b> project covers those subjects. </p>
             </div>
             <div class="clear"></div>
         </div>
