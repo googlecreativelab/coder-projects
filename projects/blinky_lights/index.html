@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product">
+<head> 
+    <title>Blinky Lights | Coder Projects</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico" />
+    <link href="../../shared_assets/css/project.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../../shared_assets/js/jquery.min.js"></script>
+    <script src="../../shared_assets/js/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../shared_assets/js/project.js"></script>
+    <meta itemprop="name" content="Blinky Lights | Coder Projects">
+    <meta itemprop="description" content="Things to make. Stuff to learn. Make fun web stuff on Raspberry Pi.">
+    <meta itemprop="image" content="http://googlecreativelab.github.io/coder-projects/projects/blinky_lights/assets/images/info.jpg">
+    <style>
+        .step .codeview .data {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="project_nav">
+        <div class="project_home"><a href="../../">Coder</a></div>
+        <div class="project_info">&lt;project&gt; steps(6)</div>
+        <h1>Blinky Lights</h1>
+        <a href="http://goo.gl/coder" class="what_is_coder">What's CODER?</a>
+    </div>
+    <div class="section intro">
+        <img class="feature" src="assets/images/feature_full.jpg" />
+        <a href="assets/downloads/FILE.zip" target="_blank" class="project_download trackdl">Download Complete Project <span class="info">305k | .zip file</span></a>
+    </div>
+    <div class="section description">
+        <div class="details">
+            <h2>Description</h2>
+            <p>Connect your web browser to real-world lights and sensors. With a bit of electronics and server programming, you can blink a real light by clicking a web button, or even blink your web browser by pushing a real button!</p>
+            <p><b>Note:</b> requires Coder v.5</p>
+            <p class="whofor"><strong>A great project for:</strong>
+            Illuminated engineers, server hackers, circuit benders, button pushers.
+            </p>
+        </div>
+        <div class="meta">
+            <div class="difficulty">Challenging</div>
+            <p><span class="name">Skills Needed:</span>
+                Intermediate Javascript, Basic HTML, & Basic CSS
+            </p>
+            <p><span class="name">Skills Learned:</span>
+                Basic Electronics, Node.js, GPIO, and Web Sockets
+            </p>
+            <p><span class="name">Submitted By:</span>
+                Coder Team
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section">
+        <h2>Stuff You Might Need</h2>
+        <p>Before we start you might want to get more familiar with Javascript with a previous Coder project. You'll also want to download the Blinky Lights app to make your electronics work.</p>
+        <div class="projectlink">
+            <img src="../night_and_day/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../night_and_day/">Previous Project: Night &amp; Day</a></h3>
+                <p>This project will introduce you to Javascript, the JS tab, and how to make your web browser respond to mouse clicks.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="../digital_clock/assets/images/feature_sml.jpg" />
+            <div class="details">
+                <h3><a href="../digital_clock/">Previous Project: Digital Clock</a></h3>
+                <p>What time is it? Learning some simple logic with Javascript, you’ll finally be able to answer that question by building a simple clock.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/app.jpg" />
+            <div class="details">
+                <h3><a href="">Download: Blinky Lights App</a></h3>
+                <p>This project starts with a finished program. We’ll build the electronics and investigate how to talk to them with the included app. Download the complete Blinky Lights app for Coder here: <a href="" target="_blank">blinky_lights.zip</a>.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section steps">
+        <div class="step">
+            <h2>Alright, let's get started</h2>
+            <p>This project will be a little different from some of the other Coder projects. Rather than start completely from scratch, we’re going to focus on building the electronics first and then dissect a fully completed app to discover how all the pieces work together.</p>
+            <p>There's a lot going on here, so if you feel a little overwealmed, don't panic. For a less challenging approach, just follow the wiring directions in each step and skip over the details (we won't tell). Then, once you have everything working, you can come back and read the explanations to learm more about how things work.</p>
+
+            <p><b>Coder v.5 required:</b><br />This project requires a few new features in Coder v.5 that we released in January 2014. If you have an older version of Coder, export your programs to back them up, and get the new Coder image for your SD Card here: <a href="http://goo.gl/coder/">goo.gl/coder/</a></p>
+
+        </div>
+        <div class="step">
+            <h2>Step 1: Get parts, fill brain</h2>
+            <p><img src="assets/images/step_01.jpg" /></p>
+            <p>First things first, you’ll need a few parts to build this project. Here’s the complete list of what you need:</p>
+            <ul>
+                <li>Raspberry Pi GPIO breakout board and cable (search link)</li>
+                <li>Breadboard</li>
+                <li>5 male-to-male patch wires</li>
+                <li>LED (ours is yellow, but red, green, or blue are also popular)</li>
+                <li>Intermittent push button</li>
+                <li>10K Ohm resistor</li>
+                <li>Two 560 Ohm resistors</li>
+            </ul>
+            <p><b>Brain fill: a quick background on prototyping</b><br />
+            A breadboard allows you to prototype and experiment easily with electronics. When you plug a pin or wire into a breadboard, it becomes electrically connected to anything else that’s plugged into its half-row.
+            </p>
+            <p>Most breadboards also have two connection rows that run the full length of either side, usually marked with a red and blue line. These rails allow you to easily route power and ground to all of your components.</p>
+            <p>The Raspberry Pi GPIO breakout board lets you quickly connect your Raspberry Pi to a breadboard, which makes it infinitely easier to experiment with simple electronics circuits.</p>
+            <p><img src="assets/images/step_01_breadboard.gif" /></p>
+
+            <p><b>Brain fill: what's GPIO?</b><br />
+            GPIO stands for General Purpose Input and Output. Those two rows of pins on your Raspberry Pi are GPIO pins, and these pins allow your Raspberry Pi computer to make electrical connections with external electronics and devices.
+            </p>
+            <p>A couple of those pins provide power (a positive charge) all the time. A couple of those pins provide access to ground so you can complete a circuit. And a handful of those pins are special input/output pins. Those I/O pins can be controlled from your code to either send small amounts of power, or to receive binary on/off signals.
+            </p>
+            <p>So think about a little light like our LED. To make that light up, your Raspberry Pi needs to send power to it. That’s possible with a GPIO output. An output allows your code to turn power on and off on one of those IO pins. Just like a light switch.
+            </p>
+            <p>Now think about something like a button. It can be in one of these states: pressed or not pressed. You code can know about whether a button is pressed or not by using a GPIO input. To do this, you built a circuit that connects power an I/O pin when the button is pressed, and connects ground to the I/O pin when the button is released.
+            </p>
+            <p><b>Ready to get started?</b><br />
+                Have all your gear? Brain all full? Let’s get building!
+            </p>
+        </div>
+        
+        
+        <div class="step">
+            <h2>Step 2: Power and ground</h2>
+            <p><img src="assets/images/step_02.jpg" /></p>
+            <p>The first thing to wire up is our breakout board. We’ll also connect its 3.3v and ground pins to the power and ground rails that run the length of the breadboard. This will make it a lot easier to connect up our other components in the following steps.
+            </p>
+            
+            <p><b>Wire up the breakout board:</b></p>
+            <ul>
+                <li>Connect the breakout board to your breadboard. Place it so that each row of pins is on the opposite side of the breadboard divider.</li>
+                <li>Connect up the 3.3v (3v3) power pin to the positive (+) labeled red rail on one side of the breadboard.</li>
+                <li>Connect the ground (GND) pin to the negative (-) labeled blue rail.</li>
+            </ul>
+
+            <p><b>Be careful here.</b> It’s really important that you wire up the right pins, or you may risk damaging your Raspberry Pi. Note that the GND pin is dangerously close to a 5v pin. You want the 3rd pin down from the top right. The 3.3v pin is the top left pin on the board. If you’re confused about which end is the top, insert the  GPIO cable (it only goes in one way) -- the white wire on the cable is oriented toward pin 1 at the top of the board.</p>
+        </div>
+
+
+        <div class="step">
+            <h2>Step 3: LED circuit</h2>
+            <p><img src="assets/images/step_03.jpg" /></p>
+            <p>Let’s wire up a circuit for an LED. LED stands for Light Emitting Diode. The light emitting part you can probably guess -- it’s a light -- but what’s a diode? Without going into too much detail, a diode is a simple electronic component that allows electricity to flow in one direction, but not in the other direction. Because it’s a diode, an LED will work in only one direction.</p>
+
+            <p><b>Which way does the LED go?</b><br />
+            One leg connects to a power source, and the other connects to ground. Get it in backwards and it simply won’t turn on. On an LED, one leg is a bit longer than the other one, and if you look close at the short leg side of the LED, you’ll find that it’s a little bit flat. These clues make it easy to tell which direction the LED goes: long leg goes to positive, short leg on flat side goes to ground.</p>
+
+            <p><b>Every LED needs a resistor.</b><br />
+            A resistor is a component that limits the flow of electricity. An LED is such a simple component that it doesn’t have anything built in to control power flow. So if you connect an LED without a resistor, it will light up and then quickly burn out and destroy itself by pulling too much power. We use a small 560 Ohm (green blue brown) resistor here, which allows enough power to flow to make your LED bright, but limits the power flow enough to keep your LDE from
+            becoming damaged. You can try a larger resistor if you like. It will resist more power and make the light less bright.</p>
+
+            <p><b>Wiring it up.</b></p>
+            <ul>
+                <li>Connect GPIO #4 (4th pin down on the left side) to the long leg on the LED. GPIO #4 will provide power to the LED to light it up.</li>
+                <li>Connect the short leg of the LED to the 560 Ohm resistor. The resistor can face either way.</li>
+                <li>Connect the other end of the resistor to ground. Careful: don’t accidentally connect this to the 3.3v rail.</li>
+            </ul>
+            
+            <p>Your Blinky Lights program should now be able to turn the LED on by activating GPIO 4. But before we get ahead of things, let’s go ahead and get the button circuit wired up quick.</p>
+
+        </div>
+
+        
+        <div class="step">
+            <h2>Step 4: Button circuit</h2>
+            <p><img src="assets/images/step_04.jpg" /></p>
+            <p>So far, we have an LED circuit that lets Coder blink a light in the real world. Let’s build a button sensor circuit so that we can make something blink on your screen when a real-world button is pressed.</p>
+
+            <p><b>Wiring it all up:</b></p>
+            <ul>
+                <li>Place the button so that the legs span over the center line of the breadboard. The button legs should be facing the sides of the breadboard.</li>
+                <li>Connect GPIO #17 (6th pin down on the left side) to one leg of the 560 Ohm resistor. Use a jumper wire so this is off to the side and not accidentally connected to another GPIO pin.</li>
+                <li>Connect the other end of the resistor to a button leg.</li>
+                <li>On the button leg immediately opposite from this input resistor, connect the 10K Ohm pull down resistor.</li>
+                <li>The other leg of the 10K Ohm resistor connects to ground. This completes the “off” portion of the button circuit.</li>
+                <li>Now connect a jumper wire from the 3.3v rail to the other button pin (the one diagonal from the 560 Ohm input resistor). This completes the power circuit for when the button is pressed.</li>
+            </ul>
+
+            <p><b>How does this 4-legged button work?</b><br />
+            A button like this is a simple switch. When it’s not pressed, the legs directly across each other are electrically connected, but the legs diagonally from each other are disconnected. When you press the button, all four of the pins become connected together.
+            </p>
+
+            <p><b>How a GPIO input works.</b><br />
+            When an I/O pin on Raspberry Pi is set up as an input, it allows your code to see one of two values: a low voltage setting which means 0, or a high voltage setting which means 1. Our circuit will cause GPIO #17 to be connected to ground when the button is not pressed. Your code will see this as a value of 0. The circuit will also take care of connecting GPIO #17 to the 3.3v power source as soon as the button is pressed. Your code will see this as a value of 1.
+            </p>
+
+            <p>Technically, there’s also something weird that happens if your input pin isn’t connected to either ground and it isn’t connected to sufficient voltage. In this in-between state, when you don’t have an input pin connected to anything, the I/O pin is said to be “floating”. This can cause your code to see either a 0 or a 1 at random. We don’t want this to happen, so our button circuit is designed to only have two states: connected to ground, or connected to voltage.
+            </p>
+
+            <p><b>What are the resistors for?</b><br />
+            The most important resistor here is the 10K Ohm (brown black orange) resistor that connects our button to ground. Remember that when our button gets pressed, all of its legs become electrically connected. Notice that our button also connects to 3.3v on the other leg. So when that button is pressed, an electrical connection is made directly between our source voltage and ground; left unregulated, this is called a short circuit, and that’s a bad thing.
+            </p>
+
+            <p>The 10K Ohm resistor keeps this short circuit from happening. 10K (or 10,000) Ohms is a lot of resistance to the flow of electricity, so instead of a short circuit when the button is pressed, there’s just the tiniest trickle of electricity that won’t affect anything. Instead, when the button is pressed, electricity will more easily flow from 3.3v to our input pin.
+            </p>
+
+            <p>The 560 Ohm resistor isn’t completely necessary, but it protects our I/O pin from being damaged if we make a software mistake. You see, if the I/O pin is accidentally configured as an output pin (like our LED will be), and that pin is off, it becomes connected to ground. If the button is pressed at the same time, 3.3v would be shorted to ground right through the middle of our Raspberry Pi hardware. Yikes! To prevent this with software, we make sure to set this up as an input pin. To prevent this with hardware, we use this resistor to limit the amount of power that could accidentally flow to that pin. 
+            </p>
+
+            <p><img src="assets/images/step_04_example.jpg" /></p>
+
+            <p>At this point, you’re done with all the wiring. Above is a picture of how ours turned out.</p>
+
+            <p>If you thought that was a lot of work, check out what it would look like to breadboard a <a href="http://upload.wikimedia.org/wikipedia/commons/4/47/Breadboard_complex.jpg" target="_blank">whole desktop computer!</a></p>
+        </div>
+
+
+        <div class="step">
+            <h2>Step 5: See it work!</h2>
+            <p><img src="assets/images/step_05.gif" /></p>
+            <p>It’s time to check out the results of all your hard work. To get things running, you just need to hook it all up and run the Blinky Lights app supplied with this project. You can download that here if you haven’t already.</p>
+
+            <p><b>Connect your circuit to Coder:</b></p>
+            <ul>
+                <li>Use the ribbon cable to connect your circuit up to the Raspberry Pi. Then, boot up Coder.</li>
+                <li>Import the Blinky Lights app into Coder. Just click the green plus button like you’re creating a project, and then click the little import arrow icon. Select the blinky_lights.zip file you downloaded and it should import and take you into the editor.</li>
+                <li>Click the preview button in the editor, or click on the Blinky Lights app to open it in full screen.</li>
+            </ul>
+
+            <p>The application may take a second or two to load and connect to your Raspberry Pi. Once it’s connected, you’ll see a virtual version of the circuit you just created.</p>
+
+            <p><b>Try it out:</b></p>
+            <ul>
+                <li>Press and hold the green button on the web interface. The LED on your real circuit should light up!</li>
+                <li>Press and hold the button on your real circuit. The LED on your web app’s virtual circuit should light up!</li>
+            </ul>
+            <p>Pretty cool, right? Let’s take a look at the code and see how this stuff works.</p>
+
+        </div>
+
+        <div class="step">
+            <h2>Step 6: Looking at the code</h2>
+            <p><img src="assets/images/step_06.jpg" /></p>
+            <p>Hop into the code editor and let’s investigate what’s happening. We’ve heavily commented most of the code in the project you downloaded, so you can just dig in if you prefer to learn that way. Otherwise, here’s a breakdown of a few things that make this project work.</p>
+
+            <p><b>Introducing the Node tab:</b><br />
+            <b>Node.js</b> is a bit like the javascript you’re familiar with, but instead of running in your web browser, this javascript code actually runs on your Coder server. In a typical Coder app, Node is responsible for delivering the HTML that you create to your web browser, and then your web browser executes everything it receives.</p>
+
+            <p>In this app, the Node.js has a couple extra responsibilities:</p>
+
+            <p><b>GPIO</b><br />
+            Because we need to interface with hardware, there needs to be code on the device that can communicate with that hardware. To do this, our <b>Node.js</b> code runs on the Coder server and uses a <b>GPIO library</b> to turn output pins on and off, and to listen to changes on input pins.
+            </p>
+
+            <p><b>Web Sockets with Socket.IO</b><br />
+            When a button is pushed, you want the light to light up right away, not after a second or two. In a normal web connection, the web browser connects to the server, asks it for a file (such as an HTML page), and then the browser disconnects from the server. All this connecting and disconnecting takes time. And what about the other direction, where the server needs to tell the web browser something, like “Hey a button got pressed?”
+            </p>
+
+
+            <p>To solve this problem, we use a permanent connection called a <b>web socket</b>. This connection is established once, stays open until you close the web page, and the server and browser can talk to each other any time they like, as soon as something happens.</p>
+
+
+
+
+            <h2>GPIO</h2>
+            <p>Let’s put the web socket stuff to the side for a moment, and first take a look at how we configure and use GPIO pins using Node.js.</p>
+
+            <p><b>Enabling GPIO input and output pins</b><br />
+                Click the <b>Node</b> tab on your project, and find for the function called <b>enableGPIO</b>. It looks like this:
+            </p>
+            
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+//
+// This is called once from our first socket connection.
+// - set up the LED GPIO as an output
+// - set up the Button GPIO as an input and tie it to send a "change" message
+//
+var enableGPIO = function() {
+    
+    // Set up the LED output GPIO
+    console.log("Setting up LED as an output on GPIO " + ledGPIOID );
+    ledDevice = gpio.export( ledGPIOID, {
+        ready: function() {
+            // This works around a bug in gpio, where sometimes this device
+            // doesn't become immediately available.
+            setTimeout( function() {
+                ledDevice.setDirection("out");
+            }, 100); //wait 100 ms before setting direction
+        }
+    });
+    
+    // Set up the button input GPIO
+    console.log("Setting up Button as an input on GPIO" + buttonGPIOID);
+    buttonDevice = gpio.export( buttonGPIOID, {
+        direction: "in",
+        ready: function() {
+            
+            // Set up buttonDevice to call the buttonChange  
+            // function (below) whenever its value changes.
+            buttonDevice.on("change", buttonChange);
+        }
+    });
+
+};
+                </div>
+            </div>
+
+            <p>We use the <b>gpio.export( gpioid, options )</b> method to connect to and configure a GPIO pin. This function returns a handle to the GPIO device, which we can save to a variable and use over and over to read and write to. At the top of the file, you’ll find global variables <b>ledGPIOID</b> and <b>buttonGPIOID</b> that contain the GPIO number for the two pins we’re using. You’ll also see <b>ledDevice</b> and <b>buttonDevice</b> -- these variables store the gpio device handle that we retrieve from gpio.export.</p>
+
+            <p>We also use <b>deviceHandle.setDirection("out")</b> or <b>deviceHandle.setDirection("in")</b> to configure the pin as an output or input pin. Note that this is a little quirky (a bug in the gpio library), so we’re using a slight delay timer on <b>ledDevice</b> to make this happen after 100 milliseconds.</p>
+
+            <p>The <b>enableGPIO</b> function only needs to be run once, the first time a web browser connects to our app. You can imagine that more than one browser window might connect to this app, but we only have one physical LED and button. To accommodate this, our code needs to manage the GPIO devices carefully so that they can be shared between any connected windows.</p>
+
+            <p>There’s similar code in <b>disableGPIO</b> that tears everything down when the last browser window disconnects. In most cases, this will let you exit your app and everything will turn off so that you can go into another app and do something different with those GPIO pins.</p>
+
+            <p><b>Turning the LED on and off</b><br />
+            Our setLED function is used to turn the LED on or off. It takes either a <b>0</b> (off) or a <b>1</b> (on) as a parameter. Just in case it receives the string "0" or "1", it uses <b>parseInt</b> to turn that into a proper integer value.
+            </p>
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+//
+// Set the value on the LED GPIO device, either 0 (off) or 1 (on).
+//
+var setLED = function( val ) {
+    val = parseInt( val );
+    if ( val != 0 ) {
+        val = 1;
+    }
+    ledDevice.set( val );
+};
+                </div>
+            </div>
+
+
+            <p>The functional piece here is <b>ledDevice.set( val )</b>. Recall that ledDevice is the GPIO handle we received from gpio.export. Setting a value of 1 or 0 to this device will turn the LED on and off.</p>
+
+            <p><b>Detecting a button press</b><br />
+                Let’s look back inside the <b>enableGPIO</b> function, where we set up the button device:
+            </p>
+
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+buttonDevice = gpio.export( buttonGPIOID, {
+    direction: "in",
+    ready: function() {
+        
+        // Set up buttonDevice to call the buttonChange 
+        // function (below) whenever its value changes.
+        buttonDevice.on("change", buttonChange);
+    }
+});
+ 
+                </div>
+            </div>
+
+            <p>The second parameter to the gpio.export function is a map of options. One of those options has the key “<b>ready</b>”, which is a function that will be run once the device becomes available and ready to use. For GPIO input devices, we can register an event handler that runs a piece of code every time the value of that input changes.</p>
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+buttonDevice.on("change", buttonChange);
+                </div>
+            </div>
+
+             <p>Now, every time our button is pressed or released, the buttonChange function is run. That function is responsible for processing the new button value. In this case, we’re sending that bit of data from Node (running on our server) through a web socket to the front end Javascript (running in a connected web browser).</p>
+
+
+            <h2>Web Sockets - Client Side</h2>
+            <p>Okay. So now you know how to get data to and from a GPIO pin, but how does a click from the web browser get to our Node.js code. And how does a button press on the Raspberry Pi get sent back to any web browser that’s running our app? For this, we need to look at web sockets.</p>
+
+            <p>This is rad and complicated, so let’s just dig in.</p>
+
+            <p><b>Create a web socket to talk to Node from the browser</b><br />
+                Jump over to your Javascript code and you’ll find <b>Coder.socketConnection.init</b>:
+            </p>
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+$(document).ready( function() {
+    Coder.socketConnection.init(function(){
+        
+        // Send a "connect" message to our Node page when we first connect.
+        Coder.socketConnection.sendData( 'connect', {} );
+    });
+});
+                </div>
+            </div>
+
+            <p>The <b>Coder.socketConnection.init( callback )</b> function makes a socket connection to the Coder server, and calls the callback function once the connection is established. The Coder library that’s included by default in your project (it’s the coderlib reference in your HTML’s head includes) is what makes Coder.socketConnection available in your projects. This object will make it easy to create a web socket to communicate with your Node code.</p>
+
+
+            <p><b>Send a message from the web browser to Node</b><br />
+To send data from the browser Javascript to the Node.js server-side code, you just call “<b>Coder.socketConnection.sendData( name, dataObj )</b>”. It takes two parameters, a string <b>name</b>, which will tell the server what type of data it’s receiving, and a data object, which can contain whatever data you like.
+            </p>
+
+            <p>In this case, we send a “connect” message, with no data inside. This will tell our back-end code that that the browser has connected.</p>
+
+            <p>We also use <b>Coder.socketConnection.sendData</b> to tell Node to turn our light on or off. Check out the <b>ledOn</b> function in your JS tab.</p>
+
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+// Send a "setled" message to the device with a value of 1 (on)
+var ledOn = function() {
+    ledValue = 1;
+    Coder.socketConnection.sendData( 'setled', {
+        'value': ledValue
+    });
+};
+                </div>
+            </div>
+
+            <p>That sends a "<b>setled</b>" message along with a bundle of data that contains a 0 or 1 for the led value.</p>
+
+
+            <p><b>Receive a message on the web browser from Node</b><br />
+The web socket works in both directions, which means you can also receive data. To do this, add a listener with “<b>Coder.socketConnection.addListener</b>” to respond to specific message types that the Node app is sending.
+            </p>
+
+            <p>Here’s the code that handles a "<b>buttonupdate</b>" message from the Node server. This message is sent every time the button is pressed or released.</p>
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+Coder.socketConnection.addListener( 'buttonupdate', function( d ){
+            console.log("button gpio value: " + d);
+            
+            // The data we get should be an integer, 0 (off) or 1 (button pressed).
+            var val = parseInt( d );
+            if ( d === 1 ) {
+                $("#buttonval").addClass('on');
+            } else {
+                $("#buttonval").removeClass('on');
+            }
+        });
+                </div>
+            </div>
+
+            <p>We use that information on the front-end Javascript to turn the virtual LED on and off.
+            </p>
+
+
+            <h2>Web Sockets - Server Side</h2>
+
+            <p>In our server-side Node.js code, we also need to handle these socket messages. Coder is set up so that it’s easy to respond to these messages, but the Node app also needs to do a little extra work to manage connections as they come and go.</p>
+
+            <p>Switch over to the Node tab and let’s see how to put this together.</p>
+
+            <p><b>Receiving a message in Node from the browser</b><br />
+To receive messages in Node, you use <b>exports.socketio_routes</b> to register the types of messages your want to respond to:</p>
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+// Incoming socket events that this module will expose.
+exports.socketio_routes = [
+    { key:'connect', handler:'on_socket_connect' }, // sent by client once socket is loaded
+    { key:'setled', handler:'on_socket_setled' }, // sent by client to turn on/off the led
+];
+                </div>
+            </div>
+
+            <p>Here we’ve defined two socket messages for our app to receive, <b>connect</b> and <b>setled</b>. Remember that these are the message types we sent to the server from Javascript. By defining handlers for these messages, a specific function will be called whenever a message is received, such as “<b>on_socket_connect</b>” or “<b>on_socket_setled</b>” in this example. </p>
+
+            <p>These handlers will be sent a handle to the socket that sent the data (each browser connection has a different socket handle), as well as the data being sent from the Javascript side. Here’s the <b>on_socket_setled</b> handler that calls the <b>setLED</b> function every time a setled message is received:</p>
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+exports.on_socket_setled = function( socket, data ) {
+    if ( data.value !== "undefined" ) {
+        setLED( data.value );
+    }
+};
+                </div>
+            </div>
+
+            <p><b>Note:</b> you need to export this function with <b>exports.function_name</b> or the Coder server won’t be able to access it in your app module.</p>
+
+            <p><b>Managing socket connections</b><br />
+If we want to send data back to the front-end Javascript, it’s important to keep track of all the connected browser sockets. When you want to send data, you’ll need to know which connection to send it to.
+            </p>
+
+            <p>In this example, which you’ll find inside <b>exports.on_socket_connect</b>, Node receives the connect message and stores the socket connection in a key/value array so it can be used later. </p>
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+// Store information about this socket so we can communicate with
+// all connected sockets in the future.
+connections[socket.socketID] = {
+    socket: socket,
+    id: socket.socketID
+};
+                </div>
+            </div>
+
+            <p>It’s also important to forget about this connection when it has been disconnected. You can do that by listening for the disconnect event:</p>
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+// Watch for this socket to disconnect so that we can remove it from
+// our collection of connected sockets.
+socket.on('disconnect', function() {
+    console.log( 'socket disconnect from ID: ' + socket.socketID );
+    delete connections[socket.socketID];
+    
+    //Free up the GPIO when the last socket disconnects
+    if ( Object.keys( connections ).length &lt;= 0 ) {
+        disableGPIO();
+        connected = false;
+    }
+});
+                </div>
+            </div>
+
+            <p>For most web sockets apps in Coder, you’ll likely want to do some variation of this. Feel free to copy this code and change it to meet your needs.</p>
+
+            <p><b>Sending data from Node to the front-end Javascript</b><br />
+So we can receive data from the front-end in Node and we can keep track of all our connections. The only missing piece is to be able to send data from Node to the web browser. 
+            </p>
+
+            <p>Actually, let’s send data from the Node.js code on the server, to every single browser that’s connected!</p>
+
+            <p>We’ll do this every time the button is pressed:</p>
+
+
+            <div class="codeview">
+                <div class="data" data-type="javascript">
+var buttonChange = function( val ) {
+    // Recall that this code is running on the device. We need to send a
+    // socket message with the button data to our javascript in the
+    // web browser. In fact, we need to send this data to every connected
+    // socket, since there may be more than one browser window looking at
+    // this page.
+    
+    console.log( "buttonChange event with value: " + val );
+    
+    // Iterate through all of our socket connections
+    for ( var socketid in connections ) {
+        // Get the socket object for this socket
+        var socket = connections[socketid].socket;
+        
+        // The "appdata" event will be received by the Coder.socketConnection
+        // object in the front end code and sent to the appropriate listener
+        // that we've defined.   
+        // The "buttonupdate" key refers to a listener we set up on the front
+        // end with the code:
+        // Coder.socketConnection.addListener( "buttonupdate", function... )
+        socket.emit( "appdata", {
+            key: "buttonupdate",
+            data: val
+        });
+    }
+};
+                </div>
+            </div>
+
+            <p>That for loop iterates over every single socket connection to this app and sends a <b>buttonupdate</b> message.</p>
+
+            <p>Try it out. Even if you open a bunch of windows or connect from a couple of totally different computers, they will all light up when you push the physical button on the circuit you built!</p>
+
+
+
+
+        </div>
+    
+    
+    </div> <!-- end all steps section -->
+
+
+
+    <div class="section">
+        <h2>Bonus Rounds</h2>
+        <p>You did it! Now that we’ve got the basics of drawing done, let’s see what else we can make with Two.js.</p>
+        <div class="projectlink">
+            <img src="assets/images/morse.jpg" />
+            <div class="details">
+                <h3>Send Morse Code <span class="difficulty">Easy</span></h3>
+                <p>Have a friend operate the computer while you run the hardware. You can use fast and slow presses as dots and dashes to send secret messages in morse code.<br />
+                <a href="http://en.wikipedia.org/wiki/Morse_code" targer="_blank">en.wikipedia.org/wiki/Morse_code</a><p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="projectlink">
+            <img src="assets/images/game_controller.jpg" />
+            <div class="details">
+                <h3>Make a Game Controller <span class="difficulty">Medium</span></h3>
+                <p>With a couple more buttons, you could make a simple controller to control your own web games.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="section projects last">
+        <h2>Coder Projects to Try Next</h2>
+        <p>This project was pretty involved. Why not take a break and try these other projects that will excersise your artistic side?</p>
+
+        <!-- Two.js Puppy -->
+        <div class="project left">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../two_puppy/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Two.js Puppy</h3>
+                <p>Drawing with code can be a walk in the park with the help of Javascript and the handy drawing library Two.js. In just a few lines of code your browser becomes your sketchbook.</p>
+                <a href="../two_puppy/" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+         
+        <!-- Comic Creator -->
+        <div class="project right">
+            <span class="projectid">&lt;project&gt;</span>
+            <img class="feature" src="../comic_creator/assets/images/feature_full.jpg" />
+            <div class="details">
+                <h3>Comic Creator</h3>
+                <p>Got a story to tell? Have some great text and images you want to put together? This project will give you the pieces to turn them into a webcomic while teaching you some new skills along the way.</p>
+                <a href="../comic_creator/" class="button inline">Open Project</a>
+                <div class="difficulty">Medium</div>
+            </div>
+        </div>
+        <!-- end project -->
+
+
+
+        <div class="clear"></div>
+    </div> <!-- end next projects -->
+    <div class="footer">
+        <div class="madewith bottom"></div>
+        <div class="links">
+            <a href="http://www.google.com/intl/en/policies/" class="trackout">Privacy and Terms</a>
+            <div class="plusholder">
+                <div class="g-plusone"></div>
+            </div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41998892-3', 'googlecreativelab.github.io');
+  ga('send', 'pageview');
+  
+</script>
+</body>
+</html>
