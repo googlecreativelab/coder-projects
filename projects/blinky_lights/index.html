@@ -26,13 +26,13 @@
     </div>
     <div class="section intro">
         <img class="feature" src="assets/images/feature_full.jpg" />
-        <a href="assets/downloads/FILE.zip" target="_blank" class="project_download trackdl">Download Complete Project <span class="info">305k | .zip file</span></a>
+        <a href="assets/downloads/blinky_lights.zip" target="_blank" class="project_download trackdl">Download Complete Project <span class="info">13k | .zip file</span></a>
     </div>
     <div class="section description">
         <div class="details">
             <h2>Description</h2>
             <p>Connect your web browser to real-world lights and sensors. With a bit of electronics and server programming, you can blink a real light by clicking a web button, or even blink your web browser by pushing a real button!</p>
-            <p><b>Note:</b> requires Coder v.5</p>
+            <p><b>Note:</b> Requires Coder v.5</p>
             <p class="whofor"><strong>A great project for:</strong>
             Illuminated engineers, server hackers, circuit benders, button pushers.
             </p>
@@ -73,8 +73,8 @@
         <div class="projectlink">
             <img src="assets/images/app.jpg" />
             <div class="details">
-                <h3><a href="">Download: Blinky Lights App</a></h3>
-                <p>This project starts with a finished program. We’ll build the electronics and investigate how to talk to them with the included app. Download the complete Blinky Lights app for Coder here: <a href="" target="_blank">blinky_lights.zip</a>.</p>
+                <h3><a href="assets/downloads/blinky_lights.zip" target="_blank" class="trackdl">Download: Blinky Lights App</a></h3>
+                <p>This project starts with a finished program. We’ll build the electronics and investigate how to talk to them with the included app. Download the complete Blinky Lights app for Coder here: <a href="assets/downloads/blinky_lights.zip" target="_blank" class="trackdl">blinky_lights.zip</a>.</p>
             </div>
             <div class="clear"></div>
         </div>
@@ -211,7 +211,7 @@
         <div class="step">
             <h2>Step 5: See it work!</h2>
             <p><img src="assets/images/step_05.gif" /></p>
-            <p>It’s time to check out the results of all your hard work. To get things running, you just need to hook it all up and run the Blinky Lights app supplied with this project. You can download that here if you haven’t already.</p>
+            <p>It’s time to check out the results of all your hard work. To get things running, you just need to hook it all up and run the Blinky Lights app supplied with this project. You can download that here if you haven’t already: <a href="assets/downloads/blinky_lights.zip" target="_blank" class="trackdl">blinky_lights.zip</a></p>
 
             <p><b>Connect your circuit to Coder:</b></p>
             <ul>
@@ -235,7 +235,7 @@
             <h2>Step 6: Looking at the code</h2>
             <p><img src="assets/images/step_06.jpg" /></p>
             <p>Hop into the code editor and let’s investigate what’s happening. We’ve heavily commented most of the code in the project you downloaded, so you can just dig in if you prefer to learn that way. Otherwise, here’s a breakdown of a few things that make this project work.</p>
-
+            
             <p><b>Introducing the Node tab:</b><br />
             <b>Node.js</b> is a bit like the javascript you’re familiar with, but instead of running in your web browser, this javascript code actually runs on your Coder server. In a typical Coder app, Node is responsible for delivering the HTML that you create to your web browser, and then your web browser executes everything it receives.</p>
 
@@ -417,16 +417,16 @@ The web socket works in both directions, which means you can also receive data. 
             <div class="codeview">
                 <div class="data" data-type="javascript">
 Coder.socketConnection.addListener( 'buttonupdate', function( d ){
-            console.log("button gpio value: " + d);
-            
-            // The data we get should be an integer, 0 (off) or 1 (button pressed).
-            var val = parseInt( d );
-            if ( d === 1 ) {
-                $("#buttonval").addClass('on');
-            } else {
-                $("#buttonval").removeClass('on');
-            }
-        });
+    console.log("button gpio value: " + d);
+    
+    // The data we get should be an integer, 0 (off) or 1 (button pressed).
+    var val = parseInt( d );
+    if ( d === 1 ) {
+        $("#buttonval").addClass('on');
+    } else {
+        $("#buttonval").removeClass('on');
+    }
+});
                 </div>
             </div>
 
