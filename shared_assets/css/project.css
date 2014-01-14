@@ -673,3 +673,9 @@ img.feature {
 .step .codeview .data .ace_cursor {
     display: none;
 }
+
+/* turn off right hand scrollbars on editor */
+.ace_scrollbar {
+    display: none;
+    visibility: hidden;
+}
