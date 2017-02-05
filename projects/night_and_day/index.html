@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/Product">
-<head> 
+<head>
     <title>Night and Day | Coder Projects</title>
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico" />
@@ -37,7 +37,7 @@
                 Basic HTML, Basic CSS.
             </p>
             <p><span class="name">Skills Learned:</span>
-                Introduction to Javascript, Introduction to jQuery, Basic Interaction, CSS Circles, Buttons 
+                Introduction to Javascript, Introduction to jQuery, Basic Interaction, CSS Circles, Buttons
             </p>
             <p><span class="name">Submitted By:</span>
                 Coder Team
@@ -79,13 +79,13 @@
                 <div class="data" data-type="html">
 &lt;div class="pagecontent">
         &lt;button>click me&lt;/button>
-&lt;/div>                    
+&lt;/div>
                 </div>
             </div>
             <ul>
                 <li>Take a look at your project preview now. See that little button? That’s what the button tag creates. It’s a quick and easy way to make things that look like buttons on web pages. </li>
                 <li>Click it. Nothing will happen. That’s ok. The button tag just creates the button object.  We haven’t told it what to do yet. We’ll change that in the next two steps.</li>
-            </ul>            
+            </ul>
         </div>
 
         <div class="step">
@@ -109,12 +109,12 @@
             <h2>Step 3: Time to open that JS tab…</h2>
             <br>
             <img src="assets/images/step_03.jpg" />
-            <p>So now we’re going to go someplace previous projects have not gone before: the JS tab. JS 
+            <p>So now we’re going to go someplace previous projects have not gone before: the JS tab. JS
 stands for Javascript. Javascript is a programming language that allows you to control how your application functions. You can use Javascript to respond to mouse clicks, perform calculations, or animate things on the screen. </p>
 
-<p>Javascript is different from HTML and CSS in a big way. You might have noticed that HTML and CSS show exactly what’s written in between their tags and braces. They’re static, once they’re set a certain way, they stay that way until you go back and change them. Javascript, on the other-hand, can actually think. It can look at the what’s going on in a project, (what the mouse is doing, for example) and make calculations or run logical responses that change what’s written in the HTML and CSS. So with Javascript, you can change what things look like or how the they behave.</p>  
+<p>Javascript is different from HTML and CSS in a big way. You might have noticed that HTML and CSS show exactly what’s written in between their tags and braces. They’re static, once they’re set a certain way, they stay that way until you go back and change them. Javascript, on the other-hand, can actually think. It can look at the what’s going on in a project, (what the mouse is doing, for example) and make calculations or run logical responses that change what’s written in the HTML and CSS. So with Javascript, you can change what things look like or how the they behave.</p>
 
-<p>In more advanced projects, Javascript will actually do complex math and calculations to do things like challenge you to a game, animate shapes and 
+<p>In more advanced projects, Javascript will actually do complex math and calculations to do things like challenge you to a game, animate shapes and
 Javascript is pretty powerful. It’s what we will use to make our simple button change our background-color.</p>
         </div>
 
@@ -130,7 +130,7 @@ $(document).ready(function() {
 
     //This code will run after your page loads
 
-});                   
+});
                 </div>
             </div>
             <p>This probably looks kinda weird to you. Its syntax, how it’s written, is different than what we’ve been dealing with so far. So let’s walk through it.</p>
@@ -147,7 +147,7 @@ $(document).ready(function() {
 
 <p>If you read this code out as a sentence it would sound something like this: When the document is ready (fully loaded) then do the actions inside the braces.</p>
 
-<p>To sum it up, this function waits for the web page to be ready for us to do our work. It’s key to all of our web projects that use Javascript because it’s what establishes that our HTML elements exist on the page, before we start to manipulate them in code. So don’t delete this. We will be writing our code inside of it.  </p>         
+<p>To sum it up, this function waits for the web page to be ready for us to do our work. It’s key to all of our web projects that use Javascript because it’s what establishes that our HTML elements exist on the page, before we start to manipulate them in code. So don’t delete this. We will be writing our code inside of it.  </p>
         </div>
 
         <div class="step">
@@ -158,9 +158,9 @@ $(document).ready(function() {
             <p><i>It looks like this:</i></p>
             <div class="codeview">
                 <div class="data" data-type="html">
-&lt;script src="/static/common/js/jquery.min.js">&lt;/script>                  
+&lt;script src="/static/common/js/jquery.min.js">&lt;/script>
                 </div>
-            </div>  
+            </div>
             <p>Loading this jQuery library gives us easy access to a whole bunch of useful things, such as events, CSS selectors, and animation effects that will make doing cool stuff simpler and much quicker than writing it out in raw javascript.</p>
 
 
@@ -182,9 +182,9 @@ $(document).ready(function() {
                 <div class="data" data-type="javascript">
 $('button').click(function(){
 
-});                 
+});
                 </div>
-            </div>  
+            </div>
             <ul>
                 <li>Now let’s make that button click do something. We’ll need to identify the thing we want to affect with that click. In this case it’s the <b>body</b>. In between the <b>.click {}</b> add a new line targeting the body.</li>
                 <li>Use the jQuery function <b>.addClass</b> (make sure you capitalize it correctly) to add the class <b>.black</b> to the body.</li>
@@ -197,9 +197,9 @@ $( document ).ready( function() {
     $( 'button' ).click( function() {
         $( 'body' ).addClass( 'black' );
     );
-});                
+});
                 </div>
-            </div>  
+            </div>
             <ul>
                 <li>Go back the preview mode. Click the button. Did the body turn black?</li>
             </ul>
@@ -228,9 +228,9 @@ $(document).ready( function() {
            doThisOtherThing
         }
     });
-});                
+});
                 </div>
-            </div> 
+            </div>
             <ul>
                 <li>Let’s start our <b>“if”</b> statement. We want to check to see if the body has the <b>.black”</b> class. To do that we’ll use the convenient jQuery bit: <b>.hasClass</b>.</li>
             </ul>
@@ -246,9 +246,9 @@ $(document).ready( function() {
            doThisOtherThing
         }
     });
-});              
+});
                 </div>
-            </div> 
+            </div>
             <ul>
                 <li>Now let’s define what it should do if it does have that class. This is the <b>“then”</b> part of our statement. Anything in the <b>{}</b> can be read as <b>“then.”</b> We want to take the current class away and add a different one. We’ll use the <b>.removeClass</b> and <b>.addClass</b> jQuery functions to do that.</li>
             </ul>
@@ -264,9 +264,9 @@ $(document).ready( function() {
            doThisOtherThing
         }
     });
-});             
+});
                 </div>
-            </div> 
+            </div>
             <ul>
                 <li>Now we have one last thing to do. If we leave it like this then it will only toggle once. We need to set up an <b>“else”</b> statement give it something to do when <b>if</b> isn’t true and keep it bouncing between black and white on every click. This is like saying “otherwise” in a sentence. In this case, we know that if something doesn’t have the <b>.black</b> class it will have to have the <b>.white class</b>. We need to make our <b>else</b> statement turn it <b>.black</b> class.</li>
             </ul>
@@ -282,9 +282,9 @@ $(document).ready(function() {
             $('body').removeClass('white').addClass('black');
         }
     });
-});           
+});
                 </div>
-            </div> 
+            </div>
             <ul>
                 <li>The way this would read if it was a sentence would be something like this: <i>When button is clicked, check to see if the body has the black class applied to it, if it does, then remove that class and add white, otherwise, remove the white class and add black.</i></li>
                 <li>Go back to the preview mode and see if it toggles back and forth!</li>
@@ -315,10 +315,10 @@ $(document).ready(function() {
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-    background-color: #blue;
-}                
+    background-color: blue;
+}
                 </div>
-            </div>  
+            </div>
             <ul>
                 <li>Let’s also make a new CSS ID for the sky and set it to take up all our background. Naming it  <b>#sky</b> and making separate from the<b>body</b> will make it a little bit easier to keep track of the logic in JS tab when we get to that point.</li>
             </ul>
@@ -328,9 +328,9 @@ $(document).ready(function() {
 #sky {
     height: 100%;
     width: 100%;
-}               
+}
                 </div>
-            </div>  
+            </div>
             <ul>
                 <li>Set up a <b>&lt;div&gt;</b> for the <b>#orb</b> and <b>#sky</b> in the body</li>
             </ul>
@@ -340,9 +340,9 @@ $(document).ready(function() {
 &lt;body>
     &lt;div id= "orb">&lt;/div>
     &lt;div id= "sky">&lt;/div>
-&lt;/body>            
+&lt;/body>
                 </div>
-            </div> 
+            </div>
          </div>
 
         <div class="step">
@@ -432,7 +432,7 @@ $(document).ready(function() {
             <p><i>Our code looks like this:</i></p>
             <div class="codeview">
                 <div class="data" data-type="javascript">
-$('#orb').click( function() {        
+$('#orb').click( function() {
         if ($(this).hasClass('sun')) {
             $(this).removeClass('sun').addClass('moon');
         }
@@ -595,9 +595,9 @@ if ($('#moonspot1').hasClass('visible')) {
             </div>
         </div>
         <!-- end project -->
-        
+
         <!-- Comic Creator -->
-        <!-- 
+        <!--
         <div class="project right">
             <span class="projectid">&lt;project&gt;</span>
             <img class="feature" src="../comic_creator/assets/images/feature_sml.jpg" />
@@ -638,7 +638,7 @@ if ($('#moonspot1').hasClass('visible')) {
 
   ga('create', 'UA-41998892-3', 'googlecreativelab.github.io');
   ga('send', 'pageview');
-  
+
 </script>
 </body>
 </html>
